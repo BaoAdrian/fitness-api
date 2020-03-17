@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    db:
+        image: mysql:latest
+        container_name: sql-container
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_USER=admin
+            - MYSQL_PASSWORD=admin
+            - MYSQL_DATABASE=fitnessdb
+        restart: always
