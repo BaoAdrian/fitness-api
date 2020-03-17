@@ -1,9 +1,13 @@
+-- Create & Use Database
+CREATE DATABASE fitnessdb;
+USE fitnessdb;
+
 -- Create Exercises table
 CREATE TABLE exercises (
     exerciseid  INT,
-    name        VARCHAR2(58)  NOT NULL,
-    category    VARCHAR2(11)  NOT NULL,
-    description VARCHAR2(100) NULL,
+    name        VARCHAR(58),
+    category    VARCHAR(11),
+    description VARCHAR(100),
     CONSTRAINT PK_EXCERCISEID primary key (exerciseid)
 );
 
