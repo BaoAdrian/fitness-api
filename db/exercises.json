@@ -1,0 +1,5398 @@
+{
+    "exercises": [
+        {
+            "exerciseid": 0,
+            "name": "ab crunch machine",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 1,
+            "name": "ab roller",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 2,
+            "name": "adductor",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 3,
+            "name": "adductor/groin",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 4,
+            "name": "advanced kettlebell windmill",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 5,
+            "name": "air bike",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 6,
+            "name": "all fours quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 7,
+            "name": "alternate hammer curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 8,
+            "name": "alternate heel touchers",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 9,
+            "name": "alternate incline dumbbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 10,
+            "name": "alternate leg diagonal bound",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 11,
+            "name": "alternating cable shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 12,
+            "name": "alternating deltoid raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 13,
+            "name": "alternating floor press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 14,
+            "name": "alternating hang clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 15,
+            "name": "alternating kettlebell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 16,
+            "name": "alternating kettlebell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 17,
+            "name": "alternating renegade row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 18,
+            "name": "ankle circles",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 19,
+            "name": "ankle on the knee",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 20,
+            "name": "anterior tibialis-smr",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 21,
+            "name": "anti-gravity press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 22,
+            "name": "arm circles",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 23,
+            "name": "arnold dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 24,
+            "name": "around the worlds",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 25,
+            "name": "atlas stone trainer",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 26,
+            "name": "atlas stones",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 27,
+            "name": "axle deadlift",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 28,
+            "name": "ab crunch machine",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 29,
+            "name": "ab roller",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 30,
+            "name": "adductor",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 31,
+            "name": "adductor/groin",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 32,
+            "name": "advanced kettlebell windmill",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 33,
+            "name": "air bike",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 34,
+            "name": "all fours quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 35,
+            "name": "alternate hammer curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 36,
+            "name": "alternate heel touchers",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 37,
+            "name": "alternate incline dumbbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 38,
+            "name": "alternate leg diagonal bound",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 39,
+            "name": "alternating cable shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 40,
+            "name": "alternating deltoid raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 41,
+            "name": "alternating floor press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 42,
+            "name": "alternating hang clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 43,
+            "name": "alternating kettlebell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 44,
+            "name": "alternating kettlebell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 45,
+            "name": "alternating renegade row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 46,
+            "name": "ankle circles",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 47,
+            "name": "ankle on the knee",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 48,
+            "name": "anterior tibialis-smr",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 49,
+            "name": "anti-gravity press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 50,
+            "name": "arm circles",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 51,
+            "name": "arnold dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 52,
+            "name": "around the worlds",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 53,
+            "name": "atlas stone trainer",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 54,
+            "name": "atlas stones",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 55,
+            "name": "axle deadlift",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 56,
+            "name": "back flyes - with bands",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 57,
+            "name": "backward drag",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 58,
+            "name": "backward medicine ball throw",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 59,
+            "name": "balance board",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 60,
+            "name": "ball leg curl",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 61,
+            "name": "band assisted pull-up",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 62,
+            "name": "band good morning",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 63,
+            "name": "band good morning (pull through)",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 64,
+            "name": "band hip adductions",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 65,
+            "name": "band pull apart",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 66,
+            "name": "band skull crusher",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 67,
+            "name": "barbell ab rollout",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 68,
+            "name": "barbell ab rollout - on knees",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 69,
+            "name": "barbell bench press - medium grip",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 70,
+            "name": "barbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 71,
+            "name": "barbell curls lying against an incline",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 72,
+            "name": "barbell deadlift",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 73,
+            "name": "barbell full squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 74,
+            "name": "barbell glute bridge",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 75,
+            "name": "barbell guillotine bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 76,
+            "name": "barbell hack squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 77,
+            "name": "barbell hip thrust",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 78,
+            "name": "barbell incline bench press - medium grip",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 79,
+            "name": "barbell incline shoulder raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 80,
+            "name": "barbell lunge",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 81,
+            "name": "barbell rear delt row",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 82,
+            "name": "barbell rollout from bench",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 83,
+            "name": "barbell seated calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 84,
+            "name": "barbell shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 85,
+            "name": "barbell shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 86,
+            "name": "barbell shrug behind the back",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 87,
+            "name": "barbell side bend",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 88,
+            "name": "barbell side split squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 89,
+            "name": "barbell squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 90,
+            "name": "barbell squat to a bench",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 91,
+            "name": "barbell step ups",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 92,
+            "name": "barbell walking lunge",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 93,
+            "name": "battling ropes",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 94,
+            "name": "bear crawl sled drags",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 95,
+            "name": "behind head chest stretch",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 96,
+            "name": "bench dips",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 97,
+            "name": "bench jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 98,
+            "name": "bench press - powerlifting",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 99,
+            "name": "bench press - with bands",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 100,
+            "name": "bench press with chains",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 101,
+            "name": "bench sprint",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 102,
+            "name": "bent over barbell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 103,
+            "name": "bent over dumbbell rear delt raise with head on bench",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 104,
+            "name": "bent over low-pulley side lateral",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 105,
+            "name": "bent over one-arm long bar row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 106,
+            "name": "bent over two-arm long bar row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 107,
+            "name": "bent over two-dumbbell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 108,
+            "name": "bent over two-dumbbell row with palms in",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 109,
+            "name": "bent press",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 110,
+            "name": "bent-arm barbell pullover",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 111,
+            "name": "bent-arm dumbbell pullover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 112,
+            "name": "bent-knee hip raise",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 113,
+            "name": "bicycling",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 114,
+            "name": "bicycling",
+            "category": "stationary",
+            "description": ""
+        },
+        {
+            "exerciseid": 115,
+            "name": "board press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 116,
+            "name": "body tricep press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 117,
+            "name": "body-up",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 118,
+            "name": "bodyweight flyes",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 119,
+            "name": "bodyweight mid row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 120,
+            "name": "bodyweight squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 121,
+            "name": "bodyweight walking lunge",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 122,
+            "name": "bosu ball cable crunch with side bends",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 123,
+            "name": "bottoms up",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 124,
+            "name": "bottoms-up clean from the hang position",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 125,
+            "name": "box jump (multiple response)",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 126,
+            "name": "box skip",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 127,
+            "name": "box squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 128,
+            "name": "box squat with bands",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 129,
+            "name": "box squat with chains",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 130,
+            "name": "brachialis-smr",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 131,
+            "name": "bradford/rocky presses",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 132,
+            "name": "butt lift (bridge)",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 133,
+            "name": "butt-ups",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 134,
+            "name": "butterfly",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 135,
+            "name": "cable chest press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 136,
+            "name": "cable crossover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 137,
+            "name": "cable crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 138,
+            "name": "cable deadlifts",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 139,
+            "name": "cable hammer curls - rope attachment",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 140,
+            "name": "cable hip adduction",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 141,
+            "name": "cable incline pushdown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 142,
+            "name": "cable incline triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 143,
+            "name": "cable internal rotation",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 144,
+            "name": "cable iron cross",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 145,
+            "name": "cable judo flip",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 146,
+            "name": "cable lying triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 147,
+            "name": "cable one arm tricep extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 148,
+            "name": "cable preacher curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 149,
+            "name": "cable rear delt fly",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 150,
+            "name": "cable reverse crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 151,
+            "name": "cable rope overhead triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 152,
+            "name": "cable rope rear-delt rows",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 153,
+            "name": "cable russian twists",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 154,
+            "name": "cable seated crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 155,
+            "name": "cable seated lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 156,
+            "name": "cable shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 157,
+            "name": "cable shrugs",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 158,
+            "name": "cable tuck reverse crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 159,
+            "name": "cable wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 160,
+            "name": "calf press",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 161,
+            "name": "calf press on the leg press machine",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 162,
+            "name": "calf raise on a dumbbell",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 163,
+            "name": "calf raises - with bands",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 164,
+            "name": "calf stretch elbows against wall",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 165,
+            "name": "calf stretch hands against wall",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 166,
+            "name": "calf-machine shoulder shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 167,
+            "name": "calves-smr",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 168,
+            "name": "car deadlift",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 169,
+            "name": "car drivers",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 170,
+            "name": "carioca quick step",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 171,
+            "name": "cat stretch",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 172,
+            "name": "catch and overhead throw",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 173,
+            "name": "chain handle extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 174,
+            "name": "chain press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 175,
+            "name": "chair leg extended stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 176,
+            "name": "chair lower back stretch",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 177,
+            "name": "chair squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 178,
+            "name": "chair upper body stretch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 179,
+            "name": "chest and front of shoulder stretch",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 180,
+            "name": "chest push (multiple response)",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 181,
+            "name": "chest push (single response)",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 182,
+            "name": "chest push from 3 point stance",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 183,
+            "name": "chest push with run release",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 184,
+            "name": "chest stretch on stability ball",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 185,
+            "name": "child's pose",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 186,
+            "name": "chin to chest stretch",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 187,
+            "name": "chin-up",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 188,
+            "name": "circus bell",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 189,
+            "name": "clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 190,
+            "name": "clean and jerk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 191,
+            "name": "clean and press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 192,
+            "name": "clean deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 193,
+            "name": "clean from blocks",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 194,
+            "name": "clean pull",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 195,
+            "name": "clean shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 196,
+            "name": "clock push-up",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 197,
+            "name": "close-grip barbell bench press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 198,
+            "name": "close-grip dumbbell press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 199,
+            "name": "close-grip ez bar curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 200,
+            "name": "close-grip ez-bar curl with band",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 201,
+            "name": "close-grip ez-bar press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 202,
+            "name": "close-grip front lat pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 203,
+            "name": "close-grip push-up off of a dumbbell",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 204,
+            "name": "close-grip standing barbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 205,
+            "name": "cocoons",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 206,
+            "name": "conan's wheel",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 207,
+            "name": "concentration curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 208,
+            "name": "cross body hammer curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 209,
+            "name": "cross over - with bands",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 210,
+            "name": "cross-body crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 211,
+            "name": "crossover reverse lunge",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 212,
+            "name": "crucifix",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 213,
+            "name": "crunch - hands overhead",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 214,
+            "name": "crunch - legs on exercise ball",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 215,
+            "name": "crunches",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 216,
+            "name": "cuban press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 217,
+            "name": "dancer's stretch",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 218,
+            "name": "deadlift with bands",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 219,
+            "name": "deadlift with chains",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 220,
+            "name": "decline barbell bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 221,
+            "name": "decline close-grip bench to skull crusher",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 222,
+            "name": "decline crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 223,
+            "name": "decline dumbbell bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 224,
+            "name": "decline dumbbell flyes",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 225,
+            "name": "decline dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 226,
+            "name": "decline ez bar triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 227,
+            "name": "decline oblique crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 228,
+            "name": "decline push-up",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 229,
+            "name": "decline reverse crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 230,
+            "name": "decline smith press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 231,
+            "name": "deficit deadlift",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 232,
+            "name": "depth jump leap",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 233,
+            "name": "dip machine",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 234,
+            "name": "dips - chest version",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 235,
+            "name": "dips - triceps version",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 236,
+            "name": "donkey calf raises",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 237,
+            "name": "double kettlebell alternating hang clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 238,
+            "name": "double kettlebell jerk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 239,
+            "name": "double kettlebell push press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 240,
+            "name": "double kettlebell snatch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 241,
+            "name": "double kettlebell windmill",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 242,
+            "name": "double leg butt kick",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 243,
+            "name": "downward facing balance",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 244,
+            "name": "drag curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 245,
+            "name": "drop push",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 246,
+            "name": "dumbbell alternate bicep curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 247,
+            "name": "dumbbell bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 248,
+            "name": "dumbbell bench press with neutral grip",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 249,
+            "name": "dumbbell bicep curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 250,
+            "name": "dumbbell clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 251,
+            "name": "dumbbell floor press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 252,
+            "name": "dumbbell flyes",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 253,
+            "name": "dumbbell incline row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 254,
+            "name": "dumbbell incline shoulder raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 255,
+            "name": "dumbbell lunges",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 256,
+            "name": "dumbbell lying one-arm rear lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 257,
+            "name": "dumbbell lying pronation",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 258,
+            "name": "dumbbell lying rear lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 259,
+            "name": "dumbbell lying supination",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 260,
+            "name": "dumbbell one-arm shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 261,
+            "name": "dumbbell one-arm triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 262,
+            "name": "dumbbell one-arm upright row",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 263,
+            "name": "dumbbell prone incline curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 264,
+            "name": "dumbbell raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 265,
+            "name": "dumbbell rear lunge",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 266,
+            "name": "dumbbell scaption",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 267,
+            "name": "dumbbell seated box jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 268,
+            "name": "dumbbell seated one-leg calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 269,
+            "name": "dumbbell shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 270,
+            "name": "dumbbell shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 271,
+            "name": "dumbbell side bend",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 272,
+            "name": "dumbbell squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 273,
+            "name": "dumbbell squat to a bench",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 274,
+            "name": "dumbbell step ups",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 275,
+            "name": "dumbbell tricep extension -pronated grip",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 276,
+            "name": "dynamic back stretch",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 277,
+            "name": "dynamic chest stretch",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 278,
+            "name": "elbow circles",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 279,
+            "name": "elbow to knee",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 280,
+            "name": "elbows back",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 281,
+            "name": "elevated back lunge",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 282,
+            "name": "elevated cable rows",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 283,
+            "name": "elliptical trainer",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 284,
+            "name": "exercise ball crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 285,
+            "name": "exercise ball pull-in",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 286,
+            "name": "extended range one-arm kettlebell floor press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 287,
+            "name": "external rotation",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 288,
+            "name": "external rotation with band",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 289,
+            "name": "external rotation with cable",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 290,
+            "name": "ez-bar curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 291,
+            "name": "ez-bar skullcrusher",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 292,
+            "name": "face pull",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 293,
+            "name": "farmer's walk",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 294,
+            "name": "fast skipping",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 295,
+            "name": "finger curls",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 296,
+            "name": "flat bench cable flyes",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 297,
+            "name": "flat bench leg pull-in",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 298,
+            "name": "flat bench lying leg raise",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 299,
+            "name": "flexor incline dumbbell curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 300,
+            "name": "floor glute-ham raise",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 301,
+            "name": "floor press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 302,
+            "name": "floor press with chains",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 303,
+            "name": "flutter kicks",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 304,
+            "name": "foot-smr",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 305,
+            "name": "forward drag with press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 306,
+            "name": "frankenstein squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 307,
+            "name": "freehand jump squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 308,
+            "name": "frog hops",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 309,
+            "name": "frog sit-ups",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 310,
+            "name": "front barbell squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 311,
+            "name": "front barbell squat to a bench",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 312,
+            "name": "front box jump",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 313,
+            "name": "front cable raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 314,
+            "name": "front cone hops (or hurdle hops)",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 315,
+            "name": "front dumbbell raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 316,
+            "name": "front incline dumbbell raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 317,
+            "name": "front leg raises",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 318,
+            "name": "front plate raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 319,
+            "name": "front raise and pullover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 320,
+            "name": "front squat (clean grip)",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 321,
+            "name": "front squats with two kettlebells",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 322,
+            "name": "front two-dumbbell raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 323,
+            "name": "full range-of-motion lat pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 324,
+            "name": "gironda sternum chins",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 325,
+            "name": "glute ham raise",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 326,
+            "name": "glute kickback",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 327,
+            "name": "goblet squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 328,
+            "name": "good morning",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 329,
+            "name": "good morning off pins",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 330,
+            "name": "gorilla chin/crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 331,
+            "name": "groin and back stretch",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 332,
+            "name": "groiners",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 333,
+            "name": "hack squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 334,
+            "name": "hammer curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 335,
+            "name": "hammer grip incline db bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 336,
+            "name": "hamstring stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 337,
+            "name": "hamstring-smr",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 338,
+            "name": "handstand push-ups",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 339,
+            "name": "hang clean",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 340,
+            "name": "hang clean - below the knees",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 341,
+            "name": "hang snatch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 342,
+            "name": "hang snatch - below knees",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 343,
+            "name": "hanging bar good morning",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 344,
+            "name": "hanging leg raise",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 345,
+            "name": "hanging pike",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 346,
+            "name": "heaving snatch balance",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 347,
+            "name": "heavy bag thrust",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 348,
+            "name": "high cable curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 349,
+            "name": "hip circles (prone)",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 350,
+            "name": "hip crossover",
+            "category": "",
+            "description": ""
+        },
+        {
+            "exerciseid": 351,
+            "name": "hip extension with bands",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 352,
+            "name": "hip flexion with band",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 353,
+            "name": "hip lift with band",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 354,
+            "name": "hug a ball",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 355,
+            "name": "hug knees to chest",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 356,
+            "name": "hurdle hops",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 357,
+            "name": "hyperextensions (back extensions)",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 358,
+            "name": "hyperextensions with no hyperextension bench",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 359,
+            "name": "iliotibial tract-smr",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 360,
+            "name": "incline barbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 361,
+            "name": "incline bench pull",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 362,
+            "name": "incline cable chest press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 363,
+            "name": "incline cable flye",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 364,
+            "name": "incline dumbbell bench with palms facing in",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 365,
+            "name": "incline dumbbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 366,
+            "name": "incline dumbbell flyes",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 367,
+            "name": "incline dumbbell flyes - with a twist",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 368,
+            "name": "incline dumbbell press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 369,
+            "name": "incline hammer curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 370,
+            "name": "incline inner biceps curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 371,
+            "name": "incline push-up",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 372,
+            "name": "incline push-up close-grip",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 373,
+            "name": "incline push-up depth jump",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 374,
+            "name": "incline push-up medium",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 375,
+            "name": "incline push-up reverse grip",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 376,
+            "name": "incline push-up wide",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 377,
+            "name": "intermediate groin stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 378,
+            "name": "intermediate hip flexor and quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 379,
+            "name": "internal rotation with band",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 380,
+            "name": "inverted row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 381,
+            "name": "inverted row with straps",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 382,
+            "name": "iron cross",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 383,
+            "name": "iron crosses (stretch)",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 384,
+            "name": "isometric chest squeezes",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 385,
+            "name": "isometric neck exercise - front and back",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 386,
+            "name": "isometric neck exercise - sides",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 387,
+            "name": "isometric wipers",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 388,
+            "name": "it band and glute stretch",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 389,
+            "name": "jackknife sit-up",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 390,
+            "name": "janda sit-up",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 391,
+            "name": "jefferson squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 392,
+            "name": "jerk balance",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 393,
+            "name": "jerk dip squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 394,
+            "name": "jm press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 395,
+            "name": "jogging-treadmill",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 396,
+            "name": "keg load",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 397,
+            "name": "kettlebell arnold press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 398,
+            "name": "kettlebell dead clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 399,
+            "name": "kettlebell figure 8",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 400,
+            "name": "kettlebell hang clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 401,
+            "name": "kettlebell one-legged deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 402,
+            "name": "kettlebell pass between the legs",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 403,
+            "name": "kettlebell pirate ships",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 404,
+            "name": "kettlebell pistol squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 405,
+            "name": "kettlebell seated press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 406,
+            "name": "kettlebell seesaw press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 407,
+            "name": "kettlebell sumo high pull",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 408,
+            "name": "kettlebell thruster",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 409,
+            "name": "kettlebell turkish get-up (lunge style)",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 410,
+            "name": "kettlebell turkish get-up (squat style)",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 411,
+            "name": "kettlebell windmill",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 412,
+            "name": "kipping muscle up",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 413,
+            "name": "knee across the body",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 414,
+            "name": "knee circles",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 415,
+            "name": "knee tuck jump",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 416,
+            "name": "knee/hip raise on parallel bars",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 417,
+            "name": "kneeling arm drill",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 418,
+            "name": "kneeling cable crunch with alternating oblique twists",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 419,
+            "name": "kneeling cable triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 420,
+            "name": "kneeling forearm stretch",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 421,
+            "name": "kneeling high pulley row",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 422,
+            "name": "kneeling hip flexor",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 423,
+            "name": "kneeling jump squat",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 424,
+            "name": "kneeling single-arm high pulley row",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 425,
+            "name": "kneeling squat",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 426,
+            "name": "landmine 180's",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 427,
+            "name": "landmine linear jammer",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 428,
+            "name": "lateral bound",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 429,
+            "name": "lateral box jump",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 430,
+            "name": "lateral cone hops",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 431,
+            "name": "lateral raise - with bands",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 432,
+            "name": "latissimus dorsi-smr",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 433,
+            "name": "leg extensions",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 434,
+            "name": "leg lift",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 435,
+            "name": "leg press",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 436,
+            "name": "leg pull-in",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 437,
+            "name": "leg-over floor press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 438,
+            "name": "leg-up hamstring stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 439,
+            "name": "leverage chest press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 440,
+            "name": "leverage deadlift",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 441,
+            "name": "leverage decline chest press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 442,
+            "name": "leverage high row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 443,
+            "name": "leverage incline chest press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 444,
+            "name": "leverage iso row",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 445,
+            "name": "leverage shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 446,
+            "name": "leverage shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 447,
+            "name": "linear 3-part start technique",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 448,
+            "name": "linear acceleration wall drill",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 449,
+            "name": "linear depth jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 450,
+            "name": "log lift",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 451,
+            "name": "london bridges",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 452,
+            "name": "looking at ceiling",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 453,
+            "name": "low cable crossover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 454,
+            "name": "low cable triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 455,
+            "name": "low pulley row to neck",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 456,
+            "name": "lower back curl",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 457,
+            "name": "lower back-smr",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 458,
+            "name": "lunge pass through",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 459,
+            "name": "lunge sprint",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 460,
+            "name": "lying bent leg groin",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 461,
+            "name": "lying cable curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 462,
+            "name": "lying cambered barbell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 463,
+            "name": "lying close-grip bar curl on high pulley",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 464,
+            "name": "lying close-grip barbell triceps extension behind the head",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 465,
+            "name": "lying close-grip barbell triceps press to chin",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 466,
+            "name": "lying crossover",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 467,
+            "name": "lying dumbbell tricep extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 468,
+            "name": "lying face down plate neck resistance",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 469,
+            "name": "lying face up plate neck resistance",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 470,
+            "name": "lying glute",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 471,
+            "name": "lying hamstring",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 472,
+            "name": "lying high bench barbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 473,
+            "name": "lying leg curls",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 474,
+            "name": "lying machine squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 475,
+            "name": "lying one-arm lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 476,
+            "name": "lying prone quadriceps",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 477,
+            "name": "lying rear delt raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 478,
+            "name": "lying supine dumbbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 479,
+            "name": "lying t-bar row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 480,
+            "name": "lying triceps press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 481,
+            "name": "machine bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 482,
+            "name": "machine bicep curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 483,
+            "name": "machine preacher curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 484,
+            "name": "machine shoulder (military) press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 485,
+            "name": "machine triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 486,
+            "name": "medicine ball chest pass",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 487,
+            "name": "medicine ball full twist",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 488,
+            "name": "medicine ball scoop throw",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 489,
+            "name": "middle back shrug",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 490,
+            "name": "middle back stretch",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 491,
+            "name": "mixed grip chin",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 492,
+            "name": "monster walk",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 493,
+            "name": "mountain climbers",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 494,
+            "name": "moving claw series",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 495,
+            "name": "muscle snatch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 496,
+            "name": "muscle up",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 497,
+            "name": "narrow stance hack squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 498,
+            "name": "narrow stance leg press",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 499,
+            "name": "narrow stance squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 500,
+            "name": "natural glute ham raise",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 501,
+            "name": "neck press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 502,
+            "name": "neck-smr",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 503,
+            "name": "oblique crunches",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 504,
+            "name": "oblique crunches - on the floor",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 505,
+            "name": "olympic squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 506,
+            "name": "on your side quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 507,
+            "name": "on-your-back quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 508,
+            "name": "one arm against wall",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 509,
+            "name": "one arm chin-up",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 510,
+            "name": "one arm dumbbell bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 511,
+            "name": "one arm dumbbell preacher curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 512,
+            "name": "one arm floor press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 513,
+            "name": "one arm lat pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 514,
+            "name": "one arm pronated dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 515,
+            "name": "one arm supinated dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 516,
+            "name": "one half locust",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 517,
+            "name": "one handed hang",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 518,
+            "name": "one knee to chest",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 519,
+            "name": "one leg barbell squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 520,
+            "name": "one-arm dumbbell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 521,
+            "name": "one-arm flat bench dumbbell flye",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 522,
+            "name": "one-arm high-pulley cable side bends",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 523,
+            "name": "one-arm incline lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 524,
+            "name": "one-arm kettlebell clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 525,
+            "name": "one-arm kettlebell clean and jerk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 526,
+            "name": "one-arm kettlebell floor press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 527,
+            "name": "one-arm kettlebell jerk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 528,
+            "name": "one-arm kettlebell military press to the side",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 529,
+            "name": "one-arm kettlebell para press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 530,
+            "name": "one-arm kettlebell push press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 531,
+            "name": "one-arm kettlebell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 532,
+            "name": "one-arm kettlebell snatch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 533,
+            "name": "one-arm kettlebell split jerk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 534,
+            "name": "one-arm kettlebell split snatch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 535,
+            "name": "one-arm kettlebell swings",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 536,
+            "name": "one-arm long bar row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 537,
+            "name": "one-arm medicine ball slam",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 538,
+            "name": "one-arm open palm kettlebell clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 539,
+            "name": "one-arm overhead kettlebell squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 540,
+            "name": "one-arm side deadlift",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 541,
+            "name": "one-arm side laterals",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 542,
+            "name": "one-legged cable kickback",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 543,
+            "name": "open palm kettlebell clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 544,
+            "name": "otis-up",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 545,
+            "name": "overhead cable curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 546,
+            "name": "overhead lat",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 547,
+            "name": "overhead slam",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 548,
+            "name": "overhead squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 549,
+            "name": "overhead stretch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 550,
+            "name": "overhead triceps",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 551,
+            "name": "pallof press with rotation",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 552,
+            "name": "palms-down dumbbell wrist curl over a bench",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 553,
+            "name": "palms-down wrist curl over a bench",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 554,
+            "name": "palms-up barbell wrist curl over a bench",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 555,
+            "name": "palms-up dumbbell wrist curl over a bench",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 556,
+            "name": "parallel bar dip",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 557,
+            "name": "pelvic tilt into bridge",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 558,
+            "name": "peroneals stretch",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 559,
+            "name": "peroneals-smr",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 560,
+            "name": "physioball hip bridge",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 561,
+            "name": "pin presses",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 562,
+            "name": "piriformis-smr",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 563,
+            "name": "plank",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 564,
+            "name": "plank with twist",
+            "category": "",
+            "description": ""
+        },
+        {
+            "exerciseid": 565,
+            "name": "plate pinch",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 566,
+            "name": "plate twist",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 567,
+            "name": "platform hamstring slides",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 568,
+            "name": "plie dumbbell squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 569,
+            "name": "plyo kettlebell pushups",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 570,
+            "name": "plyo push-up",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 571,
+            "name": "posterior tibialis stretch",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 572,
+            "name": "power clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 573,
+            "name": "power clean from blocks",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 574,
+            "name": "power jerk",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 575,
+            "name": "power partials",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 576,
+            "name": "power snatch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 577,
+            "name": "power snatch from blocks",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 578,
+            "name": "power stairs",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 579,
+            "name": "preacher curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 580,
+            "name": "preacher hammer dumbbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 581,
+            "name": "press sit-up",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 582,
+            "name": "prone manual hamstring",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 583,
+            "name": "prowler sprint",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 584,
+            "name": "pull through",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 585,
+            "name": "pullups",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 586,
+            "name": "push press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 587,
+            "name": "push press - behind the neck",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 588,
+            "name": "push up to side plank",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 589,
+            "name": "push-up wide",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 590,
+            "name": "push-ups - close triceps position",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 591,
+            "name": "push-ups with feet elevated",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 592,
+            "name": "push-ups with feet on an exercise ball",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 593,
+            "name": "pushups",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 594,
+            "name": "pushups (close and wide hand positions)",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 595,
+            "name": "pyramid",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 596,
+            "name": "quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 597,
+            "name": "quadriceps-smr",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 598,
+            "name": "quick leap",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 599,
+            "name": "rack delivery",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 600,
+            "name": "rack pull with bands",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 601,
+            "name": "rack pulls",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 602,
+            "name": "rear leg raises",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 603,
+            "name": "recumbent bike",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 604,
+            "name": "return push from stance",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 605,
+            "name": "reverse band bench press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 606,
+            "name": "reverse band box squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 607,
+            "name": "reverse band deadlift",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 608,
+            "name": "reverse band power squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 609,
+            "name": "reverse band sumo deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 610,
+            "name": "reverse barbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 611,
+            "name": "reverse barbell preacher curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 612,
+            "name": "reverse cable curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 613,
+            "name": "reverse crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 614,
+            "name": "reverse flyes",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 615,
+            "name": "reverse flyes with external rotation",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 616,
+            "name": "reverse grip bent-over rows",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 617,
+            "name": "reverse grip triceps pushdown",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 618,
+            "name": "reverse hyperextension",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 619,
+            "name": "reverse machine flyes",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 620,
+            "name": "reverse plate curls",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 621,
+            "name": "reverse triceps bench press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 622,
+            "name": "rhomboids-smr",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 623,
+            "name": "rickshaw carry",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 624,
+            "name": "rickshaw deadlift",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 625,
+            "name": "ring dips",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 626,
+            "name": "rocket jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 627,
+            "name": "rocking standing calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 628,
+            "name": "rocky pull-ups/pulldowns",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 629,
+            "name": "romanian deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 630,
+            "name": "romanian deadlift from deficit",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 631,
+            "name": "rope climb",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 632,
+            "name": "rope crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 633,
+            "name": "rope jumping",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 634,
+            "name": "rope straight-arm pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 635,
+            "name": "round the world shoulder stretch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 636,
+            "name": "rowing",
+            "category": "stationary",
+            "description": ""
+        },
+        {
+            "exerciseid": 637,
+            "name": "runner's stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 638,
+            "name": "running",
+            "category": "treadmill",
+            "description": ""
+        },
+        {
+            "exerciseid": 639,
+            "name": "russian twist",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 640,
+            "name": "sandbag load",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 641,
+            "name": "scapular pull-up",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 642,
+            "name": "scissor kick",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 643,
+            "name": "scissors jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 644,
+            "name": "seated band hamstring curl",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 645,
+            "name": "seated barbell military press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 646,
+            "name": "seated barbell twist",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 647,
+            "name": "seated bent-over one-arm dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 648,
+            "name": "seated bent-over rear delt raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 649,
+            "name": "seated bent-over two-arm dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 650,
+            "name": "seated biceps",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 651,
+            "name": "seated cable rows",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 652,
+            "name": "seated cable shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 653,
+            "name": "seated calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 654,
+            "name": "seated calf stretch",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 655,
+            "name": "seated close-grip concentration barbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 656,
+            "name": "seated dumbbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 657,
+            "name": "seated dumbbell inner biceps curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 658,
+            "name": "seated dumbbell palms-down wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 659,
+            "name": "seated dumbbell palms-up wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 660,
+            "name": "seated dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 661,
+            "name": "seated flat bench leg pull-in",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 662,
+            "name": "seated floor hamstring stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 663,
+            "name": "seated front deltoid",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 664,
+            "name": "seated glute",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 665,
+            "name": "seated good mornings",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 666,
+            "name": "seated hamstring",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 667,
+            "name": "seated hamstring and calf stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 668,
+            "name": "seated head harness neck resistance",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 669,
+            "name": "seated leg curl",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 670,
+            "name": "seated leg tucks",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 671,
+            "name": "seated one-arm cable pulley rows",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 672,
+            "name": "seated one-arm dumbbell palms-down wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 673,
+            "name": "seated one-arm dumbbell palms-up wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 674,
+            "name": "seated overhead stretch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 675,
+            "name": "seated palm-up barbell wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 676,
+            "name": "seated palms-down barbell wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 677,
+            "name": "seated side lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 678,
+            "name": "seated triceps press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 679,
+            "name": "seated two-arm palms-up low-pulley wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 680,
+            "name": "see-saw press (alternating side press)",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 681,
+            "name": "shotgun row",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 682,
+            "name": "shoulder circles",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 683,
+            "name": "shoulder press - with bands",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 684,
+            "name": "shoulder raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 685,
+            "name": "shoulder stretch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 686,
+            "name": "side bridge",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 687,
+            "name": "side hop-sprint",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 688,
+            "name": "side jackknife",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 689,
+            "name": "side lateral raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 690,
+            "name": "side laterals to front raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 691,
+            "name": "side leg raises",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 692,
+            "name": "side lying groin stretch",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 693,
+            "name": "side neck stretch",
+            "category": "neck",
+            "description": ""
+        },
+        {
+            "exerciseid": 694,
+            "name": "side standing long jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 695,
+            "name": "side to side box shuffle",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 696,
+            "name": "side to side chins",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 697,
+            "name": "side wrist pull",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 698,
+            "name": "side-lying floor stretch",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 699,
+            "name": "single dumbbell raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 700,
+            "name": "single leg butt kick",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 701,
+            "name": "single leg glute bridge",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 702,
+            "name": "single leg push-off",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 703,
+            "name": "single-arm cable crossover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 704,
+            "name": "single-arm linear jammer",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 705,
+            "name": "single-arm push-up",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 706,
+            "name": "single-cone sprint drill",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 707,
+            "name": "single-leg high box squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 708,
+            "name": "single-leg hop progression",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 709,
+            "name": "single-leg lateral hop",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 710,
+            "name": "single-leg leg extension",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 711,
+            "name": "single-leg stride jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 712,
+            "name": "sit squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 713,
+            "name": "sit-up",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 714,
+            "name": "skating",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 715,
+            "name": "sled drag - harness",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 716,
+            "name": "sled overhead backward walk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 717,
+            "name": "sled overhead triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 718,
+            "name": "sled push",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 719,
+            "name": "sled reverse flye",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 720,
+            "name": "sled row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 721,
+            "name": "sledgehammer swings",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 722,
+            "name": "smith incline shoulder raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 723,
+            "name": "smith machine behind the back shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 724,
+            "name": "smith machine bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 725,
+            "name": "smith machine bent over row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 726,
+            "name": "smith machine calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 727,
+            "name": "smith machine close-grip bench press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 728,
+            "name": "smith machine decline press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 729,
+            "name": "smith machine hang power clean",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 730,
+            "name": "smith machine hip raise",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 731,
+            "name": "smith machine incline bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 732,
+            "name": "smith machine leg press",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 733,
+            "name": "smith machine one-arm upright row",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 734,
+            "name": "smith machine overhead shoulder press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 735,
+            "name": "smith machine pistol squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 736,
+            "name": "smith machine reverse calf raises",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 737,
+            "name": "smith machine shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 738,
+            "name": "smith machine squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 739,
+            "name": "smith machine stiff-legged deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 740,
+            "name": "smith machine upright row",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 741,
+            "name": "smith single-leg split squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 742,
+            "name": "snatch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 743,
+            "name": "snatch balance",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 744,
+            "name": "snatch deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 745,
+            "name": "snatch from blocks",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 746,
+            "name": "snatch pull",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 747,
+            "name": "snatch shrug",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 748,
+            "name": "speed band overhead triceps",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 749,
+            "name": "speed band pushdown",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 750,
+            "name": "speed box squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 751,
+            "name": "speed squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 752,
+            "name": "spell caster",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 753,
+            "name": "spider crawl",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 754,
+            "name": "spider curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 755,
+            "name": "spinal stretch",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 756,
+            "name": "split clean",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 757,
+            "name": "split jerk",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 758,
+            "name": "split jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 759,
+            "name": "split snatch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 760,
+            "name": "split squat with dumbbells",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 761,
+            "name": "split squats",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 762,
+            "name": "squat jerk",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 763,
+            "name": "squat with bands",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 764,
+            "name": "squat with chains",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 765,
+            "name": "squat with plate movers",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 766,
+            "name": "squats - with bands",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 767,
+            "name": "stairmaster",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 768,
+            "name": "standing alternating dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 769,
+            "name": "standing barbell calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 770,
+            "name": "standing barbell press behind neck",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 771,
+            "name": "standing bent-over one-arm dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 772,
+            "name": "standing bent-over two-arm dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 773,
+            "name": "standing biceps cable curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 774,
+            "name": "standing biceps stretch",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 775,
+            "name": "standing bradford press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 776,
+            "name": "standing cable chest press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 777,
+            "name": "standing cable lift",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 778,
+            "name": "standing cable wood chop",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 779,
+            "name": "standing calf raises",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 780,
+            "name": "standing concentration curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 781,
+            "name": "standing dumbbell calf raise",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 782,
+            "name": "standing dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 783,
+            "name": "standing dumbbell reverse curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 784,
+            "name": "standing dumbbell straight-arm front delt raise above head",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 785,
+            "name": "standing dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 786,
+            "name": "standing dumbbell upright row",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 787,
+            "name": "standing elevated quad stretch",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 788,
+            "name": "standing front barbell raise over head",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 789,
+            "name": "standing gastrocnemius calf stretch",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 790,
+            "name": "standing hamstring and calf stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 791,
+            "name": "standing hip circles",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 792,
+            "name": "standing hip flexors",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 793,
+            "name": "standing inner-biceps curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 794,
+            "name": "standing lateral stretch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 795,
+            "name": "standing leg curl",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 796,
+            "name": "standing long jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 797,
+            "name": "standing low-pulley deltoid raise",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 798,
+            "name": "standing low-pulley one-arm triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 799,
+            "name": "standing military press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 800,
+            "name": "standing olympic plate hand squeeze",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 801,
+            "name": "standing one-arm cable curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 802,
+            "name": "standing one-arm dumbbell curl over incline bench",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 803,
+            "name": "standing one-arm dumbbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 804,
+            "name": "standing overhead barbell triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 805,
+            "name": "standing palm-in one-arm dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 806,
+            "name": "standing palms-in dumbbell press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 807,
+            "name": "standing palms-up barbell behind the back wrist curl",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 808,
+            "name": "standing pelvic tilt",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 809,
+            "name": "standing rope crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 810,
+            "name": "standing soleus and achilles stretch",
+            "category": "calves",
+            "description": ""
+        },
+        {
+            "exerciseid": 811,
+            "name": "standing toe touches",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 812,
+            "name": "standing towel triceps extension",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 813,
+            "name": "standing two-arm overhead throw",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 814,
+            "name": "star jump",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 815,
+            "name": "step mill",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 816,
+            "name": "step-up with knee raise",
+            "category": "glutes",
+            "description": ""
+        },
+        {
+            "exerciseid": 817,
+            "name": "stiff leg barbell good morning",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 818,
+            "name": "stiff-legged barbell deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 819,
+            "name": "stiff-legged dumbbell deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 820,
+            "name": "stomach vacuum",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 821,
+            "name": "straight bar bench mid rows",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 822,
+            "name": "straight raises on incline bench",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 823,
+            "name": "straight-arm dumbbell pullover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 824,
+            "name": "straight-arm pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 825,
+            "name": "stride jump crossover",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 826,
+            "name": "sumo deadlift",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 827,
+            "name": "sumo deadlift with bands",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 828,
+            "name": "sumo deadlift with chains",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 829,
+            "name": "superman",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 830,
+            "name": "supine chest throw",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 831,
+            "name": "supine one-arm overhead throw",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 832,
+            "name": "supine two-arm overhead throw",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 833,
+            "name": "suspended push-up",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 834,
+            "name": "suspended reverse crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 835,
+            "name": "suspended row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 836,
+            "name": "suspended split squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 837,
+            "name": "t-bar row with handle",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 838,
+            "name": "tate press",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 839,
+            "name": "the straddle",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 840,
+            "name": "thigh abductor",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 841,
+            "name": "thigh adductor",
+            "category": "adductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 842,
+            "name": "tire flip",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 843,
+            "name": "toe touchers",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 844,
+            "name": "torso rotation",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 845,
+            "name": "trail running/walking",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 846,
+            "name": "trap bar deadlift",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 847,
+            "name": "tricep dumbbell kickback",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 848,
+            "name": "tricep side stretch",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 849,
+            "name": "triceps overhead extension with rope",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 850,
+            "name": "triceps pushdown",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 851,
+            "name": "triceps pushdown - rope attachment",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 852,
+            "name": "triceps pushdown - v-bar attachment",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 853,
+            "name": "triceps stretch",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 854,
+            "name": "tuck crunch",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 855,
+            "name": "two-arm dumbbell preacher curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 856,
+            "name": "two-arm kettlebell clean",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 857,
+            "name": "two-arm kettlebell jerk",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 858,
+            "name": "two-arm kettlebell military press",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 859,
+            "name": "two-arm kettlebell row",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 860,
+            "name": "underhand cable pulldowns",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 861,
+            "name": "upper back stretch",
+            "category": "middle back",
+            "description": ""
+        },
+        {
+            "exerciseid": 862,
+            "name": "upper back-leg grab",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 863,
+            "name": "upright barbell row",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 864,
+            "name": "upright cable row",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 865,
+            "name": "upright row - with bands",
+            "category": "traps",
+            "description": ""
+        },
+        {
+            "exerciseid": 866,
+            "name": "upward stretch",
+            "category": "shoulders",
+            "description": ""
+        },
+        {
+            "exerciseid": 867,
+            "name": "v-bar pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 868,
+            "name": "v-bar pullup",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 869,
+            "name": "vertical swing",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 870,
+            "name": "walking",
+            "category": "treadmill",
+            "description": ""
+        },
+        {
+            "exerciseid": 871,
+            "name": "weighted ball hyperextension",
+            "category": "lower back",
+            "description": ""
+        },
+        {
+            "exerciseid": 872,
+            "name": "weighted ball side bend",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 873,
+            "name": "weighted bench dip",
+            "category": "triceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 874,
+            "name": "weighted crunches",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 875,
+            "name": "weighted jump squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 876,
+            "name": "weighted pull ups",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 877,
+            "name": "weighted sissy squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 878,
+            "name": "weighted sit-ups - with bands",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 879,
+            "name": "weighted squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 880,
+            "name": "wide stance barbell squat",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 881,
+            "name": "wide stance stiff legs",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 882,
+            "name": "wide-grip barbell bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 883,
+            "name": "wide-grip decline barbell bench press",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 884,
+            "name": "wide-grip decline barbell pullover",
+            "category": "chest",
+            "description": ""
+        },
+        {
+            "exerciseid": 885,
+            "name": "wide-grip lat pulldown",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 886,
+            "name": "wide-grip pulldown behind the neck",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 887,
+            "name": "wide-grip rear pull-up",
+            "category": "lats",
+            "description": ""
+        },
+        {
+            "exerciseid": 888,
+            "name": "wide-grip standing barbell curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 889,
+            "name": "wind sprints",
+            "category": "abdominals",
+            "description": ""
+        },
+        {
+            "exerciseid": 890,
+            "name": "windmills",
+            "category": "abductors",
+            "description": ""
+        },
+        {
+            "exerciseid": 891,
+            "name": "world's greatest stretch",
+            "category": "hamstrings",
+            "description": ""
+        },
+        {
+            "exerciseid": 892,
+            "name": "wrist circles",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 893,
+            "name": "wrist roller",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 894,
+            "name": "wrist rotations with straight bar",
+            "category": "forearms",
+            "description": ""
+        },
+        {
+            "exerciseid": 895,
+            "name": "yoke walk",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 896,
+            "name": "zercher squats",
+            "category": "quadriceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 897,
+            "name": "zottman curl",
+            "category": "biceps",
+            "description": ""
+        },
+        {
+            "exerciseid": 898,
+            "name": "zottman preacher curl",
+            "category": "biceps",
+            "description": ""
+        }
+    ]
+}
