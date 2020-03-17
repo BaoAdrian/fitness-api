@@ -1,3 +1,4 @@
+-- Create Exercises table
 CREATE TABLE exercises (
     exerciseid  INT,
     name        VARCHAR2(58)  NOT NULL,
@@ -5,906 +6,904 @@ CREATE TABLE exercises (
     description VARCHAR2(100) NULL,
     CONSTRAINT PK_EXCERCISEID primary key (exerciseid)
 );
-INSERT INTO exercises VALUES
-    (0,'ab crunch machine','abdominals',NULL),
-    (1,'ab roller','abdominals',NULL),
-    (2,'adductor','adductors',NULL),
-    (3,'adductor/groin','adductors',NULL),
-    (4,'advanced kettlebell windmill','abdominals',NULL),
-    (5,'air bike','abdominals',NULL),
-    (6,'all fours quad stretch','quadriceps',NULL),
-    (7,'alternate hammer curl','biceps',NULL),
-    (8,'alternate heel touchers','abdominals',NULL),
-    (9,'alternate incline dumbbell curl','biceps',NULL),
-    (10,'alternate leg diagonal bound','quadriceps',NULL),
-    (11,'alternating cable shoulder press','shoulders',NULL),
-    (12,'alternating deltoid raise','shoulders',NULL),
-    (13,'alternating floor press','chest',NULL),
-    (14,'alternating hang clean','hamstrings',NULL),
-    (15,'alternating kettlebell press','shoulders',NULL),
-    (16,'alternating kettlebell row','middle back',NULL),
-    (17,'alternating renegade row','middle back',NULL),
-    (18,'ankle circles','calves',NULL),
-    (19,'ankle on the knee','glutes',NULL),
-    (20,'anterior tibialis-smr','calves',NULL),
-    (21,'anti-gravity press','shoulders',NULL),
-    (22,'arm circles','shoulders',NULL),
-    (23,'arnold dumbbell press','shoulders',NULL),
-    (24,'around the worlds','chest',NULL),
-    (25,'atlas stone trainer','lower back',NULL),
-    (26,'atlas stones','lower back',NULL),
-    (27,'axle deadlift','lower back',NULL),
-    (28,'ab crunch machine','abdominals',NULL),
-    (29,'ab roller','abdominals',NULL),
-    (30,'adductor','adductors',NULL),
-    (31,'adductor/groin','adductors',NULL),
-    (32,'advanced kettlebell windmill','abdominals',NULL),
-    (33,'air bike','abdominals',NULL),
-    (34,'all fours quad stretch','quadriceps',NULL),
-    (35,'alternate hammer curl','biceps',NULL),
-    (36,'alternate heel touchers','abdominals',NULL),
-    (37,'alternate incline dumbbell curl','biceps',NULL),
-    (38,'alternate leg diagonal bound','quadriceps',NULL),
-    (39,'alternating cable shoulder press','shoulders',NULL),
-    (40,'alternating deltoid raise','shoulders',NULL),
-    (41,'alternating floor press','chest',NULL),
-    (42,'alternating hang clean','hamstrings',NULL),
-    (43,'alternating kettlebell press','shoulders',NULL),
-    (44,'alternating kettlebell row','middle back',NULL),
-    (45,'alternating renegade row','middle back',NULL),
-    (46,'ankle circles','calves',NULL),
-    (47,'ankle on the knee','glutes',NULL),
-    (48,'anterior tibialis-smr','calves',NULL),
-    (49,'anti-gravity press','shoulders',NULL),
-    (50,'arm circles','shoulders',NULL),
-    (51,'arnold dumbbell press','shoulders',NULL),
-    (52,'around the worlds','chest',NULL),
-    (53,'atlas stone trainer','lower back',NULL),
-    (54,'atlas stones','lower back',NULL),
-    (55,'axle deadlift','lower back',NULL),
-    (56,'back flyes - with bands','shoulders',NULL),
-    (57,'backward drag','quadriceps',NULL),
-    (58,'backward medicine ball throw','shoulders',NULL),
-    (59,'balance board','calves',NULL),
-    (60,'ball leg curl','hamstrings',NULL),
-    (61,'band assisted pull-up','lats',NULL),
-    (62,'band good morning','hamstrings',NULL),
-    (63,'band good morning (pull through)','hamstrings',NULL),
-    (64,'band hip adductions','adductors',NULL),
-    (65,'band pull apart','shoulders',NULL),
-    (66,'band skull crusher','triceps',NULL),
-    (67,'barbell ab rollout','abdominals',NULL),
-    (68,'barbell ab rollout - on knees','abdominals',NULL),
-    (69,'barbell bench press - medium grip','chest',NULL),
-    (70,'barbell curl','biceps',NULL),
-    (71,'barbell curls lying against an incline','biceps',NULL),
-    (72,'barbell deadlift','lower back',NULL),
-    (73,'barbell full squat','quadriceps',NULL),
-    (74,'barbell glute bridge','glutes',NULL),
-    (75,'barbell guillotine bench press','chest',NULL),
-    (76,'barbell hack squat','quadriceps',NULL),
-    (77,'barbell hip thrust','glutes',NULL),
-    (78,'barbell incline bench press - medium grip','chest',NULL),
-    (79,'barbell incline shoulder raise','shoulders',NULL),
-    (80,'barbell lunge','quadriceps',NULL),
-    (81,'barbell rear delt row','shoulders',NULL),
-    (82,'barbell rollout from bench','abdominals',NULL),
-    (83,'barbell seated calf raise','calves',NULL),
-    (84,'barbell shoulder press','shoulders',NULL),
-    (85,'barbell shrug','traps',NULL),
-    (86,'barbell shrug behind the back','traps',NULL),
-    (87,'barbell side bend','abdominals',NULL),
-    (88,'barbell side split squat','quadriceps',NULL),
-    (89,'barbell squat','quadriceps',NULL),
-    (90,'barbell squat to a bench','quadriceps',NULL),
-    (91,'barbell step ups','quadriceps',NULL),
-    (92,'barbell walking lunge','quadriceps',NULL),
-    (93,'battling ropes','shoulders',NULL),
-    (94,'bear crawl sled drags','quadriceps',NULL),
-    (95,'behind head chest stretch','chest',NULL),
-    (96,'bench dips','triceps',NULL),
-    (97,'bench jump','quadriceps',NULL),
-    (98,'bench press - powerlifting','triceps',NULL),
-    (99,'bench press - with bands','chest',NULL),
-    (100,'bench press with chains','triceps',NULL),
-    (101,'bench sprint','quadriceps',NULL),
-    (102,'bent over barbell row','middle back',NULL),
-    (103,'bent over dumbbell rear delt raise with head on bench','shoulders',NULL),
-    (104,'bent over low-pulley side lateral','shoulders',NULL),
-    (105,'bent over one-arm long bar row','middle back',NULL),
-    (106,'bent over two-arm long bar row','middle back',NULL),
-    (107,'bent over two-dumbbell row','middle back',NULL),
-    (108,'bent over two-dumbbell row with palms in','middle back',NULL),
-    (109,'bent press','abdominals',NULL),
-    (110,'bent-arm barbell pullover','lats',NULL),
-    (111,'bent-arm dumbbell pullover','chest',NULL),
-    (112,'bent-knee hip raise','abdominals',NULL),
-    (113,'bicycling','quadriceps',NULL),
-    (114,'bicycling','stationary',NULL),
-    (115,'board press','triceps',NULL),
-    (116,'body tricep press','triceps',NULL),
-    (117,'body-up','triceps',NULL),
-    (118,'bodyweight flyes','chest',NULL),
-    (119,'bodyweight mid row','middle back',NULL),
-    (120,'bodyweight squat','quadriceps',NULL),
-    (121,'bodyweight walking lunge','quadriceps',NULL),
-    (122,'bosu ball cable crunch with side bends','abdominals',NULL),
-    (123,'bottoms up','abdominals',NULL),
-    (124,'bottoms-up clean from the hang position','forearms',NULL),
-    (125,'box jump (multiple response)','hamstrings',NULL),
-    (126,'box skip','hamstrings',NULL),
-    (127,'box squat','quadriceps',NULL),
-    (128,'box squat with bands','quadriceps',NULL),
-    (129,'box squat with chains','quadriceps',NULL),
-    (130,'brachialis-smr','biceps',NULL),
-    (131,'bradford/rocky presses','shoulders',NULL),
-    (132,'butt lift (bridge)','glutes',NULL),
-    (133,'butt-ups','abdominals',NULL),
-    (134,'butterfly','chest',NULL),
-    (135,'cable chest press','chest',NULL),
-    (136,'cable crossover','chest',NULL),
-    (137,'cable crunch','abdominals',NULL),
-    (138,'cable deadlifts','quadriceps',NULL),
-    (139,'cable hammer curls - rope attachment','biceps',NULL),
-    (140,'cable hip adduction','quadriceps',NULL),
-    (141,'cable incline pushdown','lats',NULL),
-    (142,'cable incline triceps extension','triceps',NULL),
-    (143,'cable internal rotation','shoulders',NULL),
-    (144,'cable iron cross','chest',NULL),
-    (145,'cable judo flip','abdominals',NULL),
-    (146,'cable lying triceps extension','triceps',NULL),
-    (147,'cable one arm tricep extension','triceps',NULL),
-    (148,'cable preacher curl','biceps',NULL),
-    (149,'cable rear delt fly','shoulders',NULL),
-    (150,'cable reverse crunch','abdominals',NULL),
-    (151,'cable rope overhead triceps extension','triceps',NULL),
-    (152,'cable rope rear-delt rows','shoulders',NULL),
-    (153,'cable russian twists','abdominals',NULL),
-    (154,'cable seated crunch','abdominals',NULL),
-    (155,'cable seated lateral raise','shoulders',NULL),
-    (156,'cable shoulder press','shoulders',NULL),
-    (157,'cable shrugs','traps',NULL),
-    (158,'cable tuck reverse crunch','abdominals',NULL),
-    (159,'cable wrist curl','forearms',NULL),
-    (160,'calf press','calves',NULL),
-    (161,'calf press on the leg press machine','calves',NULL),
-    (162,'calf raise on a dumbbell','calves',NULL),
-    (163,'calf raises - with bands','calves',NULL),
-    (164,'calf stretch elbows against wall','calves',NULL),
-    (165,'calf stretch hands against wall','calves',NULL),
-    (166,'calf-machine shoulder shrug','traps',NULL),
-    (167,'calves-smr','calves',NULL),
-    (168,'car deadlift','quadriceps',NULL),
-    (169,'car drivers','shoulders',NULL),
-    (170,'carioca quick step','adductors',NULL),
-    (171,'cat stretch','lower back',NULL),
-    (172,'catch and overhead throw','lats',NULL),
-    (173,'chain handle extension','triceps',NULL),
-    (174,'chain press','chest',NULL),
-    (175,'chair leg extended stretch','hamstrings',NULL),
-    (176,'chair lower back stretch','lats',NULL),
-    (177,'chair squat','quadriceps',NULL),
-    (178,'chair upper body stretch','shoulders',NULL),
-    (179,'chest and front of shoulder stretch','chest',NULL),
-    (180,'chest push (multiple response)','chest',NULL),
-    (181,'chest push (single response)','chest',NULL),
-    (182,'chest push from 3 point stance','chest',NULL),
-    (183,'chest push with run release','chest',NULL),
-    (184,'chest stretch on stability ball','chest',NULL),
-    (185,'child''s pose','lower back',NULL),
-    (186,'chin to chest stretch','neck',NULL),
-    (187,'chin-up','lats',NULL),
-    (188,'circus bell','shoulders',NULL),
-    (189,'clean','hamstrings',NULL),
-    (190,'clean and jerk','shoulders',NULL),
-    (191,'clean and press','shoulders',NULL),
-    (192,'clean deadlift','hamstrings',NULL),
-    (193,'clean from blocks','quadriceps',NULL),
-    (194,'clean pull','quadriceps',NULL),
-    (195,'clean shrug','traps',NULL),
-    (196,'clock push-up','chest',NULL),
-    (197,'close-grip barbell bench press','triceps',NULL),
-    (198,'close-grip dumbbell press','triceps',NULL),
-    (199,'close-grip ez bar curl','biceps',NULL),
-    (200,'close-grip ez-bar curl with band','biceps',NULL),
-    (201,'close-grip ez-bar press','triceps',NULL),
-    (202,'close-grip front lat pulldown','lats',NULL),
-    (203,'close-grip push-up off of a dumbbell','triceps',NULL),
-    (204,'close-grip standing barbell curl','biceps',NULL),
-    (205,'cocoons','abdominals',NULL),
-    (206,'conan''s wheel','quadriceps',NULL),
-    (207,'concentration curls','biceps',NULL),
-    (208,'cross body hammer curl','biceps',NULL),
-    (209,'cross over - with bands','chest',NULL),
-    (210,'cross-body crunch','abdominals',NULL),
-    (211,'crossover reverse lunge','lower back',NULL),
-    (212,'crucifix','shoulders',NULL),
-    (213,'crunch - hands overhead','abdominals',NULL),
-    (214,'crunch - legs on exercise ball','abdominals',NULL),
-    (215,'crunches','abdominals',NULL),
-    (216,'cuban press','shoulders',NULL),
-    (217,'dancer''s stretch','lower back',NULL),
-    (218,'deadlift with bands','lower back',NULL),
-    (219,'deadlift with chains','lower back',NULL),
-    (220,'decline barbell bench press','chest',NULL),
-    (221,'decline close-grip bench to skull crusher','triceps',NULL),
-    (222,'decline crunch','abdominals',NULL),
-    (223,'decline dumbbell bench press','chest',NULL),
-    (224,'decline dumbbell flyes','chest',NULL),
-    (225,'decline dumbbell triceps extension','triceps',NULL),
-    (226,'decline ez bar triceps extension','triceps',NULL),
-    (227,'decline oblique crunch','abdominals',NULL),
-    (228,'decline push-up','chest',NULL),
-    (229,'decline reverse crunch','abdominals',NULL),
-    (230,'decline smith press','chest',NULL),
-    (231,'deficit deadlift','lower back',NULL),
-    (232,'depth jump leap','quadriceps',NULL),
-    (233,'dip machine','triceps',NULL),
-    (234,'dips - chest version','chest',NULL),
-    (235,'dips - triceps version','triceps',NULL),
-    (236,'donkey calf raises','calves',NULL),
-    (237,'double kettlebell alternating hang clean','hamstrings',NULL),
-    (238,'double kettlebell jerk','shoulders',NULL),
-    (239,'double kettlebell push press','shoulders',NULL),
-    (240,'double kettlebell snatch','shoulders',NULL),
-    (241,'double kettlebell windmill','abdominals',NULL),
-    (242,'double leg butt kick','quadriceps',NULL),
-    (243,'downward facing balance','glutes',NULL),
-    (244,'drag curl','biceps',NULL),
-    (245,'drop push','chest',NULL),
-    (246,'dumbbell alternate bicep curl','biceps',NULL),
-    (247,'dumbbell bench press','chest',NULL),
-    (248,'dumbbell bench press with neutral grip','chest',NULL),
-    (249,'dumbbell bicep curl','biceps',NULL);
-INSERT INTO exercises VALUES
-    (250,'dumbbell clean','hamstrings',NULL),
-    (251,'dumbbell floor press','triceps',NULL),
-    (252,'dumbbell flyes','chest',NULL),
-    (253,'dumbbell incline row','middle back',NULL),
-    (254,'dumbbell incline shoulder raise','shoulders',NULL),
-    (255,'dumbbell lunges','quadriceps',NULL),
-    (256,'dumbbell lying one-arm rear lateral raise','shoulders',NULL),
-    (257,'dumbbell lying pronation','forearms',NULL),
-    (258,'dumbbell lying rear lateral raise','shoulders',NULL),
-    (259,'dumbbell lying supination','forearms',NULL),
-    (260,'dumbbell one-arm shoulder press','shoulders',NULL),
-    (261,'dumbbell one-arm triceps extension','triceps',NULL),
-    (262,'dumbbell one-arm upright row','shoulders',NULL),
-    (263,'dumbbell prone incline curl','biceps',NULL),
-    (264,'dumbbell raise','shoulders',NULL),
-    (265,'dumbbell rear lunge','quadriceps',NULL),
-    (266,'dumbbell scaption','shoulders',NULL),
-    (267,'dumbbell seated box jump','quadriceps',NULL),
-    (268,'dumbbell seated one-leg calf raise','calves',NULL),
-    (269,'dumbbell shoulder press','shoulders',NULL),
-    (270,'dumbbell shrug','traps',NULL),
-    (271,'dumbbell side bend','abdominals',NULL),
-    (272,'dumbbell squat','quadriceps',NULL),
-    (273,'dumbbell squat to a bench','quadriceps',NULL),
-    (274,'dumbbell step ups','quadriceps',NULL),
-    (275,'dumbbell tricep extension -pronated grip','triceps',NULL),
-    (276,'dynamic back stretch','lats',NULL),
-    (277,'dynamic chest stretch','chest',NULL),
-    (278,'elbow circles','shoulders',NULL),
-    (279,'elbow to knee','abdominals',NULL),
-    (280,'elbows back','chest',NULL),
-    (281,'elevated back lunge','quadriceps',NULL),
-    (282,'elevated cable rows','lats',NULL),
-    (283,'elliptical trainer','quadriceps',NULL),
-    (284,'exercise ball crunch','abdominals',NULL),
-    (285,'exercise ball pull-in','abdominals',NULL),
-    (286,'extended range one-arm kettlebell floor press','chest',NULL),
-    (287,'external rotation','shoulders',NULL),
-    (288,'external rotation with band','shoulders',NULL),
-    (289,'external rotation with cable','shoulders',NULL),
-    (290,'ez-bar curl','biceps',NULL),
-    (291,'ez-bar skullcrusher','triceps',NULL),
-    (292,'face pull','shoulders',NULL),
-    (293,'farmer''s walk','forearms',NULL),
-    (294,'fast skipping','quadriceps',NULL),
-    (295,'finger curls','forearms',NULL),
-    (296,'flat bench cable flyes','chest',NULL),
-    (297,'flat bench leg pull-in','abdominals',NULL),
-    (298,'flat bench lying leg raise','abdominals',NULL),
-    (299,'flexor incline dumbbell curls','biceps',NULL),
-    (300,'floor glute-ham raise','hamstrings',NULL),
-    (301,'floor press','triceps',NULL),
-    (302,'floor press with chains','triceps',NULL),
-    (303,'flutter kicks','glutes',NULL),
-    (304,'foot-smr','calves',NULL),
-    (305,'forward drag with press','chest',NULL),
-    (306,'frankenstein squat','quadriceps',NULL),
-    (307,'freehand jump squat','quadriceps',NULL),
-    (308,'frog hops','quadriceps',NULL),
-    (309,'frog sit-ups','abdominals',NULL),
-    (310,'front barbell squat','quadriceps',NULL),
-    (311,'front barbell squat to a bench','quadriceps',NULL),
-    (312,'front box jump','hamstrings',NULL),
-    (313,'front cable raise','shoulders',NULL),
-    (314,'front cone hops (or hurdle hops)','quadriceps',NULL),
-    (315,'front dumbbell raise','shoulders',NULL),
-    (316,'front incline dumbbell raise','shoulders',NULL),
-    (317,'front leg raises','hamstrings',NULL),
-    (318,'front plate raise','shoulders',NULL),
-    (319,'front raise and pullover','chest',NULL),
-    (320,'front squat (clean grip)','quadriceps',NULL),
-    (321,'front squats with two kettlebells','quadriceps',NULL),
-    (322,'front two-dumbbell raise','shoulders',NULL),
-    (323,'full range-of-motion lat pulldown','lats',NULL),
-    (324,'gironda sternum chins','lats',NULL),
-    (325,'glute ham raise','hamstrings',NULL),
-    (326,'glute kickback','glutes',NULL),
-    (327,'goblet squat','quadriceps',NULL),
-    (328,'good morning','hamstrings',NULL),
-    (329,'good morning off pins','hamstrings',NULL),
-    (330,'gorilla chin/crunch','abdominals',NULL),
-    (331,'groin and back stretch','adductors',NULL),
-    (332,'groiners','adductors',NULL),
-    (333,'hack squat','quadriceps',NULL),
-    (334,'hammer curls','biceps',NULL),
-    (335,'hammer grip incline db bench press','chest',NULL),
-    (336,'hamstring stretch','hamstrings',NULL),
-    (337,'hamstring-smr','hamstrings',NULL),
-    (338,'handstand push-ups','shoulders',NULL),
-    (339,'hang clean','quadriceps',NULL),
-    (340,'hang clean - below the knees','quadriceps',NULL),
-    (341,'hang snatch','hamstrings',NULL),
-    (342,'hang snatch - below knees','hamstrings',NULL),
-    (343,'hanging bar good morning','hamstrings',NULL),
-    (344,'hanging leg raise','abdominals',NULL),
-    (345,'hanging pike','abdominals',NULL),
-    (346,'heaving snatch balance','quadriceps',NULL),
-    (347,'heavy bag thrust','chest',NULL),
-    (348,'high cable curls','biceps',NULL),
-    (349,'hip circles (prone)','abductors',NULL),
-    (350,'hip crossover',NULL,NULL),
-    (351,'hip extension with bands','glutes',NULL),
-    (352,'hip flexion with band','quadriceps',NULL),
-    (353,'hip lift with band','glutes',NULL),
-    (354,'hug a ball','lower back',NULL),
-    (355,'hug knees to chest','lower back',NULL),
-    (356,'hurdle hops','hamstrings',NULL),
-    (357,'hyperextensions (back extensions)','lower back',NULL),
-    (358,'hyperextensions with no hyperextension bench','lower back',NULL),
-    (359,'iliotibial tract-smr','abductors',NULL),
-    (360,'incline barbell triceps extension','triceps',NULL),
-    (361,'incline bench pull','middle back',NULL),
-    (362,'incline cable chest press','chest',NULL),
-    (363,'incline cable flye','chest',NULL),
-    (364,'incline dumbbell bench with palms facing in','chest',NULL),
-    (365,'incline dumbbell curl','biceps',NULL),
-    (366,'incline dumbbell flyes','chest',NULL),
-    (367,'incline dumbbell flyes - with a twist','chest',NULL),
-    (368,'incline dumbbell press','chest',NULL),
-    (369,'incline hammer curls','biceps',NULL),
-    (370,'incline inner biceps curl','biceps',NULL),
-    (371,'incline push-up','chest',NULL),
-    (372,'incline push-up close-grip','triceps',NULL),
-    (373,'incline push-up depth jump','chest',NULL),
-    (374,'incline push-up medium','chest',NULL),
-    (375,'incline push-up reverse grip','chest',NULL),
-    (376,'incline push-up wide','chest',NULL),
-    (377,'intermediate groin stretch','hamstrings',NULL),
-    (378,'intermediate hip flexor and quad stretch','quadriceps',NULL),
-    (379,'internal rotation with band','shoulders',NULL),
-    (380,'inverted row','middle back',NULL),
-    (381,'inverted row with straps','middle back',NULL),
-    (382,'iron cross','shoulders',NULL),
-    (383,'iron crosses (stretch)','quadriceps',NULL),
-    (384,'isometric chest squeezes','chest',NULL),
-    (385,'isometric neck exercise - front and back','neck',NULL),
-    (386,'isometric neck exercise - sides','neck',NULL),
-    (387,'isometric wipers','chest',NULL),
-    (388,'it band and glute stretch','abductors',NULL),
-    (389,'jackknife sit-up','abdominals',NULL),
-    (390,'janda sit-up','abdominals',NULL),
-    (391,'jefferson squats','quadriceps',NULL),
-    (392,'jerk balance','shoulders',NULL),
-    (393,'jerk dip squat','quadriceps',NULL),
-    (394,'jm press','triceps',NULL),
-    (395,'jogging-treadmill','quadriceps',NULL),
-    (396,'keg load','lower back',NULL),
-    (397,'kettlebell arnold press','shoulders',NULL),
-    (398,'kettlebell dead clean','hamstrings',NULL),
-    (399,'kettlebell figure 8','abdominals',NULL),
-    (400,'kettlebell hang clean','hamstrings',NULL),
-    (401,'kettlebell one-legged deadlift','hamstrings',NULL),
-    (402,'kettlebell pass between the legs','abdominals',NULL),
-    (403,'kettlebell pirate ships','shoulders',NULL),
-    (404,'kettlebell pistol squat','quadriceps',NULL),
-    (405,'kettlebell seated press','shoulders',NULL),
-    (406,'kettlebell seesaw press','shoulders',NULL),
-    (407,'kettlebell sumo high pull','traps',NULL),
-    (408,'kettlebell thruster','shoulders',NULL),
-    (409,'kettlebell turkish get-up (lunge style)','shoulders',NULL),
-    (410,'kettlebell turkish get-up (squat style)','shoulders',NULL),
-    (411,'kettlebell windmill','abdominals',NULL),
-    (412,'kipping muscle up','lats',NULL),
-    (413,'knee across the body','glutes',NULL),
-    (414,'knee circles','calves',NULL),
-    (415,'knee tuck jump','hamstrings',NULL),
-    (416,'knee/hip raise on parallel bars','abdominals',NULL),
-    (417,'kneeling arm drill','shoulders',NULL),
-    (418,'kneeling cable crunch with alternating oblique twists','abdominals',NULL),
-    (419,'kneeling cable triceps extension','triceps',NULL),
-    (420,'kneeling forearm stretch','forearms',NULL),
-    (421,'kneeling high pulley row','lats',NULL),
-    (422,'kneeling hip flexor','quadriceps',NULL),
-    (423,'kneeling jump squat','glutes',NULL),
-    (424,'kneeling single-arm high pulley row','lats',NULL),
-    (425,'kneeling squat','glutes',NULL),
-    (426,'landmine 180''s','abdominals',NULL),
-    (427,'landmine linear jammer','shoulders',NULL),
-    (428,'lateral bound','adductors',NULL),
-    (429,'lateral box jump','adductors',NULL),
-    (430,'lateral cone hops','adductors',NULL),
-    (431,'lateral raise - with bands','shoulders',NULL),
-    (432,'latissimus dorsi-smr','lats',NULL),
-    (433,'leg extensions','quadriceps',NULL),
-    (434,'leg lift','glutes',NULL),
-    (435,'leg press','quadriceps',NULL),
-    (436,'leg pull-in','abdominals',NULL),
-    (437,'leg-over floor press','chest',NULL),
-    (438,'leg-up hamstring stretch','hamstrings',NULL),
-    (439,'leverage chest press','chest',NULL),
-    (440,'leverage deadlift','quadriceps',NULL),
-    (441,'leverage decline chest press','chest',NULL),
-    (442,'leverage high row','middle back',NULL),
-    (443,'leverage incline chest press','chest',NULL),
-    (444,'leverage iso row','lats',NULL),
-    (445,'leverage shoulder press','shoulders',NULL),
-    (446,'leverage shrug','traps',NULL),
-    (447,'linear 3-part start technique','hamstrings',NULL),
-    (448,'linear acceleration wall drill','hamstrings',NULL),
-    (449,'linear depth jump','quadriceps',NULL),
-    (450,'log lift','shoulders',NULL),
-    (451,'london bridges','lats',NULL),
-    (452,'looking at ceiling','quadriceps',NULL),
-    (453,'low cable crossover','chest',NULL),
-    (454,'low cable triceps extension','triceps',NULL),
-    (455,'low pulley row to neck','shoulders',NULL),
-    (456,'lower back curl','abdominals',NULL),
-    (457,'lower back-smr','lower back',NULL),
-    (458,'lunge pass through','hamstrings',NULL),
-    (459,'lunge sprint','quadriceps',NULL),
-    (460,'lying bent leg groin','adductors',NULL),
-    (461,'lying cable curl','biceps',NULL),
-    (462,'lying cambered barbell row','middle back',NULL),
-    (463,'lying close-grip bar curl on high pulley','biceps',NULL),
-    (464,'lying close-grip barbell triceps extension behind the head','triceps',NULL),
-    (465,'lying close-grip barbell triceps press to chin','triceps',NULL),
-    (466,'lying crossover','abductors',NULL),
-    (467,'lying dumbbell tricep extension','triceps',NULL),
-    (468,'lying face down plate neck resistance','neck',NULL),
-    (469,'lying face up plate neck resistance','neck',NULL),
-    (470,'lying glute','glutes',NULL),
-    (471,'lying hamstring','hamstrings',NULL),
-    (472,'lying high bench barbell curl','biceps',NULL),
-    (473,'lying leg curls','hamstrings',NULL),
-    (474,'lying machine squat','quadriceps',NULL),
-    (475,'lying one-arm lateral raise','shoulders',NULL),
-    (476,'lying prone quadriceps','quadriceps',NULL),
-    (477,'lying rear delt raise','shoulders',NULL),
-    (478,'lying supine dumbbell curl','biceps',NULL),
-    (479,'lying t-bar row','middle back',NULL),
-    (480,'lying triceps press','triceps',NULL),
-    (481,'machine bench press','chest',NULL),
-    (482,'machine bicep curl','biceps',NULL),
-    (483,'machine preacher curls','biceps',NULL),
-    (484,'machine shoulder (military) press','shoulders',NULL),
-    (485,'machine triceps extension','triceps',NULL),
-    (486,'medicine ball chest pass','chest',NULL),
-    (487,'medicine ball full twist','abdominals',NULL),
-    (488,'medicine ball scoop throw','shoulders',NULL),
-    (489,'middle back shrug','middle back',NULL),
-    (490,'middle back stretch','middle back',NULL),
-    (491,'mixed grip chin','middle back',NULL),
-    (492,'monster walk','abductors',NULL),
-    (493,'mountain climbers','quadriceps',NULL),
-    (494,'moving claw series','hamstrings',NULL),
-    (495,'muscle snatch','hamstrings',NULL),
-    (496,'muscle up','lats',NULL),
-    (497,'narrow stance hack squats','quadriceps',NULL),
-    (498,'narrow stance leg press','quadriceps',NULL),
-    (499,'narrow stance squats','quadriceps',NULL);
-INSERT INTO exercises VALUES
-    (500,'natural glute ham raise','hamstrings',NULL),
-    (501,'neck press','chest',NULL),
-    (502,'neck-smr','neck',NULL),
-    (503,'oblique crunches','abdominals',NULL),
-    (504,'oblique crunches - on the floor','abdominals',NULL),
-    (505,'olympic squat','quadriceps',NULL),
-    (506,'on your side quad stretch','quadriceps',NULL),
-    (507,'on-your-back quad stretch','quadriceps',NULL),
-    (508,'one arm against wall','lats',NULL),
-    (509,'one arm chin-up','middle back',NULL),
-    (510,'one arm dumbbell bench press','chest',NULL),
-    (511,'one arm dumbbell preacher curl','biceps',NULL),
-    (512,'one arm floor press','triceps',NULL),
-    (513,'one arm lat pulldown','lats',NULL),
-    (514,'one arm pronated dumbbell triceps extension','triceps',NULL),
-    (515,'one arm supinated dumbbell triceps extension','triceps',NULL),
-    (516,'one half locust','quadriceps',NULL),
-    (517,'one handed hang','lats',NULL),
-    (518,'one knee to chest','glutes',NULL),
-    (519,'one leg barbell squat','quadriceps',NULL),
-    (520,'one-arm dumbbell row','middle back',NULL),
-    (521,'one-arm flat bench dumbbell flye','chest',NULL),
-    (522,'one-arm high-pulley cable side bends','abdominals',NULL),
-    (523,'one-arm incline lateral raise','shoulders',NULL),
-    (524,'one-arm kettlebell clean','hamstrings',NULL),
-    (525,'one-arm kettlebell clean and jerk','shoulders',NULL),
-    (526,'one-arm kettlebell floor press','chest',NULL),
-    (527,'one-arm kettlebell jerk','shoulders',NULL),
-    (528,'one-arm kettlebell military press to the side','shoulders',NULL),
-    (529,'one-arm kettlebell para press','shoulders',NULL),
-    (530,'one-arm kettlebell push press','shoulders',NULL),
-    (531,'one-arm kettlebell row','middle back',NULL),
-    (532,'one-arm kettlebell snatch','shoulders',NULL),
-    (533,'one-arm kettlebell split jerk','shoulders',NULL),
-    (534,'one-arm kettlebell split snatch','shoulders',NULL),
-    (535,'one-arm kettlebell swings','hamstrings',NULL),
-    (536,'one-arm long bar row','middle back',NULL),
-    (537,'one-arm medicine ball slam','abdominals',NULL),
-    (538,'one-arm open palm kettlebell clean','hamstrings',NULL),
-    (539,'one-arm overhead kettlebell squats','quadriceps',NULL),
-    (540,'one-arm side deadlift','quadriceps',NULL),
-    (541,'one-arm side laterals','shoulders',NULL),
-    (542,'one-legged cable kickback','glutes',NULL),
-    (543,'open palm kettlebell clean','hamstrings',NULL),
-    (544,'otis-up','abdominals',NULL),
-    (545,'overhead cable curl','biceps',NULL),
-    (546,'overhead lat','lats',NULL),
-    (547,'overhead slam','lats',NULL),
-    (548,'overhead squat','quadriceps',NULL),
-    (549,'overhead stretch','abdominals',NULL),
-    (550,'overhead triceps','triceps',NULL),
-    (551,'pallof press with rotation','abdominals',NULL),
-    (552,'palms-down dumbbell wrist curl over a bench','forearms',NULL),
-    (553,'palms-down wrist curl over a bench','forearms',NULL),
-    (554,'palms-up barbell wrist curl over a bench','forearms',NULL),
-    (555,'palms-up dumbbell wrist curl over a bench','forearms',NULL),
-    (556,'parallel bar dip','triceps',NULL),
-    (557,'pelvic tilt into bridge','lower back',NULL),
-    (558,'peroneals stretch','calves',NULL),
-    (559,'peroneals-smr','calves',NULL),
-    (560,'physioball hip bridge','glutes',NULL),
-    (561,'pin presses','triceps',NULL),
-    (562,'piriformis-smr','glutes',NULL),
-    (563,'plank','abdominals',NULL),
-    (564,'plank with twist',NULL,NULL),
-    (565,'plate pinch','forearms',NULL),
-    (566,'plate twist','abdominals',NULL),
-    (567,'platform hamstring slides','hamstrings',NULL),
-    (568,'plie dumbbell squat','quadriceps',NULL),
-    (569,'plyo kettlebell pushups','chest',NULL),
-    (570,'plyo push-up','chest',NULL),
-    (571,'posterior tibialis stretch','calves',NULL),
-    (572,'power clean','hamstrings',NULL),
-    (573,'power clean from blocks','hamstrings',NULL),
-    (574,'power jerk','quadriceps',NULL),
-    (575,'power partials','shoulders',NULL),
-    (576,'power snatch','hamstrings',NULL),
-    (577,'power snatch from blocks','quadriceps',NULL),
-    (578,'power stairs','hamstrings',NULL),
-    (579,'preacher curl','biceps',NULL),
-    (580,'preacher hammer dumbbell curl','biceps',NULL),
-    (581,'press sit-up','abdominals',NULL),
-    (582,'prone manual hamstring','hamstrings',NULL),
-    (583,'prowler sprint','hamstrings',NULL),
-    (584,'pull through','glutes',NULL),
-    (585,'pullups','lats',NULL),
-    (586,'push press','shoulders',NULL),
-    (587,'push press - behind the neck','shoulders',NULL),
-    (588,'push up to side plank','chest',NULL),
-    (589,'push-up wide','chest',NULL),
-    (590,'push-ups - close triceps position','triceps',NULL),
-    (591,'push-ups with feet elevated','chest',NULL),
-    (592,'push-ups with feet on an exercise ball','chest',NULL),
-    (593,'pushups','chest',NULL),
-    (594,'pushups (close and wide hand positions)','chest',NULL),
-    (595,'pyramid','lower back',NULL),
-    (596,'quad stretch','quadriceps',NULL),
-    (597,'quadriceps-smr','quadriceps',NULL),
-    (598,'quick leap','quadriceps',NULL),
-    (599,'rack delivery','shoulders',NULL),
-    (600,'rack pull with bands','lower back',NULL),
-    (601,'rack pulls','lower back',NULL),
-    (602,'rear leg raises','quadriceps',NULL),
-    (603,'recumbent bike','quadriceps',NULL),
-    (604,'return push from stance','shoulders',NULL),
-    (605,'reverse band bench press','triceps',NULL),
-    (606,'reverse band box squat','quadriceps',NULL),
-    (607,'reverse band deadlift','lower back',NULL),
-    (608,'reverse band power squat','quadriceps',NULL),
-    (609,'reverse band sumo deadlift','hamstrings',NULL),
-    (610,'reverse barbell curl','biceps',NULL),
-    (611,'reverse barbell preacher curls','biceps',NULL),
-    (612,'reverse cable curl','biceps',NULL),
-    (613,'reverse crunch','abdominals',NULL),
-    (614,'reverse flyes','shoulders',NULL),
-    (615,'reverse flyes with external rotation','shoulders',NULL),
-    (616,'reverse grip bent-over rows','middle back',NULL),
-    (617,'reverse grip triceps pushdown','triceps',NULL),
-    (618,'reverse hyperextension','hamstrings',NULL),
-    (619,'reverse machine flyes','shoulders',NULL),
-    (620,'reverse plate curls','biceps',NULL),
-    (621,'reverse triceps bench press','triceps',NULL),
-    (622,'rhomboids-smr','middle back',NULL),
-    (623,'rickshaw carry','forearms',NULL),
-    (624,'rickshaw deadlift','quadriceps',NULL),
-    (625,'ring dips','triceps',NULL),
-    (626,'rocket jump','quadriceps',NULL),
-    (627,'rocking standing calf raise','calves',NULL),
-    (628,'rocky pull-ups/pulldowns','lats',NULL),
-    (629,'romanian deadlift','hamstrings',NULL),
-    (630,'romanian deadlift from deficit','hamstrings',NULL),
-    (631,'rope climb','lats',NULL),
-    (632,'rope crunch','abdominals',NULL),
-    (633,'rope jumping','quadriceps',NULL),
-    (634,'rope straight-arm pulldown','lats',NULL),
-    (635,'round the world shoulder stretch','shoulders',NULL),
-    (636,'rowing','stationary',NULL),
-    (637,'runner''s stretch','hamstrings',NULL),
-    (638,'running','treadmill',NULL),
-    (639,'russian twist','abdominals',NULL),
-    (640,'sandbag load','quadriceps',NULL),
-    (641,'scapular pull-up','traps',NULL),
-    (642,'scissor kick','abdominals',NULL),
-    (643,'scissors jump','quadriceps',NULL),
-    (644,'seated band hamstring curl','hamstrings',NULL),
-    (645,'seated barbell military press','shoulders',NULL),
-    (646,'seated barbell twist','abdominals',NULL),
-    (647,'seated bent-over one-arm dumbbell triceps extension','triceps',NULL),
-    (648,'seated bent-over rear delt raise','shoulders',NULL),
-    (649,'seated bent-over two-arm dumbbell triceps extension','triceps',NULL),
-    (650,'seated biceps','biceps',NULL),
-    (651,'seated cable rows','middle back',NULL),
-    (652,'seated cable shoulder press','shoulders',NULL),
-    (653,'seated calf raise','calves',NULL),
-    (654,'seated calf stretch','calves',NULL),
-    (655,'seated close-grip concentration barbell curl','biceps',NULL),
-    (656,'seated dumbbell curl','biceps',NULL),
-    (657,'seated dumbbell inner biceps curl','biceps',NULL),
-    (658,'seated dumbbell palms-down wrist curl','forearms',NULL),
-    (659,'seated dumbbell palms-up wrist curl','forearms',NULL),
-    (660,'seated dumbbell press','shoulders',NULL),
-    (661,'seated flat bench leg pull-in','abdominals',NULL),
-    (662,'seated floor hamstring stretch','hamstrings',NULL),
-    (663,'seated front deltoid','shoulders',NULL),
-    (664,'seated glute','glutes',NULL),
-    (665,'seated good mornings','lower back',NULL),
-    (666,'seated hamstring','hamstrings',NULL),
-    (667,'seated hamstring and calf stretch','hamstrings',NULL),
-    (668,'seated head harness neck resistance','neck',NULL),
-    (669,'seated leg curl','hamstrings',NULL),
-    (670,'seated leg tucks','abdominals',NULL),
-    (671,'seated one-arm cable pulley rows','middle back',NULL),
-    (672,'seated one-arm dumbbell palms-down wrist curl','forearms',NULL),
-    (673,'seated one-arm dumbbell palms-up wrist curl','forearms',NULL),
-    (674,'seated overhead stretch','abdominals',NULL),
-    (675,'seated palm-up barbell wrist curl','forearms',NULL),
-    (676,'seated palms-down barbell wrist curl','forearms',NULL),
-    (677,'seated side lateral raise','shoulders',NULL),
-    (678,'seated triceps press','triceps',NULL),
-    (679,'seated two-arm palms-up low-pulley wrist curl','forearms',NULL),
-    (680,'see-saw press (alternating side press)','shoulders',NULL),
-    (681,'shotgun row','lats',NULL),
-    (682,'shoulder circles','shoulders',NULL),
-    (683,'shoulder press - with bands','shoulders',NULL),
-    (684,'shoulder raise','shoulders',NULL),
-    (685,'shoulder stretch','shoulders',NULL),
-    (686,'side bridge','abdominals',NULL),
-    (687,'side hop-sprint','quadriceps',NULL),
-    (688,'side jackknife','abdominals',NULL),
-    (689,'side lateral raise','shoulders',NULL),
-    (690,'side laterals to front raise','shoulders',NULL),
-    (691,'side leg raises','adductors',NULL),
-    (692,'side lying groin stretch','adductors',NULL),
-    (693,'side neck stretch','neck',NULL),
-    (694,'side standing long jump','quadriceps',NULL),
-    (695,'side to side box shuffle','quadriceps',NULL),
-    (696,'side to side chins','lats',NULL),
-    (697,'side wrist pull','shoulders',NULL),
-    (698,'side-lying floor stretch','lats',NULL),
-    (699,'single dumbbell raise','shoulders',NULL),
-    (700,'single leg butt kick','quadriceps',NULL),
-    (701,'single leg glute bridge','glutes',NULL),
-    (702,'single leg push-off','quadriceps',NULL),
-    (703,'single-arm cable crossover','chest',NULL),
-    (704,'single-arm linear jammer','shoulders',NULL),
-    (705,'single-arm push-up','chest',NULL),
-    (706,'single-cone sprint drill','quadriceps',NULL),
-    (707,'single-leg high box squat','quadriceps',NULL),
-    (708,'single-leg hop progression','quadriceps',NULL),
-    (709,'single-leg lateral hop','quadriceps',NULL),
-    (710,'single-leg leg extension','quadriceps',NULL),
-    (711,'single-leg stride jump','quadriceps',NULL),
-    (712,'sit squats','quadriceps',NULL),
-    (713,'sit-up','abdominals',NULL),
-    (714,'skating','quadriceps',NULL),
-    (715,'sled drag - harness','quadriceps',NULL),
-    (716,'sled overhead backward walk','shoulders',NULL),
-    (717,'sled overhead triceps extension','triceps',NULL),
-    (718,'sled push','quadriceps',NULL),
-    (719,'sled reverse flye','shoulders',NULL),
-    (720,'sled row','middle back',NULL),
-    (721,'sledgehammer swings','abdominals',NULL),
-    (722,'smith incline shoulder raise','shoulders',NULL),
-    (723,'smith machine behind the back shrug','traps',NULL),
-    (724,'smith machine bench press','chest',NULL),
-    (725,'smith machine bent over row','middle back',NULL),
-    (726,'smith machine calf raise','calves',NULL),
-    (727,'smith machine close-grip bench press','triceps',NULL),
-    (728,'smith machine decline press','chest',NULL),
-    (729,'smith machine hang power clean','hamstrings',NULL),
-    (730,'smith machine hip raise','abdominals',NULL),
-    (731,'smith machine incline bench press','chest',NULL),
-    (732,'smith machine leg press','quadriceps',NULL),
-    (733,'smith machine one-arm upright row','shoulders',NULL),
-    (734,'smith machine overhead shoulder press','shoulders',NULL),
-    (735,'smith machine pistol squat','quadriceps',NULL),
-    (736,'smith machine reverse calf raises','calves',NULL),
-    (737,'smith machine shrug','traps',NULL),
-    (738,'smith machine squat','quadriceps',NULL),
-    (739,'smith machine stiff-legged deadlift','hamstrings',NULL),
-    (740,'smith machine upright row','traps',NULL),
-    (741,'smith single-leg split squat','quadriceps',NULL),
-    (742,'snatch','quadriceps',NULL),
-    (743,'snatch balance','quadriceps',NULL),
-    (744,'snatch deadlift','hamstrings',NULL),
-    (745,'snatch from blocks','quadriceps',NULL),
-    (746,'snatch pull','hamstrings',NULL),
-    (747,'snatch shrug','traps',NULL),
-    (748,'speed band overhead triceps','triceps',NULL),
-    (749,'speed band pushdown','triceps',NULL);
-INSERT INTO exercises VALUES
-    (750,'speed box squat','quadriceps',NULL),
-    (751,'speed squats','quadriceps',NULL),
-    (752,'spell caster','abdominals',NULL),
-    (753,'spider crawl','abdominals',NULL),
-    (754,'spider curl','biceps',NULL),
-    (755,'spinal stretch','middle back',NULL),
-    (756,'split clean','quadriceps',NULL),
-    (757,'split jerk','quadriceps',NULL),
-    (758,'split jump','quadriceps',NULL),
-    (759,'split snatch','hamstrings',NULL),
-    (760,'split squat with dumbbells','quadriceps',NULL),
-    (761,'split squats','hamstrings',NULL),
-    (762,'squat jerk','quadriceps',NULL),
-    (763,'squat with bands','quadriceps',NULL),
-    (764,'squat with chains','quadriceps',NULL),
-    (765,'squat with plate movers','quadriceps',NULL),
-    (766,'squats - with bands','quadriceps',NULL),
-    (767,'stairmaster','quadriceps',NULL),
-    (768,'standing alternating dumbbell press','shoulders',NULL),
-    (769,'standing barbell calf raise','calves',NULL),
-    (770,'standing barbell press behind neck','shoulders',NULL),
-    (771,'standing bent-over one-arm dumbbell triceps extension','triceps',NULL),
-    (772,'standing bent-over two-arm dumbbell triceps extension','triceps',NULL),
-    (773,'standing biceps cable curl','biceps',NULL),
-    (774,'standing biceps stretch','biceps',NULL),
-    (775,'standing bradford press','shoulders',NULL),
-    (776,'standing cable chest press','chest',NULL),
-    (777,'standing cable lift','abdominals',NULL),
-    (778,'standing cable wood chop','abdominals',NULL),
-    (779,'standing calf raises','calves',NULL),
-    (780,'standing concentration curl','biceps',NULL),
-    (781,'standing dumbbell calf raise','calves',NULL),
-    (782,'standing dumbbell press','shoulders',NULL),
-    (783,'standing dumbbell reverse curl','biceps',NULL),
-    (784,'standing dumbbell straight-arm front delt raise above head','shoulders',NULL),
-    (785,'standing dumbbell triceps extension','triceps',NULL),
-    (786,'standing dumbbell upright row','traps',NULL),
-    (787,'standing elevated quad stretch','quadriceps',NULL),
-    (788,'standing front barbell raise over head','shoulders',NULL),
-    (789,'standing gastrocnemius calf stretch','calves',NULL),
-    (790,'standing hamstring and calf stretch','hamstrings',NULL),
-    (791,'standing hip circles','abductors',NULL),
-    (792,'standing hip flexors','quadriceps',NULL),
-    (793,'standing inner-biceps curl','biceps',NULL),
-    (794,'standing lateral stretch','abdominals',NULL),
-    (795,'standing leg curl','hamstrings',NULL),
-    (796,'standing long jump','quadriceps',NULL),
-    (797,'standing low-pulley deltoid raise','shoulders',NULL),
-    (798,'standing low-pulley one-arm triceps extension','triceps',NULL),
-    (799,'standing military press','shoulders',NULL),
-    (800,'standing olympic plate hand squeeze','forearms',NULL),
-    (801,'standing one-arm cable curl','biceps',NULL),
-    (802,'standing one-arm dumbbell curl over incline bench','biceps',NULL),
-    (803,'standing one-arm dumbbell triceps extension','triceps',NULL),
-    (804,'standing overhead barbell triceps extension','triceps',NULL),
-    (805,'standing palm-in one-arm dumbbell press','shoulders',NULL),
-    (806,'standing palms-in dumbbell press','shoulders',NULL),
-    (807,'standing palms-up barbell behind the back wrist curl','forearms',NULL),
-    (808,'standing pelvic tilt','lower back',NULL),
-    (809,'standing rope crunch','abdominals',NULL),
-    (810,'standing soleus and achilles stretch','calves',NULL),
-    (811,'standing toe touches','hamstrings',NULL),
-    (812,'standing towel triceps extension','triceps',NULL),
-    (813,'standing two-arm overhead throw','shoulders',NULL),
-    (814,'star jump','quadriceps',NULL),
-    (815,'step mill','quadriceps',NULL),
-    (816,'step-up with knee raise','glutes',NULL),
-    (817,'stiff leg barbell good morning','lower back',NULL),
-    (818,'stiff-legged barbell deadlift','hamstrings',NULL),
-    (819,'stiff-legged dumbbell deadlift','hamstrings',NULL),
-    (820,'stomach vacuum','abdominals',NULL),
-    (821,'straight bar bench mid rows','middle back',NULL),
-    (822,'straight raises on incline bench','shoulders',NULL),
-    (823,'straight-arm dumbbell pullover','chest',NULL),
-    (824,'straight-arm pulldown','lats',NULL),
-    (825,'stride jump crossover','quadriceps',NULL),
-    (826,'sumo deadlift','hamstrings',NULL),
-    (827,'sumo deadlift with bands','hamstrings',NULL),
-    (828,'sumo deadlift with chains','hamstrings',NULL),
-    (829,'superman','lower back',NULL),
-    (830,'supine chest throw','triceps',NULL),
-    (831,'supine one-arm overhead throw','abdominals',NULL),
-    (832,'supine two-arm overhead throw','abdominals',NULL),
-    (833,'suspended push-up','chest',NULL),
-    (834,'suspended reverse crunch','abdominals',NULL),
-    (835,'suspended row','middle back',NULL),
-    (836,'suspended split squat','quadriceps',NULL),
-    (837,'t-bar row with handle','middle back',NULL),
-    (838,'tate press','triceps',NULL),
-    (839,'the straddle','hamstrings',NULL),
-    (840,'thigh abductor','abductors',NULL),
-    (841,'thigh adductor','adductors',NULL),
-    (842,'tire flip','quadriceps',NULL),
-    (843,'toe touchers','abdominals',NULL),
-    (844,'torso rotation','abdominals',NULL),
-    (845,'trail running/walking','quadriceps',NULL),
-    (846,'trap bar deadlift','quadriceps',NULL),
-    (847,'tricep dumbbell kickback','triceps',NULL),
-    (848,'tricep side stretch','triceps',NULL),
-    (849,'triceps overhead extension with rope','triceps',NULL),
-    (850,'triceps pushdown','triceps',NULL),
-    (851,'triceps pushdown - rope attachment','triceps',NULL),
-    (852,'triceps pushdown - v-bar attachment','triceps',NULL),
-    (853,'triceps stretch','triceps',NULL),
-    (854,'tuck crunch','abdominals',NULL),
-    (855,'two-arm dumbbell preacher curl','biceps',NULL),
-    (856,'two-arm kettlebell clean','shoulders',NULL),
-    (857,'two-arm kettlebell jerk','shoulders',NULL),
-    (858,'two-arm kettlebell military press','shoulders',NULL),
-    (859,'two-arm kettlebell row','middle back',NULL),
-    (860,'underhand cable pulldowns','lats',NULL),
-    (861,'upper back stretch','middle back',NULL),
-    (862,'upper back-leg grab','hamstrings',NULL),
-    (863,'upright barbell row','shoulders',NULL),
-    (864,'upright cable row','traps',NULL),
-    (865,'upright row - with bands','traps',NULL),
-    (866,'upward stretch','shoulders',NULL),
-    (867,'v-bar pulldown','lats',NULL),
-    (868,'v-bar pullup','lats',NULL),
-    (869,'vertical swing','hamstrings',NULL),
-    (870,'walking','treadmill',NULL),
-    (871,'weighted ball hyperextension','lower back',NULL),
-    (872,'weighted ball side bend','abdominals',NULL),
-    (873,'weighted bench dip','triceps',NULL),
-    (874,'weighted crunches','abdominals',NULL),
-    (875,'weighted jump squat','quadriceps',NULL),
-    (876,'weighted pull ups','lats',NULL),
-    (877,'weighted sissy squat','quadriceps',NULL),
-    (878,'weighted sit-ups - with bands','abdominals',NULL),
-    (879,'weighted squat','quadriceps',NULL),
-    (880,'wide stance barbell squat','quadriceps',NULL),
-    (881,'wide stance stiff legs','hamstrings',NULL),
-    (882,'wide-grip barbell bench press','chest',NULL),
-    (883,'wide-grip decline barbell bench press','chest',NULL),
-    (884,'wide-grip decline barbell pullover','chest',NULL),
-    (885,'wide-grip lat pulldown','lats',NULL),
-    (886,'wide-grip pulldown behind the neck','lats',NULL),
-    (887,'wide-grip rear pull-up','lats',NULL),
-    (888,'wide-grip standing barbell curl','biceps',NULL),
-    (889,'wind sprints','abdominals',NULL),
-    (890,'windmills','abductors',NULL),
-    (891,'world''s greatest stretch','hamstrings',NULL),
-    (892,'wrist circles','forearms',NULL),
-    (893,'wrist roller','forearms',NULL),
-    (894,'wrist rotations with straight bar','forearms',NULL),
-    (895,'yoke walk','quadriceps',NULL),
-    (896,'zercher squats','quadriceps',NULL),
-    (897,'zottman curl','biceps',NULL),
-    (898,'zottman preacher curl','biceps',NULL);
+
+-- Insert Records into table
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (0,'ab crunch machine','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (1,'ab roller','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (2,'adductor','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (3,'adductor/groin','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (4,'advanced kettlebell windmill','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (5,'air bike','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (6,'all fours quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (7,'alternate hammer curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (8,'alternate heel touchers','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (9,'alternate incline dumbbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (10,'alternate leg diagonal bound','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (11,'alternating cable shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (12,'alternating deltoid raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (13,'alternating floor press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (14,'alternating hang clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (15,'alternating kettlebell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (16,'alternating kettlebell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (17,'alternating renegade row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (18,'ankle circles','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (19,'ankle on the knee','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (20,'anterior tibialis-smr','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (21,'anti-gravity press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (22,'arm circles','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (23,'arnold dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (24,'around the worlds','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (25,'atlas stone trainer','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (26,'atlas stones','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (27,'axle deadlift','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (28,'ab crunch machine','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (29,'ab roller','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (30,'adductor','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (31,'adductor/groin','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (32,'advanced kettlebell windmill','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (33,'air bike','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (34,'all fours quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (35,'alternate hammer curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (36,'alternate heel touchers','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (37,'alternate incline dumbbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (38,'alternate leg diagonal bound','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (39,'alternating cable shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (40,'alternating deltoid raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (41,'alternating floor press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (42,'alternating hang clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (43,'alternating kettlebell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (44,'alternating kettlebell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (45,'alternating renegade row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (46,'ankle circles','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (47,'ankle on the knee','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (48,'anterior tibialis-smr','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (49,'anti-gravity press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (50,'arm circles','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (51,'arnold dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (52,'around the worlds','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (53,'atlas stone trainer','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (54,'atlas stones','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (55,'axle deadlift','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (56,'back flyes - with bands','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (57,'backward drag','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (58,'backward medicine ball throw','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (59,'balance board','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (60,'ball leg curl','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (61,'band assisted pull-up','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (62,'band good morning','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (63,'band good morning (pull through)','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (64,'band hip adductions','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (65,'band pull apart','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (66,'band skull crusher','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (67,'barbell ab rollout','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (68,'barbell ab rollout - on knees','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (69,'barbell bench press - medium grip','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (70,'barbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (71,'barbell curls lying against an incline','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (72,'barbell deadlift','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (73,'barbell full squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (74,'barbell glute bridge','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (75,'barbell guillotine bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (76,'barbell hack squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (77,'barbell hip thrust','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (78,'barbell incline bench press - medium grip','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (79,'barbell incline shoulder raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (80,'barbell lunge','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (81,'barbell rear delt row','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (82,'barbell rollout from bench','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (83,'barbell seated calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (84,'barbell shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (85,'barbell shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (86,'barbell shrug behind the back','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (87,'barbell side bend','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (88,'barbell side split squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (89,'barbell squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (90,'barbell squat to a bench','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (91,'barbell step ups','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (92,'barbell walking lunge','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (93,'battling ropes','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (94,'bear crawl sled drags','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (95,'behind head chest stretch','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (96,'bench dips','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (97,'bench jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (98,'bench press - powerlifting','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (99,'bench press - with bands','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (100,'bench press with chains','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (101,'bench sprint','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (102,'bent over barbell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (103,'bent over dumbbell rear delt raise with head on bench','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (104,'bent over low-pulley side lateral','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (105,'bent over one-arm long bar row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (106,'bent over two-arm long bar row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (107,'bent over two-dumbbell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (108,'bent over two-dumbbell row with palms in','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (109,'bent press','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (110,'bent-arm barbell pullover','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (111,'bent-arm dumbbell pullover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (112,'bent-knee hip raise','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (113,'bicycling','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (114,'bicycling','stationary',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (115,'board press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (116,'body tricep press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (117,'body-up','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (118,'bodyweight flyes','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (119,'bodyweight mid row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (120,'bodyweight squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (121,'bodyweight walking lunge','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (122,'bosu ball cable crunch with side bends','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (123,'bottoms up','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (124,'bottoms-up clean from the hang position','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (125,'box jump INSERT INTO exercises (multiple response)','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (126,'box skip','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (127,'box squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (128,'box squat with bands','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (129,'box squat with chains','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (130,'brachialis-smr','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (131,'bradford/rocky presses','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (132,'butt lift (bridge)','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (133,'butt-ups','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (134,'butterfly','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (135,'cable chest press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (136,'cable crossover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (137,'cable crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (138,'cable deadlifts','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (139,'cable hammer curls - rope attachment','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (140,'cable hip adduction','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (141,'cable incline pushdown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (142,'cable incline triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (143,'cable internal rotation','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (144,'cable iron cross','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (145,'cable judo flip','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (146,'cable lying triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (147,'cable one arm tricep extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (148,'cable preacher curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (149,'cable rear delt fly','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (150,'cable reverse crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (151,'cable rope overhead triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (152,'cable rope rear-delt rows','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (153,'cable russian twists','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (154,'cable seated crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (155,'cable seated lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (156,'cable shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (157,'cable shrugs','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (158,'cable tuck reverse crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (159,'cable wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (160,'calf press','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (161,'calf press on the leg press machine','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (162,'calf raise on a dumbbell','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (163,'calf raises - with bands','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (164,'calf stretch elbows against wall','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (165,'calf stretch hands against wall','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (166,'calf-machine shoulder shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (167,'calves-smr','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (168,'car deadlift','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (169,'car drivers','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (170,'carioca quick step','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (171,'cat stretch','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (172,'catch and overhead throw','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (173,'chain handle extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (174,'chain press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (175,'chair leg extended stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (176,'chair lower back stretch','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (177,'chair squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (178,'chair upper body stretch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (179,'chest and front of shoulder stretch','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (180,'chest push (multiple response)','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (181,'chest push (single response)','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (182,'chest push from 3 point stance','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (183,'chest push with run release','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (184,'chest stretch on stability ball','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (185,'child''s pose','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (186,'chin to chest stretch','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (187,'chin-up','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (188,'circus bell','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (189,'clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (190,'clean and jerk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (191,'clean and press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (192,'clean deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (193,'clean from blocks','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (194,'clean pull','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (195,'clean shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (196,'clock push-up','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (197,'close-grip barbell bench press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (198,'close-grip dumbbell press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (199,'close-grip ez bar curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (200,'close-grip ez-bar curl with band','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (201,'close-grip ez-bar press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (202,'close-grip front lat pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (203,'close-grip push-up off of a dumbbell','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (204,'close-grip standing barbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (205,'cocoons','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (206,'conan''s wheel','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (207,'concentration curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (208,'cross body hammer curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (209,'cross over - with bands','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (210,'cross-body crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (211,'crossover reverse lunge','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (212,'crucifix','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (213,'crunch - hands overhead','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (214,'crunch - legs on exercise ball','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (215,'crunches','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (216,'cuban press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (217,'dancer''s stretch','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (218,'deadlift with bands','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (219,'deadlift with chains','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (220,'decline barbell bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (221,'decline close-grip bench to skull crusher','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (222,'decline crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (223,'decline dumbbell bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (224,'decline dumbbell flyes','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (225,'decline dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (226,'decline ez bar triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (227,'decline oblique crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (228,'decline push-up','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (229,'decline reverse crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (230,'decline smith press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (231,'deficit deadlift','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (232,'depth jump leap','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (233,'dip machine','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (234,'dips - chest version','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (235,'dips - triceps version','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (236,'donkey calf raises','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (237,'double kettlebell alternating hang clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (238,'double kettlebell jerk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (239,'double kettlebell push press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (240,'double kettlebell snatch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (241,'double kettlebell windmill','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (242,'double leg butt kick','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (243,'downward facing balance','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (244,'drag curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (245,'drop push','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (246,'dumbbell alternate bicep curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (247,'dumbbell bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (248,'dumbbell bench press with neutral grip','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (249,'dumbbell bicep curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (250,'dumbbell clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (251,'dumbbell floor press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (252,'dumbbell flyes','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (253,'dumbbell incline row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (254,'dumbbell incline shoulder raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (255,'dumbbell lunges','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (256,'dumbbell lying one-arm rear lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (257,'dumbbell lying pronation','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (258,'dumbbell lying rear lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (259,'dumbbell lying supination','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (260,'dumbbell one-arm shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (261,'dumbbell one-arm triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (262,'dumbbell one-arm upright row','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (263,'dumbbell prone incline curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (264,'dumbbell raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (265,'dumbbell rear lunge','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (266,'dumbbell scaption','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (267,'dumbbell seated box jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (268,'dumbbell seated one-leg calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (269,'dumbbell shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (270,'dumbbell shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (271,'dumbbell side bend','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (272,'dumbbell squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (273,'dumbbell squat to a bench','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (274,'dumbbell step ups','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (275,'dumbbell tricep extension -pronated grip','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (276,'dynamic back stretch','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (277,'dynamic chest stretch','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (278,'elbow circles','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (279,'elbow to knee','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (280,'elbows back','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (281,'elevated back lunge','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (282,'elevated cable rows','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (283,'elliptical trainer','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (284,'exercise ball crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (285,'exercise ball pull-in','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (286,'extended range one-arm kettlebell floor press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (287,'external rotation','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (288,'external rotation with band','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (289,'external rotation with cable','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (290,'ez-bar curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (291,'ez-bar skullcrusher','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (292,'face pull','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (293,'farmer''s walk','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (294,'fast skipping','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (295,'finger curls','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (296,'flat bench cable flyes','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (297,'flat bench leg pull-in','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (298,'flat bench lying leg raise','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (299,'flexor incline dumbbell curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (300,'floor glute-ham raise','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (301,'floor press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (302,'floor press with chains','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (303,'flutter kicks','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (304,'foot-smr','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (305,'forward drag with press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (306,'frankenstein squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (307,'freehand jump squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (308,'frog hops','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (309,'frog sit-ups','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (310,'front barbell squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (311,'front barbell squat to a bench','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (312,'front box jump','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (313,'front cable raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (314,'front cone hops (or hurdle hops)','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (315,'front dumbbell raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (316,'front incline dumbbell raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (317,'front leg raises','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (318,'front plate raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (319,'front raise and pullover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (320,'front squat (clean grip)','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (321,'front squats with two kettlebells','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (322,'front two-dumbbell raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (323,'full range-of-motion lat pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (324,'gironda sternum chins','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (325,'glute ham raise','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (326,'glute kickback','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (327,'goblet squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (328,'good morning','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (329,'good morning off pins','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (330,'gorilla chin/crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (331,'groin and back stretch','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (332,'groiners','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (333,'hack squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (334,'hammer curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (335,'hammer grip incline db bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (336,'hamstring stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (337,'hamstring-smr','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (338,'handstand push-ups','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (339,'hang clean','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (340,'hang clean - below the knees','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (341,'hang snatch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (342,'hang snatch - below knees','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (343,'hanging bar good morning','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (344,'hanging leg raise','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (345,'hanging pike','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (346,'heaving snatch balance','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (347,'heavy bag thrust','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (348,'high cable curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (349,'hip circles (prone)','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (350,'hip crossover','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (351,'hip extension with bands','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (352,'hip flexion with band','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (353,'hip lift with band','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (354,'hug a ball','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (355,'hug knees to chest','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (356,'hurdle hops','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (357,'hyperextensions (back extensions)','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (358,'hyperextensions with no hyperextension bench','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (359,'iliotibial tract-smr','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (360,'incline barbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (361,'incline bench pull','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (362,'incline cable chest press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (363,'incline cable flye','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (364,'incline dumbbell bench with palms facing in','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (365,'incline dumbbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (366,'incline dumbbell flyes','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (367,'incline dumbbell flyes - with a twist','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (368,'incline dumbbell press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (369,'incline hammer curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (370,'incline inner biceps curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (371,'incline push-up','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (372,'incline push-up close-grip','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (373,'incline push-up depth jump','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (374,'incline push-up medium','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (375,'incline push-up reverse grip','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (376,'incline push-up wide','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (377,'intermediate groin stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (378,'intermediate hip flexor and quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (379,'internal rotation with band','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (380,'inverted row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (381,'inverted row with straps','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (382,'iron cross','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (383,'iron crosses (stretch)','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (384,'isometric chest squeezes','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (385,'isometric neck exercise - front and back','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (386,'isometric neck exercise - sides','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (387,'isometric wipers','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (388,'it band and glute stretch','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (389,'jackknife sit-up','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (390,'janda sit-up','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (391,'jefferson squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (392,'jerk balance','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (393,'jerk dip squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (394,'jm press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (395,'jogging-treadmill','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (396,'keg load','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (397,'kettlebell arnold press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (398,'kettlebell dead clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (399,'kettlebell figure 8','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (400,'kettlebell hang clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (401,'kettlebell one-legged deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (402,'kettlebell pass between the legs','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (403,'kettlebell pirate ships','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (404,'kettlebell pistol squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (405,'kettlebell seated press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (406,'kettlebell seesaw press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (407,'kettlebell sumo high pull','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (408,'kettlebell thruster','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (409,'kettlebell turkish get-up (lunge style)','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (410,'kettlebell turkish get-up (squat style)','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (411,'kettlebell windmill','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (412,'kipping muscle up','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (413,'knee across the body','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (414,'knee circles','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (415,'knee tuck jump','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (416,'knee/hip raise on parallel bars','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (417,'kneeling arm drill','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (418,'kneeling cable crunch with alternating oblique twists','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (419,'kneeling cable triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (420,'kneeling forearm stretch','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (421,'kneeling high pulley row','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (422,'kneeling hip flexor','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (423,'kneeling jump squat','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (424,'kneeling single-arm high pulley row','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (425,'kneeling squat','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (426,'landmine 180''s','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (427,'landmine linear jammer','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (428,'lateral bound','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (429,'lateral box jump','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (430,'lateral cone hops','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (431,'lateral raise - with bands','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (432,'latissimus dorsi-smr','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (433,'leg extensions','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (434,'leg lift','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (435,'leg press','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (436,'leg pull-in','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (437,'leg-over floor press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (438,'leg-up hamstring stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (439,'leverage chest press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (440,'leverage deadlift','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (441,'leverage decline chest press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (442,'leverage high row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (443,'leverage incline chest press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (444,'leverage iso row','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (445,'leverage shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (446,'leverage shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (447,'linear 3-part start technique','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (448,'linear acceleration wall drill','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (449,'linear depth jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (450,'log lift','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (451,'london bridges','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (452,'looking at ceiling','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (453,'low cable crossover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (454,'low cable triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (455,'low pulley row to neck','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (456,'lower back curl','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (457,'lower back-smr','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (458,'lunge pass through','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (459,'lunge sprint','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (460,'lying bent leg groin','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (461,'lying cable curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (462,'lying cambered barbell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (463,'lying close-grip bar curl on high pulley','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (464,'lying close-grip barbell triceps extension behind the head','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (465,'lying close-grip barbell triceps press to chin','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (466,'lying crossover','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (467,'lying dumbbell tricep extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (468,'lying face down plate neck resistance','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (469,'lying face up plate neck resistance','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (470,'lying glute','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (471,'lying hamstring','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (472,'lying high bench barbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (473,'lying leg curls','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (474,'lying machine squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (475,'lying one-arm lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (476,'lying prone quadriceps','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (477,'lying rear delt raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (478,'lying supine dumbbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (479,'lying t-bar row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (480,'lying triceps press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (481,'machine bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (482,'machine bicep curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (483,'machine preacher curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (484,'machine shoulder (military) press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (485,'machine triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (486,'medicine ball chest pass','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (487,'medicine ball full twist','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (488,'medicine ball scoop throw','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (489,'middle back shrug','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (490,'middle back stretch','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (491,'mixed grip chin','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (492,'monster walk','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (493,'mountain climbers','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (494,'moving claw series','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (495,'muscle snatch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (496,'muscle up','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (497,'narrow stance hack squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (498,'narrow stance leg press','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (499,'narrow stance squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (500,'natural glute ham raise','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (501,'neck press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (502,'neck-smr','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (503,'oblique crunches','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (504,'oblique crunches - on the floor','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (505,'olympic squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (506,'on your side quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (507,'on-your-back quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (508,'one arm against wall','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (509,'one arm chin-up','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (510,'one arm dumbbell bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (511,'one arm dumbbell preacher curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (512,'one arm floor press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (513,'one arm lat pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (514,'one arm pronated dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (515,'one arm supinated dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (516,'one half locust','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (517,'one handed hang','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (518,'one knee to chest','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (519,'one leg barbell squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (520,'one-arm dumbbell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (521,'one-arm flat bench dumbbell flye','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (522,'one-arm high-pulley cable side bends','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (523,'one-arm incline lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (524,'one-arm kettlebell clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (525,'one-arm kettlebell clean and jerk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (526,'one-arm kettlebell floor press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (527,'one-arm kettlebell jerk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (528,'one-arm kettlebell military press to the side','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (529,'one-arm kettlebell para press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (530,'one-arm kettlebell push press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (531,'one-arm kettlebell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (532,'one-arm kettlebell snatch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (533,'one-arm kettlebell split jerk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (534,'one-arm kettlebell split snatch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (535,'one-arm kettlebell swings','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (536,'one-arm long bar row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (537,'one-arm medicine ball slam','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (538,'one-arm open palm kettlebell clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (539,'one-arm overhead kettlebell squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (540,'one-arm side deadlift','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (541,'one-arm side laterals','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (542,'one-legged cable kickback','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (543,'open palm kettlebell clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (544,'otis-up','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (545,'overhead cable curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (546,'overhead lat','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (547,'overhead slam','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (548,'overhead squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (549,'overhead stretch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (550,'overhead triceps','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (551,'pallof press with rotation','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (552,'palms-down dumbbell wrist curl over a bench','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (553,'palms-down wrist curl over a bench','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (554,'palms-up barbell wrist curl over a bench','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (555,'palms-up dumbbell wrist curl over a bench','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (556,'parallel bar dip','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (557,'pelvic tilt into bridge','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (558,'peroneals stretch','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (559,'peroneals-smr','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (560,'physioball hip bridge','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (561,'pin presses','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (562,'piriformis-smr','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (563,'plank','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (564,'plank with twist','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (565,'plate pinch','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (566,'plate twist','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (567,'platform hamstring slides','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (568,'plie dumbbell squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (569,'plyo kettlebell pushups','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (570,'plyo push-up','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (571,'posterior tibialis stretch','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (572,'power clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (573,'power clean from blocks','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (574,'power jerk','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (575,'power partials','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (576,'power snatch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (577,'power snatch from blocks','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (578,'power stairs','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (579,'preacher curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (580,'preacher hammer dumbbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (581,'press sit-up','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (582,'prone manual hamstring','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (583,'prowler sprint','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (584,'pull through','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (585,'pullups','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (586,'push press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (587,'push press - behind the neck','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (588,'push up to side plank','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (589,'push-up wide','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (590,'push-ups - close triceps position','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (591,'push-ups with feet elevated','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (592,'push-ups with feet on an exercise ball','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (593,'pushups','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (594,'pushups (close and wide hand positions)','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (595,'pyramid','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (596,'quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (597,'quadriceps-smr','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (598,'quick leap','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (599,'rack delivery','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (600,'rack pull with bands','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (601,'rack pulls','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (602,'rear leg raises','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (603,'recumbent bike','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (604,'return push from stance','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (605,'reverse band bench press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (606,'reverse band box squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (607,'reverse band deadlift','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (608,'reverse band power squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (609,'reverse band sumo deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (610,'reverse barbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (611,'reverse barbell preacher curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (612,'reverse cable curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (613,'reverse crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (614,'reverse flyes','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (615,'reverse flyes with external rotation','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (616,'reverse grip bent-over rows','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (617,'reverse grip triceps pushdown','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (618,'reverse hyperextension','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (619,'reverse machine flyes','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (620,'reverse plate curls','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (621,'reverse triceps bench press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (622,'rhomboids-smr','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (623,'rickshaw carry','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (624,'rickshaw deadlift','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (625,'ring dips','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (626,'rocket jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (627,'rocking standing calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (628,'rocky pull-ups/pulldowns','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (629,'romanian deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (630,'romanian deadlift from deficit','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (631,'rope climb','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (632,'rope crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (633,'rope jumping','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (634,'rope straight-arm pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (635,'round the world shoulder stretch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (636,'rowing','stationary',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (637,'runner''s stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (638,'running','treadmill',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (639,'russian twist','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (640,'sandbag load','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (641,'scapular pull-up','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (642,'scissor kick','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (643,'scissors jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (644,'seated band hamstring curl','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (645,'seated barbell military press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (646,'seated barbell twist','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (647,'seated bent-over one-arm dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (648,'seated bent-over rear delt raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (649,'seated bent-over two-arm dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (650,'seated biceps','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (651,'seated cable rows','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (652,'seated cable shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (653,'seated calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (654,'seated calf stretch','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (655,'seated close-grip concentration barbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (656,'seated dumbbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (657,'seated dumbbell inner biceps curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (658,'seated dumbbell palms-down wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (659,'seated dumbbell palms-up wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (660,'seated dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (661,'seated flat bench leg pull-in','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (662,'seated floor hamstring stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (663,'seated front deltoid','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (664,'seated glute','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (665,'seated good mornings','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (666,'seated hamstring','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (667,'seated hamstring and calf stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (668,'seated head harness neck resistance','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (669,'seated leg curl','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (670,'seated leg tucks','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (671,'seated one-arm cable pulley rows','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (672,'seated one-arm dumbbell palms-down wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (673,'seated one-arm dumbbell palms-up wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (674,'seated overhead stretch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (675,'seated palm-up barbell wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (676,'seated palms-down barbell wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (677,'seated side lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (678,'seated triceps press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (679,'seated two-arm palms-up low-pulley wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (680,'see-saw press (alternating side press)','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (681,'shotgun row','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (682,'shoulder circles','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (683,'shoulder press - with bands','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (684,'shoulder raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (685,'shoulder stretch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (686,'side bridge','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (687,'side hop-sprint','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (688,'side jackknife','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (689,'side lateral raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (690,'side laterals to front raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (691,'side leg raises','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (692,'side lying groin stretch','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (693,'side neck stretch','neck',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (694,'side standing long jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (695,'side to side box shuffle','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (696,'side to side chins','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (697,'side wrist pull','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (698,'side-lying floor stretch','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (699,'single dumbbell raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (700,'single leg butt kick','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (701,'single leg glute bridge','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (702,'single leg push-off','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (703,'single-arm cable crossover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (704,'single-arm linear jammer','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (705,'single-arm push-up','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (706,'single-cone sprint drill','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (707,'single-leg high box squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (708,'single-leg hop progression','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (709,'single-leg lateral hop','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (710,'single-leg leg extension','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (711,'single-leg stride jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (712,'sit squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (713,'sit-up','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (714,'skating','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (715,'sled drag - harness','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (716,'sled overhead backward walk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (717,'sled overhead triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (718,'sled push','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (719,'sled reverse flye','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (720,'sled row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (721,'sledgehammer swings','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (722,'smith incline shoulder raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (723,'smith machine behind the back shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (724,'smith machine bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (725,'smith machine bent over row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (726,'smith machine calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (727,'smith machine close-grip bench press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (728,'smith machine decline press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (729,'smith machine hang power clean','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (730,'smith machine hip raise','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (731,'smith machine incline bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (732,'smith machine leg press','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (733,'smith machine one-arm upright row','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (734,'smith machine overhead shoulder press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (735,'smith machine pistol squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (736,'smith machine reverse calf raises','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (737,'smith machine shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (738,'smith machine squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (739,'smith machine stiff-legged deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (740,'smith machine upright row','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (741,'smith single-leg split squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (742,'snatch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (743,'snatch balance','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (744,'snatch deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (745,'snatch from blocks','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (746,'snatch pull','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (747,'snatch shrug','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (748,'speed band overhead triceps','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (749,'speed band pushdown','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (750,'speed box squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (751,'speed squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (752,'spell caster','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (753,'spider crawl','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (754,'spider curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (755,'spinal stretch','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (756,'split clean','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (757,'split jerk','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (758,'split jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (759,'split snatch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (760,'split squat with dumbbells','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (761,'split squats','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (762,'squat jerk','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (763,'squat with bands','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (764,'squat with chains','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (765,'squat with plate movers','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (766,'squats - with bands','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (767,'stairmaster','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (768,'standing alternating dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (769,'standing barbell calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (770,'standing barbell press behind neck','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (771,'standing bent-over one-arm dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (772,'standing bent-over two-arm dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (773,'standing biceps cable curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (774,'standing biceps stretch','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (775,'standing bradford press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (776,'standing cable chest press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (777,'standing cable lift','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (778,'standing cable wood chop','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (779,'standing calf raises','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (780,'standing concentration curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (781,'standing dumbbell calf raise','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (782,'standing dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (783,'standing dumbbell reverse curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (784,'standing dumbbell straight-arm front delt raise above head','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (785,'standing dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (786,'standing dumbbell upright row','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (787,'standing elevated quad stretch','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (788,'standing front barbell raise over head','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (789,'standing gastrocnemius calf stretch','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (790,'standing hamstring and calf stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (791,'standing hip circles','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (792,'standing hip flexors','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (793,'standing inner-biceps curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (794,'standing lateral stretch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (795,'standing leg curl','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (796,'standing long jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (797,'standing low-pulley deltoid raise','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (798,'standing low-pulley one-arm triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (799,'standing military press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (800,'standing olympic plate hand squeeze','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (801,'standing one-arm cable curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (802,'standing one-arm dumbbell curl over incline bench','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (803,'standing one-arm dumbbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (804,'standing overhead barbell triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (805,'standing palm-in one-arm dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (806,'standing palms-in dumbbell press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (807,'standing palms-up barbell behind the back wrist curl','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (808,'standing pelvic tilt','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (809,'standing rope crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (810,'standing soleus and achilles stretch','calves',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (811,'standing toe touches','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (812,'standing towel triceps extension','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (813,'standing two-arm overhead throw','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (814,'star jump','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (815,'step mill','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (816,'step-up with knee raise','glutes',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (817,'stiff leg barbell good morning','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (818,'stiff-legged barbell deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (819,'stiff-legged dumbbell deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (820,'stomach vacuum','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (821,'straight bar bench mid rows','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (822,'straight raises on incline bench','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (823,'straight-arm dumbbell pullover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (824,'straight-arm pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (825,'stride jump crossover','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (826,'sumo deadlift','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (827,'sumo deadlift with bands','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (828,'sumo deadlift with chains','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (829,'superman','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (830,'supine chest throw','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (831,'supine one-arm overhead throw','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (832,'supine two-arm overhead throw','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (833,'suspended push-up','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (834,'suspended reverse crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (835,'suspended row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (836,'suspended split squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (837,'t-bar row with handle','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (838,'tate press','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (839,'the straddle','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (840,'thigh abductor','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (841,'thigh adductor','adductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (842,'tire flip','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (843,'toe touchers','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (844,'torso rotation','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (845,'trail running/walking','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (846,'trap bar deadlift','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (847,'tricep dumbbell kickback','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (848,'tricep side stretch','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (849,'triceps overhead extension with rope','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (850,'triceps pushdown','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (851,'triceps pushdown - rope attachment','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (852,'triceps pushdown - v-bar attachment','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (853,'triceps stretch','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (854,'tuck crunch','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (855,'two-arm dumbbell preacher curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (856,'two-arm kettlebell clean','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (857,'two-arm kettlebell jerk','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (858,'two-arm kettlebell military press','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (859,'two-arm kettlebell row','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (860,'underhand cable pulldowns','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (861,'upper back stretch','middle back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (862,'upper back-leg grab','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (863,'upright barbell row','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (864,'upright cable row','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (865,'upright row - with bands','traps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (866,'upward stretch','shoulders',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (867,'v-bar pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (868,'v-bar pullup','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (869,'vertical swing','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (870,'walking','treadmill',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (871,'weighted ball hyperextension','lower back',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (872,'weighted ball side bend','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (873,'weighted bench dip','triceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (874,'weighted crunches','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (875,'weighted jump squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (876,'weighted pull ups','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (877,'weighted sissy squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (878,'weighted sit-ups - with bands','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (879,'weighted squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (880,'wide stance barbell squat','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (881,'wide stance stiff legs','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (882,'wide-grip barbell bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (883,'wide-grip decline barbell bench press','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (884,'wide-grip decline barbell pullover','chest',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (885,'wide-grip lat pulldown','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (886,'wide-grip pulldown behind the neck','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (887,'wide-grip rear pull-up','lats',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (888,'wide-grip standing barbell curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (889,'wind sprints','abdominals',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (890,'windmills','abductors',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (891,'world''s greatest stretch','hamstrings',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (892,'wrist circles','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (893,'wrist roller','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (894,'wrist rotations with straight bar','forearms',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (895,'yoke walk','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (896,'zercher squats','quadriceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (897,'zottman curl','biceps',NULL);
+INSERT INTO exercises (exerciseid, name, category, description) VALUES (898,'zottman preacher curl','biceps',NULL);
