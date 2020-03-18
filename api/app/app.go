@@ -15,15 +15,30 @@ type App struct {
 	Database *sql.DB
 }
 
+// Exercise struct
+type Exercise struct {
+	ID          int            `json:"id"`
+	Name        string         `json:"name"`
+	Category    string         `json:"category"`
+	Description sql.NullString `json:"description"`
+}
+
+// Collection struct
+type Collection struct {
+	Collection []Exercise `json:"collection"`
+}
+
 // SetupRouter Creates Router & Maps Handler Functions for API
 func (app *App) SetupRouter() {
 
 	api := app.Router.PathPrefix("/api/v1").Subrouter()
 
-	api.Methods("GET").Path("/exercises").HandlerFunc(app.exercises)
-	api.HandleFunc("", post).Methods(http.MethodPost)
-	api.HandleFunc("", put).Methods(http.MethodPut)
-	api.HandleFunc("", delete).Methods(http.MethodDelete)
+	api.Methods("GET").Path("/exercises").HandlerFunc(app.getExercises)
+	api.Methods("GET").Path("/exercises/names").HandlerFunc(app.getExerciseNames)
+	api.Methods("GET").Path("/exercises/category").HandlerFunc(app.getExerciseCategories)
+	api.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
+	api.Methods("GET").Path("/exercises/name/{name}").HandlerFunc(app.getExerciseByName)
+	api.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
 	api.HandleFunc("", notFound)
 
 	log.Fatal(http.ListenAndServe(":8080", app.Router))
@@ -31,20 +46,9 @@ func (app *App) SetupRouter() {
 
 // Endpoint: /exercises
 // Response: Collection of all exercises within the database
-func (app *App) exercises(w http.ResponseWriter, r *http.Request) {
+func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-
-	type Exercise struct {
-		ID          int            `json:"id"`
-		Name        string         `json:"name"`
-		Category    string         `json:"category"`
-		Description sql.NullString `json:"description"`
-	}
-
-	type Collection struct {
-		Collection []Exercise `json:"collection"`
-	}
 
 	rows, err := app.Database.Query(`SELECT * FROM exercises`)
 	if err != nil {
@@ -67,25 +71,24 @@ func (app *App) exercises(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// POST
-func post(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
-	w.Write([]byte(`{"message": "POST called"}`))
+func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
+	// TODO
 }
 
-// PUT
-func put(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusAccepted)
-	w.Write([]byte(`{"message": "PUT called"}`))
+func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
+	// TODO
 }
 
-// DELETE
-func delete(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"message": "DELETE called"}`))
+func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
+	// TODO
+}
+
+func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
+	// TODO
+}
+
+func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
+	// TODO
 }
 
 // DEFAULT
