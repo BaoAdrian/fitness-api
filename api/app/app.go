@@ -23,9 +23,19 @@ type Exercise struct {
 	Description sql.NullString `json:"description"`
 }
 
-// Collection struct
-type Collection struct {
-	Collection []Exercise `json:"collection"`
+// Exercises struct
+type Exercises struct {
+	Exercises []Exercise `json:"exercises"`
+}
+
+// Names struct
+type Names struct {
+	Names []string `json:"names"`
+}
+
+// Categories Struct
+type Categories struct {
+	Categories []string `json:"categories"`
 }
 
 // SetupRouter Creates Router & Maps Handler Functions for API
@@ -35,7 +45,7 @@ func (app *App) SetupRouter() {
 
 	api.Methods("GET").Path("/exercises").HandlerFunc(app.getExercises)
 	api.Methods("GET").Path("/exercises/names").HandlerFunc(app.getExerciseNames)
-	api.Methods("GET").Path("/exercises/category").HandlerFunc(app.getExerciseCategories)
+	api.Methods("GET").Path("/exercises/categories").HandlerFunc(app.getExerciseCategories)
 	api.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
 	api.Methods("GET").Path("/exercises/name/{name}").HandlerFunc(app.getExerciseByName)
 	api.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
@@ -54,15 +64,15 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-
 	defer rows.Close()
-	collection := Collection{}
+
+	collection := Exercises{}
 	for rows.Next() {
 		exercise := Exercise{}
 		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
 			panic(err)
 		}
-		collection.Collection = append(collection.Collection, exercise)
+		collection.Exercises = append(collection.Exercises, exercise)
 	}
 	json.NewEncoder(w).Encode(collection)
 
@@ -71,12 +81,58 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// Endpoint: /exercises/names
+// Response: Collection of all exercise names within the database
 func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
-	// TODO
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	rows, err := app.Database.Query(`SELECT name FROM exercises`)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	collection := Names{}
+	for rows.Next() {
+		var name string
+		if err = rows.Scan(&name); err != nil {
+			panic(err)
+		}
+		collection.Names = append(collection.Names, name)
+	}
+	json.NewEncoder(w).Encode(collection)
+
+	if err = rows.Err(); err != nil {
+		panic(err)
+	}
 }
 
+// Endpoint: /exercises/categories
+// Response: Collection of all exercise categories within the database
 func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
-	// TODO
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	rows, err := app.Database.Query(`SELECT category FROM exercises`)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	collection := Categories{}
+	for rows.Next() {
+		var category string
+		if err = rows.Scan(&category); err != nil {
+			panic(err)
+		}
+		collection.Categories = append(collection.Categories, category)
+	}
+	json.NewEncoder(w).Encode(collection)
+
+	if err = rows.Err(); err != nil {
+		panic(err)
+	}
 }
 
 func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
