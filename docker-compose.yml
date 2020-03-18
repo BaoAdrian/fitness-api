@@ -9,3 +9,12 @@ services:
             - MYSQL_PASSWORD=admin
             - MYSQL_DATABASE=fitnessdb
         restart: always
+
+    api:
+        build:
+            context: './api'
+        container_name: api
+        ports:
+            - '8080:8080'
+        depends_on:
+            - 'db'
