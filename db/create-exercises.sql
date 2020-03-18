@@ -1,5 +1,5 @@
 -- Create & Use Database
-CREATE DATABASE fitnessdb;
+CREATE DATABASE IF NOT EXISTS fitnessdb;
 USE fitnessdb;
 
 -- Create Exercises table
