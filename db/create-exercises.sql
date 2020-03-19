@@ -5,10 +5,11 @@ USE fitnessdb;
 -- Create Exercises table
 CREATE TABLE exercises (
     exerciseid  INT,
-    name        VARCHAR(58),
-    category    VARCHAR(11),
+    name        VARCHAR(60),
+    category    VARCHAR(15),
     description VARCHAR(100),
-    CONSTRAINT PK_EXCERCISEID primary key (exerciseid)
+    CONSTRAINT PK_EXCERCISEID primary key (exerciseid),
+    CONSTRAINT UC_EXERCISE UNIQUE (exerciseid, name)
 );
 
 -- Insert Records into table
@@ -40,34 +41,6 @@ INSERT INTO exercises (exerciseid, name, category, description) VALUES (24,'arou
 INSERT INTO exercises (exerciseid, name, category, description) VALUES (25,'atlas stone trainer','lower back',NULL);
 INSERT INTO exercises (exerciseid, name, category, description) VALUES (26,'atlas stones','lower back',NULL);
 INSERT INTO exercises (exerciseid, name, category, description) VALUES (27,'axle deadlift','lower back',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (28,'ab crunch machine','abdominals',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (29,'ab roller','abdominals',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (30,'adductor','adductors',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (31,'adductor/groin','adductors',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (32,'advanced kettlebell windmill','abdominals',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (33,'air bike','abdominals',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (34,'all fours quad stretch','quadriceps',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (35,'alternate hammer curl','biceps',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (36,'alternate heel touchers','abdominals',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (37,'alternate incline dumbbell curl','biceps',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (38,'alternate leg diagonal bound','quadriceps',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (39,'alternating cable shoulder press','shoulders',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (40,'alternating deltoid raise','shoulders',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (41,'alternating floor press','chest',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (42,'alternating hang clean','hamstrings',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (43,'alternating kettlebell press','shoulders',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (44,'alternating kettlebell row','middle back',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (45,'alternating renegade row','middle back',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (46,'ankle circles','calves',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (47,'ankle on the knee','glutes',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (48,'anterior tibialis-smr','calves',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (49,'anti-gravity press','shoulders',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (50,'arm circles','shoulders',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (51,'arnold dumbbell press','shoulders',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (52,'around the worlds','chest',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (53,'atlas stone trainer','lower back',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (54,'atlas stones','lower back',NULL);
-INSERT INTO exercises (exerciseid, name, category, description) VALUES (55,'axle deadlift','lower back',NULL);
 INSERT INTO exercises (exerciseid, name, category, description) VALUES (56,'back flyes - with bands','shoulders',NULL);
 INSERT INTO exercises (exerciseid, name, category, description) VALUES (57,'backward drag','quadriceps',NULL);
 INSERT INTO exercises (exerciseid, name, category, description) VALUES (58,'backward medicine ball throw','shoulders',NULL);
