@@ -67,13 +67,13 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		exercise := Exercise{}
 		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
-			panic(err)
+			log.Fatal("Database SELECT failed")
 		}
 		collection.Exercises = append(collection.Exercises, exercise)
 	}
-	json.NewEncoder(w).Encode(collection)
 
-	if err = rows.Err(); err != nil {
+	// Write output
+	if err := json.NewEncoder(w).Encode(collection); err != nil {
 		panic(err)
 	}
 }
@@ -90,13 +90,13 @@ func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		var name string
 		if err = rows.Scan(&name); err != nil {
-			panic(err)
+			log.Fatal("Database SELECT failed")
 		}
 		collection.Names = append(collection.Names, name)
 	}
-	json.NewEncoder(w).Encode(collection)
 
-	if err = rows.Err(); err != nil {
+	// Write output
+	if err := json.NewEncoder(w).Encode(collection); err != nil {
 		panic(err)
 	}
 }
@@ -113,13 +113,13 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		var category string
 		if err = rows.Scan(&category); err != nil {
-			panic(err)
+			log.Fatal("Database SELECT failed")
 		}
 		collection.Categories = append(collection.Categories, category)
 	}
-	json.NewEncoder(w).Encode(collection)
 
-	if err = rows.Err(); err != nil {
+	// Write output
+	if err := json.NewEncoder(w).Encode(collection); err != nil {
 		panic(err)
 	}
 }
@@ -135,23 +135,19 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, ok := vars["exerciseid"]
 	if !ok {
-		fmt.Println("Not ok")
+		log.Fatal("No ID was provided")
 	}
-
-	rows, err := app.RunQuery(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id))
 
 	exercise := Exercise{}
-	for rows.Next() {
-		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
-			panic(err)
-		}
+	err := app.Database.QueryRow(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id)).Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description)
+	if err != nil {
+		log.Fatal("Database SELECT failed")
 	}
-	json.NewEncoder(w).Encode(exercise)
 
-	if err = rows.Err(); err != nil {
+	// Write output
+	if err := json.NewEncoder(w).Encode(exercise); err != nil {
 		panic(err)
 	}
-
 }
 
 func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
