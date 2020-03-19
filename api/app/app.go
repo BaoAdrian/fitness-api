@@ -3,6 +3,7 @@ package app
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 
@@ -135,8 +136,38 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// Endpoint: /exercises/id/{exerciseid}
+// Response: Retrieves exercise(s) with given id
+// Assumption: No two exercises have the same id, therefore, returned JSON
+// should have a single object
 func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
-	// TODO
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	vars := mux.Vars(r)
+	id, ok := vars["exerciseid"]
+	if !ok {
+		fmt.Println("Not ok")
+	}
+
+	rows, err := app.Database.Query(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id))
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	exercise := Exercise{}
+	for rows.Next() {
+		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
+			panic(err)
+		}
+	}
+	json.NewEncoder(w).Encode(exercise)
+
+	if err = rows.Err(); err != nil {
+		panic(err)
+	}
+
 }
 
 func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
