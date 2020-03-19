@@ -4,16 +4,21 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
+	log "github.com/sirupsen/logrus"
 )
 
 // App struct
 type App struct {
 	Router   *mux.Router
 	Database *sql.DB
+}
+
+// DefaultResponse Struct
+type DefaultResponse struct {
+	Message string `json:"message"`
 }
 
 // Exercise struct
@@ -125,9 +130,9 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 }
 
 // Endpoint: /exercises/id/{exerciseid}
-// Response: Retrieves exercise(s) with given id
-// Assumption: No two exercises have the same id, therefore, returned JSON
-// should have a single object
+// Response: Retrieves exercise with given id
+// Assertion: Since the database defines a constraint for unique ids, the
+// query is guaranteed to retrieve <= 1 record.
 func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -142,16 +147,34 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 	err := app.Database.QueryRow(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id)).Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description)
 	if err != nil {
 		log.Fatal("Database SELECT failed")
-	}
-
-	// Write output
-	if err := json.NewEncoder(w).Encode(exercise); err != nil {
-		panic(err)
+		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
+	} else {
+		json.NewEncoder(w).Encode(exercise)
 	}
 }
 
+// Endpoint: /exercises/name/{name}
+// Response: Retrieves exercise with a given name
+// Assertion: Since the database defines a constraint for unique names, the
+// query is guaranteed to retrieve <= 1 record.
 func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
-	// TODO
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	vars := mux.Vars(r)
+	name, ok := vars["name"]
+	if !ok {
+		log.Fatal("No name was provided")
+	}
+
+	exercise := Exercise{}
+	err := app.Database.QueryRow(fmt.Sprintf(`SELECT * FROM exercises WHERE name = "%s"`, name)).Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description)
+	if err != nil {
+		log.Warn("Database SELECT failed")
+		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
+	} else {
+		json.NewEncoder(w).Encode(exercise)
+	}
 }
 
 func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
