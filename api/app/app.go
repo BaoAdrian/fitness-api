@@ -61,11 +61,7 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.Database.Query(`SELECT * FROM exercises`)
-	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
+	rows, err := app.RunQuery(`SELECT * FROM exercises`)
 
 	collection := Exercises{}
 	for rows.Next() {
@@ -88,11 +84,7 @@ func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.Database.Query(`SELECT name FROM exercises`)
-	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
+	rows, err := app.RunQuery(`SELECT name FROM exercises`)
 
 	collection := Names{}
 	for rows.Next() {
@@ -115,11 +107,7 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.Database.Query(`SELECT category FROM exercises`)
-	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
+	rows, err := app.RunQuery(`SELECT category FROM exercises`)
 
 	collection := Categories{}
 	for rows.Next() {
@@ -150,11 +138,7 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Not ok")
 	}
 
-	rows, err := app.Database.Query(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id))
-	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
+	rows, err := app.RunQuery(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id))
 
 	exercise := Exercise{}
 	for rows.Next() {
@@ -183,4 +167,13 @@ func notFound(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusNotFound)
 	w.Write([]byte(`{"message": "not found"}`))
+}
+
+// RunQuery Runs specified query on database
+func (app *App) RunQuery(query string) (*sql.Rows, error) {
+	rows, err := app.Database.Query(query)
+	if err != nil {
+		return nil, err
+	}
+	return rows, nil
 }
