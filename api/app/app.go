@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/BaoAdrian/fitness-api/api/db"
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
 )
@@ -57,7 +58,7 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.RunQuery(`SELECT * FROM exercises`)
+	rows, err := db.RunQuery(app.Database, `SELECT * FROM exercises`)
 
 	collection := struct {
 		Exercises []Exercise `json:"exercises"`
@@ -82,7 +83,7 @@ func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.RunQuery(`SELECT name FROM exercises`)
+	rows, err := db.RunQuery(app.Database, `SELECT name FROM exercises`)
 
 	collection := struct {
 		Names []string `json:"names"`
@@ -108,7 +109,7 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.RunQuery(`SELECT category, COUNT(*) FROM exercises GROUP BY category`)
+	rows, err := db.RunQuery(app.Database, `SELECT category, COUNT(*) FROM exercises GROUP BY category`)
 
 	collection := struct {
 		Categories []Category `json:"categories"`
@@ -187,7 +188,7 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("No name was provided")
 	}
 
-	rows, err := app.RunQuery(fmt.Sprintf(`SELECT * FROM exercises WHERE category = "%s"`, category))
+	rows, err := db.RunQuery(app.Database, fmt.Sprintf(`SELECT * FROM exercises WHERE category = "%s"`, category))
 
 	collection := struct {
 		Exercises []Exercise `json:"exercises"`
@@ -211,13 +212,4 @@ func notFound(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusNotFound)
 	w.Write([]byte(`{"message": "not found"}`))
-}
-
-// RunQuery Runs specified query on database
-func (app *App) RunQuery(query string) (*sql.Rows, error) {
-	rows, err := app.Database.Query(query)
-	if err != nil {
-		return nil, err
-	}
-	return rows, nil
 }
