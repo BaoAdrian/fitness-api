@@ -1,8 +1,8 @@
 package main
 
 import (
-	"api/app"
-	"api/db"
+	"github.com/BaoAdrian/fitness-api/api/app"
+	"github.com/BaoAdrian/fitness-api/api/db"
 
 	"github.com/gorilla/mux"
 )

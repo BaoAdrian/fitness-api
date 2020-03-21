@@ -1,4 +1,4 @@
-module api
+module github.com/BaoAdrian/fitness-api/api
 
 go 1.12
 
