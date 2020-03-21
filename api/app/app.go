@@ -39,9 +39,15 @@ type Names struct {
 	Names []string `json:"names"`
 }
 
+// Category Struct
+type Category struct {
+	Category string `json:"category"`
+	Count    int    `json:"count"`
+}
+
 // Categories Struct
 type Categories struct {
-	Categories []string `json:"categories"`
+	Categories []Category `json:"categories"`
 }
 
 // SetupRouter Creates Router & Maps Handler Functions for API
@@ -107,17 +113,18 @@ func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 }
 
 // Endpoint: /exercises/categories
-// Response: Collection of all exercise categories within the database
+// Response: Collection of all exercise categories within the database &
+// their associated count
 func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := app.RunQuery(`SELECT category FROM exercises`)
+	rows, err := app.RunQuery(`SELECT category, COUNT(*) FROM exercises GROUP BY category`)
 
 	collection := Categories{}
 	for rows.Next() {
-		var category string
-		if err = rows.Scan(&category); err != nil {
+		category := Category{}
+		if err = rows.Scan(&category.Category, &category.Count); err != nil {
 			log.Fatal("Database SELECT failed")
 		}
 		collection.Categories = append(collection.Categories, category)
@@ -177,8 +184,33 @@ func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// Endpoint: /exercises/category/{category}
+// Response: Retrieves exercise associated with given category
 func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
-	// TODO
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	vars := mux.Vars(r)
+	category, ok := vars["category"]
+	if !ok {
+		log.Fatal("No name was provided")
+	}
+
+	rows, err := app.RunQuery(fmt.Sprintf(`SELECT * FROM exercises WHERE category = "%s"`, category))
+
+	collection := Exercises{}
+	for rows.Next() {
+		exercise := Exercise{}
+		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
+			log.Fatal("Database SELECT failed")
+		}
+		collection.Exercises = append(collection.Exercises, exercise)
+	}
+
+	// Write output
+	if err := json.NewEncoder(w).Encode(collection); err != nil {
+		panic(err)
+	}
 }
 
 // DEFAULT
