@@ -3,7 +3,6 @@ package app
 import (
 	"database/sql"
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/BaoAdrian/fitness-api/api/db"
@@ -20,14 +19,6 @@ type App struct {
 // DefaultResponse Struct
 type DefaultResponse struct {
 	Message string `json:"message"`
-}
-
-// Exercise struct
-type Exercise struct {
-	ID          int            `json:"id"`
-	Name        string         `json:"name"`
-	Category    string         `json:"category"`
-	Description sql.NullString `json:"description"`
 }
 
 // Category Struct
@@ -58,22 +49,15 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := db.RunQuery(app.Database, `SELECT * FROM exercises`)
-
-	collection := struct {
-		Exercises []Exercise `json:"exercises"`
-	}{}
-	for rows.Next() {
-		exercise := Exercise{}
-		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
-			log.Fatal("Database SELECT failed")
+	exercises, err := db.GetExercises(app.Database)
+	if err != nil {
+		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
+			panic(err)
 		}
-		collection.Exercises = append(collection.Exercises, exercise)
-	}
-
-	// Write output
-	if err := json.NewEncoder(w).Encode(collection); err != nil {
-		panic(err)
+	} else {
+		if err := json.NewEncoder(w).Encode(exercises); err != nil {
+			panic(err)
+		}
 	}
 }
 
@@ -83,22 +67,15 @@ func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := db.RunQuery(app.Database, `SELECT name FROM exercises`)
-
-	collection := struct {
-		Names []string `json:"names"`
-	}{}
-	for rows.Next() {
-		var name string
-		if err = rows.Scan(&name); err != nil {
-			log.Fatal("Database SELECT failed")
+	names, err := db.GetExerciseNames(app.Database)
+	if err != nil {
+		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
+			panic(err)
 		}
-		collection.Names = append(collection.Names, name)
-	}
-
-	// Write output
-	if err := json.NewEncoder(w).Encode(collection); err != nil {
-		panic(err)
+	} else {
+		if err := json.NewEncoder(w).Encode(names); err != nil {
+			panic(err)
+		}
 	}
 }
 
@@ -109,22 +86,15 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	rows, err := db.RunQuery(app.Database, `SELECT category, COUNT(*) FROM exercises GROUP BY category`)
-
-	collection := struct {
-		Categories []Category `json:"categories"`
-	}{}
-	for rows.Next() {
-		category := Category{}
-		if err = rows.Scan(&category.Category, &category.Count); err != nil {
-			log.Fatal("Database SELECT failed")
+	categories, err := db.GetExerciseCategories(app.Database)
+	if err != nil {
+		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
+			panic(err)
 		}
-		collection.Categories = append(collection.Categories, category)
-	}
-
-	// Write output
-	if err := json.NewEncoder(w).Encode(collection); err != nil {
-		panic(err)
+	} else {
+		if err := json.NewEncoder(w).Encode(categories); err != nil {
+			panic(err)
+		}
 	}
 }
 
@@ -142,8 +112,7 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("No ID was provided")
 	}
 
-	exercise := Exercise{}
-	err := app.Database.QueryRow(fmt.Sprintf("SELECT * FROM exercises WHERE exerciseid = %s", id)).Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description)
+	exercise, err := db.GetExerciseByID(id, app.Database)
 	if err != nil {
 		log.Fatal("Database SELECT failed")
 		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
@@ -166,8 +135,7 @@ func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("No name was provided")
 	}
 
-	exercise := Exercise{}
-	err := app.Database.QueryRow(fmt.Sprintf(`SELECT * FROM exercises WHERE name = "%s"`, name)).Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description)
+	exercise, err := db.GetExerciseByName(name, app.Database)
 	if err != nil {
 		log.Warn("Database SELECT failed")
 		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
@@ -188,22 +156,15 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("No name was provided")
 	}
 
-	rows, err := db.RunQuery(app.Database, fmt.Sprintf(`SELECT * FROM exercises WHERE category = "%s"`, category))
-
-	collection := struct {
-		Exercises []Exercise `json:"exercises"`
-	}{}
-	for rows.Next() {
-		exercise := Exercise{}
-		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
-			log.Fatal("Database SELECT failed")
+	collection, err := db.GetExerciseByCategory(category, app.Database)
+	if err != nil {
+		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
+			panic(err)
 		}
-		collection.Exercises = append(collection.Exercises, exercise)
-	}
-
-	// Write output
-	if err := json.NewEncoder(w).Encode(collection); err != nil {
-		panic(err)
+	} else {
+		if err := json.NewEncoder(w).Encode(collection); err != nil {
+			panic(err)
+		}
 	}
 }
 
