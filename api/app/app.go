@@ -29,25 +29,10 @@ type Exercise struct {
 	Description sql.NullString `json:"description"`
 }
 
-// Exercises struct
-type Exercises struct {
-	Exercises []Exercise `json:"exercises"`
-}
-
-// Names struct
-type Names struct {
-	Names []string `json:"names"`
-}
-
 // Category Struct
 type Category struct {
 	Category string `json:"category"`
 	Count    int    `json:"count"`
-}
-
-// Categories Struct
-type Categories struct {
-	Categories []Category `json:"categories"`
 }
 
 // SetupRouter Creates Router & Maps Handler Functions for API
@@ -74,7 +59,9 @@ func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 
 	rows, err := app.RunQuery(`SELECT * FROM exercises`)
 
-	collection := Exercises{}
+	collection := struct {
+		Exercises []Exercise `json:"exercises"`
+	}{}
 	for rows.Next() {
 		exercise := Exercise{}
 		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
@@ -97,7 +84,9 @@ func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 
 	rows, err := app.RunQuery(`SELECT name FROM exercises`)
 
-	collection := Names{}
+	collection := struct {
+		Names []string `json:"names"`
+	}{}
 	for rows.Next() {
 		var name string
 		if err = rows.Scan(&name); err != nil {
@@ -121,7 +110,9 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 
 	rows, err := app.RunQuery(`SELECT category, COUNT(*) FROM exercises GROUP BY category`)
 
-	collection := Categories{}
+	collection := struct {
+		Categories []Category `json:"categories"`
+	}{}
 	for rows.Next() {
 		category := Category{}
 		if err = rows.Scan(&category.Category, &category.Count); err != nil {
@@ -198,7 +189,9 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 
 	rows, err := app.RunQuery(fmt.Sprintf(`SELECT * FROM exercises WHERE category = "%s"`, category))
 
-	collection := Exercises{}
+	collection := struct {
+		Exercises []Exercise `json:"exercises"`
+	}{}
 	for rows.Next() {
 		exercise := Exercise{}
 		if err = rows.Scan(&exercise.ID, &exercise.Name, &exercise.Category, &exercise.Description); err != nil {
