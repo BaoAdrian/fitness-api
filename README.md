@@ -1,4 +1,4 @@
-# True Fitness
+# Fitness API
 RESTful API Developed in Go
 
 # Deploying
