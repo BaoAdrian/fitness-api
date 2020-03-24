@@ -30,17 +30,14 @@ type Category struct {
 // SetupRouter Creates Router & Maps Handler Functions for API
 func (app *App) SetupRouter() {
 
-	api := app.Router.PathPrefix("/api/v1").Subrouter()
+	app.Router.Methods("GET").Path("/exercises").HandlerFunc(app.getExercises)
+	app.Router.Methods("GET").Path("/exercises/names").HandlerFunc(app.getExerciseNames)
+	app.Router.Methods("GET").Path("/exercises/categories").HandlerFunc(app.getExerciseCategories)
+	app.Router.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
+	app.Router.Methods("GET").Path("/exercises/name/{name}").HandlerFunc(app.getExerciseByName)
+	app.Router.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
+	app.Router.HandleFunc("", notFound)
 
-	api.Methods("GET").Path("/exercises").HandlerFunc(app.getExercises)
-	api.Methods("GET").Path("/exercises/names").HandlerFunc(app.getExerciseNames)
-	api.Methods("GET").Path("/exercises/categories").HandlerFunc(app.getExerciseCategories)
-	api.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
-	api.Methods("GET").Path("/exercises/name/{name}").HandlerFunc(app.getExerciseByName)
-	api.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
-	api.HandleFunc("", notFound)
-
-	log.Fatal(http.ListenAndServe(":8080", app.Router))
 }
 
 // Endpoint: /exercises
@@ -114,7 +111,7 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 
 	exercise, err := db.GetExerciseByID(id, app.Database)
 	if err != nil {
-		log.Fatal("Database SELECT failed")
+		log.Warn("Database SELECT failed")
 		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
 	} else {
 		json.NewEncoder(w).Encode(exercise)
@@ -153,7 +150,7 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	category, ok := vars["category"]
 	if !ok {
-		log.Fatal("No name was provided")
+		log.Fatal("No category was provided")
 	}
 
 	collection, err := db.GetExerciseByCategory(category, app.Database)
