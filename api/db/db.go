@@ -38,8 +38,7 @@ type Categories struct {
 }
 
 // CreateDatabase Function
-func CreateDatabase() (*sql.DB, error) {
-	host := "db:3306"
+func CreateDatabase(host string) (*sql.DB, error) {
 	user := "root"
 	pass := "password"
 	dbName := "fitnessdb"
@@ -56,6 +55,9 @@ func CreateDatabase() (*sql.DB, error) {
 // GetExercises Retrieves All Exercises from Database
 func GetExercises(db *sql.DB) (exercises Exercises, err error) {
 	rows, err := runQuery(db, `SELECT * FROM exercises`)
+	if err != nil {
+		log.Fatal("runQuery Failed")
+	}
 
 	collection := Exercises{}
 	for rows.Next() {
