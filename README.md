@@ -11,3 +11,8 @@ Populate mysql database using provided script
 ```
 bash populate_db.sh
 ```
+
+Run testing suite
+```
+go test -v
+```
