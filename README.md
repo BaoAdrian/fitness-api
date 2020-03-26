@@ -16,3 +16,6 @@ Run testing suite
 ```
 go test -v
 ```
+Current supported tests
+- API Endpoints
+- DB Queries
