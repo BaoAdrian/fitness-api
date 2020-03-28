@@ -36,7 +36,9 @@ func (app *App) SetupRouter() {
 	app.Router.Methods("GET").Path("/exercises/names").HandlerFunc(app.getExerciseNames)
 	app.Router.Methods("GET").Path("/exercises/categories").HandlerFunc(app.getExerciseCategories)
 	app.Router.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
+	app.Router.Methods("DELETE").Path("/exercises/id/{exerciseid}").HandlerFunc(app.deleteExerciseByID)
 	app.Router.Methods("GET").Path("/exercises/name/{name}").HandlerFunc(app.getExerciseByName)
+	app.Router.Methods("DELETE").Path("/exercises/name/{name}").HandlerFunc(app.deleteExerciseByName)
 	app.Router.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
 	app.Router.Methods("POST").Path("/exercises").HandlerFunc(app.addExercise)
 	app.Router.HandleFunc("", notFound)
@@ -182,6 +184,34 @@ func (app *App) addExercise(w http.ResponseWriter, r *http.Request) {
 	}
 
 	db.AddExercise(exercise, app.Database)
+}
+
+func (app *App) deleteExerciseByID(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	vars := mux.Vars(r)
+	id, ok := vars["exerciseid"]
+
+	if !ok {
+		log.Fatal("No id was provided")
+	}
+
+	db.DeleteExerciseByID(id, app.Database)
+}
+
+func (app *App) deleteExerciseByName(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	vars := mux.Vars(r)
+	name, ok := vars["name"]
+
+	if !ok {
+		log.Fatal("No name was provided")
+	}
+
+	db.DeleteExerciseByName(name, app.Database)
 }
 
 // DEFAULT

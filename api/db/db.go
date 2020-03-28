@@ -145,6 +145,18 @@ func AddExercise(exercise Exercise, db *sql.DB) {
 	db.Exec(query)
 }
 
+// DeleteExerciseByID Deletes exercise with a given exerciseid
+func DeleteExerciseByID(exerciseid string, db *sql.DB) {
+	query := fmt.Sprintf("DELETE FROM exercises WHERE exerciseid = %s", exerciseid)
+	db.Exec(query)
+}
+
+// DeleteExerciseByName Deletes exercise with a given name
+func DeleteExerciseByName(name string, db *sql.DB) {
+	query := fmt.Sprintf(`DELETE FROM exercises WHERE name = "%s"`, name)
+	db.Exec(query)
+}
+
 // RunQuery Runs specified query on database
 func runQuery(db *sql.DB, query string) (*sql.Rows, error) {
 	rows, err := db.Query(query)
