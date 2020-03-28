@@ -10,10 +10,10 @@ import (
 
 // Exercise struct
 type Exercise struct {
-	ID          int            `json:"id"`
-	Name        string         `json:"name"`
-	Category    string         `json:"category"`
-	Description sql.NullString `json:"description"`
+	ID          int     `json:"id"`
+	Name        string  `json:"name"`
+	Category    string  `json:"category"`
+	Description *string `json:"description"`
 }
 
 // Exercises Struct
@@ -132,6 +132,17 @@ func GetExerciseByCategory(category string, db *sql.DB) (exercises Exercises, er
 		collection.Exercises = append(collection.Exercises, exercise)
 	}
 	return collection, err
+}
+
+// AddExercise Adds exercise to database
+func AddExercise(exercise Exercise, db *sql.DB) {
+	var query string
+	if exercise.Description != nil {
+		query = fmt.Sprintf(`INSERT INTO exercises (exerciseid,name,category,description) VALUES (%d,"%s","%s","%s")`, exercise.ID, exercise.Name, exercise.Category, *exercise.Description)
+	} else {
+		query = fmt.Sprintf(`INSERT INTO exercises (exerciseid,name,category) VALUES (%d,"%s","%s")`, exercise.ID, exercise.Name, exercise.Category)
+	}
+	db.Exec(query)
 }
 
 // RunQuery Runs specified query on database

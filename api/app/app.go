@@ -3,6 +3,8 @@ package app
 import (
 	"database/sql"
 	"encoding/json"
+	"io"
+	"io/ioutil"
 	"net/http"
 
 	"github.com/BaoAdrian/fitness-api/api/db"
@@ -36,6 +38,7 @@ func (app *App) SetupRouter() {
 	app.Router.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
 	app.Router.Methods("GET").Path("/exercises/name/{name}").HandlerFunc(app.getExerciseByName)
 	app.Router.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
+	app.Router.Methods("POST").Path("/exercises").HandlerFunc(app.addExercise)
 	app.Router.HandleFunc("", notFound)
 
 }
@@ -163,6 +166,22 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 			panic(err)
 		}
 	}
+}
+
+func (app *App) addExercise(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
+	if err != nil {
+		panic(err)
+	}
+	var exercise db.Exercise
+	if err := json.Unmarshal(body, &exercise); err != nil {
+		panic(err)
+	}
+
+	db.AddExercise(exercise, app.Database)
 }
 
 // DEFAULT
