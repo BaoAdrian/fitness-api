@@ -12,6 +12,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+const apiURL = "http://localhost:8080"
+
 // NOTE: Database connection created using 'localhost' hostname
 // to resolve tcp unable to connect to 'db' container_name as the
 // MySQL host.
@@ -93,7 +95,7 @@ func TestGetExerciseByValidID(t *testing.T) {
 	app.Router.HandleFunc("/exercises/id/{exerciseid}", app.getExerciseByID)
 	app.Router.ServeHTTP(rr, req)
 
-	expected := `{"id":345,"name":"hanging pike","category":"abdominals","description":{"String":"","Valid":false}}` + "\n"
+	expected := `{"id":345,"name":"hanging pike","category":"abdominals","description":null}` + "\n"
 	assert.Equal(t, expected, rr.Body.String())
 	assert.Equal(t, http.StatusOK, rr.Code)
 }
@@ -135,7 +137,7 @@ func TestGetExerciseByValidName(t *testing.T) {
 	app.Router.HandleFunc("/exercises/name/{name}", app.getExerciseByName)
 	app.Router.ServeHTTP(rr, req)
 
-	expected := `{"id":27,"name":"axle deadlift","category":"lower back","description":{"String":"","Valid":false}}` + "\n"
+	expected := `{"id":27,"name":"axle deadlift","category":"lower back","description":null}` + "\n"
 	assert.Equal(t, http.StatusOK, rr.Code)
 	assert.Equal(t, expected, rr.Body.String())
 }
