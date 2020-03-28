@@ -4,10 +4,10 @@ USE fitnessdb;
 
 -- Create Exercises table
 CREATE TABLE exercises (
-    exerciseid  INT,
-    name        VARCHAR(60),
-    category    VARCHAR(15),
-    description VARCHAR(100),
+    exerciseid  INT NOT NULL,
+    name        VARCHAR(60) NOT NULL,
+    category    VARCHAR(15) NOT NULL,
+    description VARCHAR(100) NULL,
     CONSTRAINT PK_EXCERCISEID primary key (exerciseid),
     CONSTRAINT UC_EXERCISE UNIQUE (exerciseid, name)
 );
