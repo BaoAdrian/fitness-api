@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"net/http"
 
+	"github.com/BaoAdrian/fitness-api/api/db"
 	"github.com/gorilla/mux"
 )
 
@@ -22,6 +23,19 @@ type DefaultResponse struct {
 type Category struct {
 	Category string `json:"category"`
 	Count    int    `json:"count"`
+}
+
+func setupApp() (app *App) {
+	database, err := db.CreateDatabase("localhost:3306")
+	if err != nil {
+		panic(err)
+	}
+
+	app = &App{
+		Router:   mux.NewRouter(),
+		Database: database,
+	}
+	return app
 }
 
 // SetupRouter Creates Router & Maps Handler Functions for API

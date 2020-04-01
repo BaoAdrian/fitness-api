@@ -9,22 +9,8 @@ import (
 
 	"github.com/BaoAdrian/fitness-api/api/db"
 
-	"github.com/gorilla/mux"
 	"github.com/stretchr/testify/assert"
 )
-
-func setupApp() (app *App) {
-	database, err := db.CreateDatabase("localhost:3306")
-	if err != nil {
-		panic(err)
-	}
-
-	app = &App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
-	return app
-}
 
 func TestGetExercises(t *testing.T) {
 	app := setupApp()
