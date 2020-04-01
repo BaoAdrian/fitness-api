@@ -106,7 +106,7 @@ func TestGetExerciseByValidID(t *testing.T) {
 	app.Router.HandleFunc("/exercises/id/{exerciseid}", app.getExerciseByID)
 	app.Router.ServeHTTP(rr, req)
 
-	expected := `{"id":345,"name":"hanging pike","category":"abdominals","description":null}` + "\n"
+	expected := `{"exerciseid":345,"name":"hanging pike","category":"abdominals","description":null}` + "\n"
 	assert.Equal(t, expected, rr.Body.String())
 	assert.Equal(t, http.StatusOK, rr.Code)
 }
@@ -169,7 +169,7 @@ func TestGetExerciseByValidName(t *testing.T) {
 	app.Router.HandleFunc("/exercises/name/{name}", app.getExerciseByName)
 	app.Router.ServeHTTP(rr, req)
 
-	expected := `{"id":27,"name":"axle deadlift","category":"lower back","description":null}` + "\n"
+	expected := `{"exerciseid":27,"name":"axle deadlift","category":"lower back","description":null}` + "\n"
 	assert.Equal(t, http.StatusOK, rr.Code)
 	assert.Equal(t, expected, rr.Body.String())
 }
