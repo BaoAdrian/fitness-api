@@ -38,6 +38,9 @@ func (app *App) SetupRouter() {
 	app.Router.Methods("DELETE").Path("/exercises/id/{exerciseid}").HandlerFunc(app.deleteExerciseByID)
 	app.Router.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
 
+	app.Router.Methods("GET").Path("/workouts").HandlerFunc(app.getWorkouts)
+	app.Router.Methods("POST").Path("/workouts").HandlerFunc(app.addWorkout)
+
 	// Default Endpoint
 	app.Router.HandleFunc("", notFound)
 }
