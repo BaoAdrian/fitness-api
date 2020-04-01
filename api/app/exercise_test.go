@@ -1,7 +1,8 @@
 package app
 
 import (
-	"database/sql"
+	"bytes"
+	"encoding/json"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -12,27 +13,24 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-const apiURL = "http://localhost:8080"
-
-// NOTE: Database connection created using 'localhost' hostname
-// to resolve tcp unable to connect to 'db' container_name as the
-// MySQL host.
-func createTestDatabase() (*sql.DB, error) {
+func setupApp() (app *App) {
 	database, err := db.CreateDatabase("localhost:3306")
-	return database, err
-}
+	if err != nil {
+		panic(err)
+	}
 
-func TestGetExercises(t *testing.T) {
-	req, err := http.NewRequest("GET", "/exercises", nil)
-	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
+	app = &App{
 		Router:   mux.NewRouter(),
 		Database: database,
 	}
+	return app
+}
+
+func TestGetExercises(t *testing.T) {
+	app := setupApp()
+
+	req, err := http.NewRequest("GET", "/exercises", nil)
+	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises", app.getExercises)
@@ -41,17 +39,42 @@ func TestGetExercises(t *testing.T) {
 	assert.Equal(t, http.StatusOK, rr.Code)
 }
 
+func TestPostExercise(t *testing.T) {
+	app := setupApp()
+
+	// First verify exercise doesn't exist yet
+	result, _ := db.GetExerciseByID("12345", app.Database)
+	assert.Equal(t, result, db.Exercise{})
+
+	// Post exercise
+	dummyExercise := db.Exercise{
+		ID:       12345,
+		Name:     "some_name",
+		Category: "some_category",
+	}
+	payload, _ := json.Marshal(dummyExercise)
+	req, err := http.NewRequest("POST", "/exercises", bytes.NewBuffer(payload))
+	assert.NoError(t, err)
+
+	rr := httptest.NewRecorder()
+	app.Router.HandleFunc("/exercises", app.addExercise)
+	app.Router.ServeHTTP(rr, req)
+	assert.Equal(t, http.StatusOK, rr.Code)
+
+	// Verify exercise exists
+	result, err = db.GetExerciseByID("12345", app.Database)
+	assert.Equal(t, result, dummyExercise)
+	assert.NoError(t, err)
+
+	// Delete dummy exercise
+	db.DeleteExerciseByID("12345", app.Database)
+}
+
 func TestGetExerciseNames(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/names", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/names", app.getExerciseNames)
@@ -61,16 +84,10 @@ func TestGetExerciseNames(t *testing.T) {
 }
 
 func TestGetExerciseCategories(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/categories", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/categories", app.getExerciseCategories)
@@ -80,16 +97,10 @@ func TestGetExerciseCategories(t *testing.T) {
 }
 
 func TestGetExerciseByValidID(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/id/345", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/id/{exerciseid}", app.getExerciseByID)
@@ -101,16 +112,10 @@ func TestGetExerciseByValidID(t *testing.T) {
 }
 
 func TestGetExerciseByInvalidID(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/id/99999", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/id/{exerciseid}", app.getExerciseByID)
@@ -121,17 +126,44 @@ func TestGetExerciseByInvalidID(t *testing.T) {
 	assert.Equal(t, http.StatusOK, rr.Code)
 }
 
+func TestDeleteExerciseByID(t *testing.T) {
+	app := setupApp()
+
+	// First verify exercise doesn't exist
+	result, _ := db.GetExerciseByID("12345", app.Database)
+	assert.Equal(t, result, db.Exercise{})
+
+	// Add dummy exercise
+	dummyExercise := db.Exercise{
+		ID:       12345,
+		Name:     "some_name",
+		Category: "some_category",
+	}
+	db.AddExercise(dummyExercise, app.Database)
+
+	// Verify exercise exists
+	result, _ = db.GetExerciseByID("12345", app.Database)
+	assert.Equal(t, result, dummyExercise)
+
+	// Now Delete the exercise matching ID
+	req, err := http.NewRequest("DELETE", "/exercises/id/12345", nil)
+	assert.NoError(t, err)
+
+	rr := httptest.NewRecorder()
+	app.Router.HandleFunc("/exercises/id/{exerciseid}", app.deleteExerciseByID)
+	app.Router.ServeHTTP(rr, req)
+	assert.Equal(t, http.StatusOK, rr.Code)
+
+	// Verify it no longer exists
+	result, _ = db.GetExerciseByID("12345", app.Database)
+	assert.Equal(t, result, db.Exercise{})
+}
+
 func TestGetExerciseByValidName(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/name/axle%20deadlift", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/name/{name}", app.getExerciseByName)
@@ -143,16 +175,10 @@ func TestGetExerciseByValidName(t *testing.T) {
 }
 
 func TestGetExerciseByInvalidName(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/name/notavalidexercise", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/name/{name}", app.getExerciseByName)
@@ -163,17 +189,44 @@ func TestGetExerciseByInvalidName(t *testing.T) {
 	assert.Equal(t, expected, rr.Body.String())
 }
 
+func TestDeleteExerciseByName(t *testing.T) {
+	app := setupApp()
+
+	// First verify exercise doesn't exist
+	result, _ := db.GetExerciseByName("some_name", app.Database)
+	assert.Equal(t, result, db.Exercise{})
+
+	// Add dummy exercise
+	dummyExercise := db.Exercise{
+		ID:       12345,
+		Name:     "some_name",
+		Category: "some_category",
+	}
+	db.AddExercise(dummyExercise, app.Database)
+
+	// Verify exercise exists
+	result, _ = db.GetExerciseByName("some_name", app.Database)
+	assert.Equal(t, result, dummyExercise)
+
+	// Now Delete the exercise matching ID
+	req, err := http.NewRequest("DELETE", "/exercises/name/some_name", nil)
+	assert.NoError(t, err)
+
+	rr := httptest.NewRecorder()
+	app.Router.HandleFunc("/exercises/name/{name}", app.deleteExerciseByName)
+	app.Router.ServeHTTP(rr, req)
+	assert.Equal(t, http.StatusOK, rr.Code)
+
+	// Verify it no longer exists
+	result, _ = db.GetExerciseByName("some_name", app.Database)
+	assert.Equal(t, result, db.Exercise{})
+}
+
 func TestGetExerciseByValidCategory(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/category/biceps", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/category/{category}", app.getExerciseByCategory)
@@ -183,16 +236,10 @@ func TestGetExerciseByValidCategory(t *testing.T) {
 }
 
 func TestGetExerciseByInvalidCategory(t *testing.T) {
+	app := setupApp()
+
 	req, err := http.NewRequest("GET", "/exercises/category/notavalidcategory", nil)
 	assert.NoError(t, err)
-
-	database, err := createTestDatabase()
-	assert.NoError(t, err)
-
-	app := App{
-		Router:   mux.NewRouter(),
-		Database: database,
-	}
 
 	rr := httptest.NewRecorder()
 	app.Router.HandleFunc("/exercises/category/{category}", app.getExerciseByCategory)
