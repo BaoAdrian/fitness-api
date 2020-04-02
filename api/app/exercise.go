@@ -5,6 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"strconv"
 
 	"github.com/BaoAdrian/fitness-api/api/db"
 	"github.com/gorilla/mux"
@@ -12,38 +13,24 @@ import (
 )
 
 // (GET) Endpoint: /exercises
-// Response: Collection of all exercises within the database
 func (app *App) getExercises(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
 	exercises, err := db.GetExercises(app.Database)
-	if err != nil {
-		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
-			panic(err)
-		}
-	} else {
-		if err := json.NewEncoder(w).Encode(exercises); err != nil {
-			panic(err)
-		}
+	if err = json.NewEncoder(w).Encode(exercises); err != nil {
+		panic(err)
 	}
 }
 
 // (GET) Endpoint: /exercises/names
-// Response: Collection of all exercise names within the database
 func (app *App) getExerciseNames(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
 	names, err := db.GetExerciseNames(app.Database)
-	if err != nil {
-		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
-			panic(err)
-		}
-	} else {
-		if err := json.NewEncoder(w).Encode(names); err != nil {
-			panic(err)
-		}
+	if err = json.NewEncoder(w).Encode(names); err != nil {
+		panic(err)
 	}
 }
 
@@ -55,14 +42,8 @@ func (app *App) getExerciseCategories(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	categories, err := db.GetExerciseCategories(app.Database)
-	if err != nil {
-		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
-			panic(err)
-		}
-	} else {
-		if err := json.NewEncoder(w).Encode(categories); err != nil {
-			panic(err)
-		}
+	if err = json.NewEncoder(w).Encode(categories); err != nil {
+		panic(err)
 	}
 }
 
@@ -81,11 +62,8 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	exercise, err := db.GetExerciseByID(id, app.Database)
-	if err != nil {
-		log.Warn("Database SELECT failed")
-		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
-	} else {
-		json.NewEncoder(w).Encode(exercise)
+	if err = json.NewEncoder(w).Encode(exercise); err != nil {
+		log.Fatal("ERROR: Failed to Encode JSON")
 	}
 }
 
@@ -104,16 +82,12 @@ func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
 	}
 
 	exercise, err := db.GetExerciseByName(name, app.Database)
-	if err != nil {
-		log.Warn("Database SELECT failed")
-		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
-	} else {
-		json.NewEncoder(w).Encode(exercise)
+	if err = json.NewEncoder(w).Encode(exercise); err != nil {
+		log.Fatal("ERROR: Failed to Encode JSON")
 	}
 }
 
 // (GET) Endpoint: /exercises/category/{category}
-// Response: Retrieves exercise associated with given 'category'
 func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -125,19 +99,12 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 	}
 
 	collection, err := db.GetExerciseByCategory(category, app.Database)
-	if err != nil {
-		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
-			panic(err)
-		}
-	} else {
-		if err := json.NewEncoder(w).Encode(collection); err != nil {
-			panic(err)
-		}
+	if err = json.NewEncoder(w).Encode(collection); err != nil {
+		log.Fatal("ERROR: Failed to Encode JSON")
 	}
 }
 
 // (POST) Endpoint: /exercises
-// POSTS JSON-Formatted Exercise
 func (app *App) addExercise(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -155,7 +122,6 @@ func (app *App) addExercise(w http.ResponseWriter, r *http.Request) {
 }
 
 // (DELETE) Endpoint: /exercises/id/{exerciseid}
-// DELETES Exercise based on given 'exerciseid'
 func (app *App) deleteExerciseByID(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -171,7 +137,6 @@ func (app *App) deleteExerciseByID(w http.ResponseWriter, r *http.Request) {
 }
 
 // (DELETE) Endpoint: /exercises/name/{name}
-// DELETES Exercise based on given 'name'
 func (app *App) deleteExerciseByName(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -184,4 +149,30 @@ func (app *App) deleteExerciseByName(w http.ResponseWriter, r *http.Request) {
 	}
 
 	db.DeleteExerciseByName(name, app.Database)
+}
+
+// (GET) Endpoint: /exercises/workoutid/{workoutid}
+// Retrieves all collection of exercises listed under a specific workout
+func (app *App) getExercisesByWorkoutID(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	vars := mux.Vars(r)
+	workoutid, ok := vars["workoutid"]
+	if !ok {
+		log.Fatal("No ID was provided")
+	}
+
+	exerciseIds := db.GetExerciseIDByWorkoutID(workoutid, app.Database)
+	exercises := db.Exercises{}
+
+	for _, exerciseid := range exerciseIds {
+		exercise, err := db.GetExerciseByID(strconv.Itoa(exerciseid), app.Database)
+		if err != nil {
+			log.Fatal("ERROR: Failed to retrieve Exercise with id: " + string(exerciseid))
+		}
+		exercises.Exercises = append(exercises.Exercises, exercise)
+	}
+
+	json.NewEncoder(w).Encode(exercises)
 }

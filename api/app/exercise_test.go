@@ -107,7 +107,7 @@ func TestGetExerciseByInvalidID(t *testing.T) {
 	app.Router.HandleFunc("/exercises/id/{exerciseid}", app.getExerciseByID)
 	app.Router.ServeHTTP(rr, req)
 
-	expected := `{"message":"No data found."}` + "\n"
+	expected := `{"exerciseid":0,"name":"","category":"","description":null}` + "\n"
 	assert.Equal(t, expected, rr.Body.String())
 	assert.Equal(t, http.StatusOK, rr.Code)
 }
@@ -170,7 +170,7 @@ func TestGetExerciseByInvalidName(t *testing.T) {
 	app.Router.HandleFunc("/exercises/name/{name}", app.getExerciseByName)
 	app.Router.ServeHTTP(rr, req)
 
-	expected := `{"message":"No data found."}` + "\n"
+	expected := `{"exerciseid":0,"name":"","category":"","description":null}` + "\n"
 	assert.Equal(t, http.StatusOK, rr.Code)
 	assert.Equal(t, expected, rr.Body.String())
 }
