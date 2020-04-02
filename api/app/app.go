@@ -53,12 +53,21 @@ func (app *App) SetupRouter() {
 	app.Router.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
 	app.Router.Methods("GET").Path("/exercises/workoutid/{workoutid}").HandlerFunc(app.getExercisesByWorkoutID)
 
+	// Workout Endpoints
 	app.Router.Methods("GET").Path("/workouts").HandlerFunc(app.getWorkouts)
 	app.Router.Methods("POST").Path("/workouts").HandlerFunc(app.addWorkout)
 	app.Router.Methods("GET").Path("/workouts/id/{workoutid}").HandlerFunc(app.getWorkoutByWorkoutID)
 	app.Router.Methods("DELETE").Path("/workouts/id/{workoutid}").HandlerFunc(app.deleteWorkoutByWorkoutID)
 	app.Router.Methods("GET").Path("/workouts/name/{name}").HandlerFunc(app.getWorkoutByWorkoutName)
 	app.Router.Methods("DELETE").Path("/workouts/name/{name}").HandlerFunc(app.deleteWorkoutByWorkoutName)
+
+	// Routine Endpoints
+	app.Router.Methods("GET").Path("/routines").HandlerFunc(app.getRoutines)
+	app.Router.Methods("POST").Path("/routines").HandlerFunc(app.addRoutine)
+	app.Router.Methods("GET").Path("/routines/id/{routineid}").HandlerFunc(app.getRoutineByID)
+	app.Router.Methods("DELETE").Path("/routines/id/{routineid}").HandlerFunc(app.deleteRoutineByID)
+	app.Router.Methods("GET").Path("/routines/name/{name}").HandlerFunc(app.getRoutineByName)
+	app.Router.Methods("DELETE").Path("/routines/name/{name}").HandlerFunc(app.deleteRoutineByName)
 
 	// Default Endpoint
 	app.Router.HandleFunc("", notFound)
