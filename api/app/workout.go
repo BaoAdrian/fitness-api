@@ -18,14 +18,8 @@ func (app *App) getWorkouts(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	workouts, err := db.GetWorkouts(app.Database)
-	if err != nil {
-		if err := json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."}); err != nil {
-			panic(err)
-		}
-	} else {
-		if err := json.NewEncoder(w).Encode(workouts); err != nil {
-			panic(err)
-		}
+	if err = json.NewEncoder(w).Encode(workouts); err != nil {
+		log.Fatal("ERROR: Failed to Encode JSON")
 	}
 }
 
@@ -54,15 +48,12 @@ func (app *App) getWorkoutByWorkoutID(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, ok := vars["workoutid"]
 	if !ok {
-		log.Fatal("No ID was provided")
+		log.Fatal("ERROR: No ID was provided")
 	}
 
 	results, err := db.GetWorkoutByWorkoutID(id, app.Database)
-	if err != nil {
-		log.Warn("Database SELECT failed")
-		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
-	} else {
-		json.NewEncoder(w).Encode(results)
+	if err = json.NewEncoder(w).Encode(results); err != nil {
+		log.Fatal("ERROR: Failed to Encode JSON")
 	}
 }
 
@@ -75,7 +66,7 @@ func (app *App) deleteWorkoutByWorkoutID(w http.ResponseWriter, r *http.Request)
 	id, ok := vars["workoutid"]
 
 	if !ok {
-		log.Fatal("No ID was provided")
+		log.Fatal("ERROR: No ID was provided")
 	}
 
 	db.DeleteWorkoutByID(id, app.Database)
@@ -89,15 +80,12 @@ func (app *App) getWorkoutByWorkoutName(w http.ResponseWriter, r *http.Request) 
 	vars := mux.Vars(r)
 	name, ok := vars["name"]
 	if !ok {
-		log.Fatal("No name was provided")
+		log.Fatal("ERROR: No name was provided")
 	}
 
 	workout, err := db.GetWorkoutByName(name, app.Database)
-	if err != nil {
-		log.Warn("Database SELECT failed")
-		json.NewEncoder(w).Encode(DefaultResponse{Message: "No data found."})
-	} else {
-		json.NewEncoder(w).Encode(workout)
+	if err = json.NewEncoder(w).Encode(workout); err != nil {
+		log.Fatal("ERROR: Failed to Encode JSON")
 	}
 }
 
@@ -109,7 +97,7 @@ func (app *App) deleteWorkoutByWorkoutName(w http.ResponseWriter, r *http.Reques
 	vars := mux.Vars(r)
 	name, ok := vars["name"]
 	if !ok {
-		log.Fatal("No name was provided")
+		log.Fatal("ERROR: No name was provided")
 	}
 
 	db.DeleteWorkoutByName(name, app.Database)

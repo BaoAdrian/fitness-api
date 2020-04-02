@@ -58,7 +58,7 @@ func (app *App) getExerciseByID(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, ok := vars["exerciseid"]
 	if !ok {
-		log.Fatal("No ID was provided")
+		log.Fatal("ERROR: No ID was provided")
 	}
 
 	exercise, err := db.GetExerciseByID(id, app.Database)
@@ -78,7 +78,7 @@ func (app *App) getExerciseByName(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	name, ok := vars["name"]
 	if !ok {
-		log.Fatal("No name was provided")
+		log.Fatal("ERROR: No name was provided")
 	}
 
 	exercise, err := db.GetExerciseByName(name, app.Database)
@@ -95,7 +95,7 @@ func (app *App) getExerciseByCategory(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	category, ok := vars["category"]
 	if !ok {
-		log.Fatal("No category was provided")
+		log.Fatal("ERROR: No category was provided")
 	}
 
 	collection, err := db.GetExerciseByCategory(category, app.Database)
@@ -130,7 +130,7 @@ func (app *App) deleteExerciseByID(w http.ResponseWriter, r *http.Request) {
 	id, ok := vars["exerciseid"]
 
 	if !ok {
-		log.Fatal("No id was provided")
+		log.Fatal("ERROR: No id was provided")
 	}
 
 	db.DeleteExerciseByID(id, app.Database)
@@ -145,7 +145,7 @@ func (app *App) deleteExerciseByName(w http.ResponseWriter, r *http.Request) {
 	name, ok := vars["name"]
 
 	if !ok {
-		log.Fatal("No name was provided")
+		log.Fatal("ERROR: No name was provided")
 	}
 
 	db.DeleteExerciseByName(name, app.Database)
@@ -160,7 +160,7 @@ func (app *App) getExercisesByWorkoutID(w http.ResponseWriter, r *http.Request) 
 	vars := mux.Vars(r)
 	workoutid, ok := vars["workoutid"]
 	if !ok {
-		log.Fatal("No ID was provided")
+		log.Fatal("ERROR: No ID was provided")
 	}
 
 	exerciseIds := db.GetExerciseIDByWorkoutID(workoutid, app.Database)
