@@ -17,12 +17,12 @@ CREATE TABLE Workouts (
     workoutid   INT NOT NULL,
     name        VARCHAR(25) NOT NULL,
     exerciseid  INT NOT NULL,
-    PRIMARY KEY (workoutid),
-    CONSTRAINT FK_EXERCISEID FOREIGN KEY (exerciseid) REFERENCES Exercises(exerciseid),
-    CONSTRAINT UC_WORKOUT UNIQUE (workoutid, name)
+    setcount    INT DEFAULT 0,
+    repcount    INT DEFAULT 0,
+    CONSTRAINT FK_EXERCISEID FOREIGN KEY (exerciseid) REFERENCES Exercises(exerciseid)
 );
 
--- Insert Records into table
+-- Populate Exercises Bank
 INSERT INTO Exercises (exerciseid, name, category, description) VALUES (0,'ab crunch machine','abdominals',NULL);
 INSERT INTO Exercises (exerciseid, name, category, description) VALUES (1,'ab roller','abdominals',NULL);
 INSERT INTO Exercises (exerciseid, name, category, description) VALUES (2,'adductor','adductors',NULL);
@@ -894,3 +894,19 @@ INSERT INTO Exercises (exerciseid, name, category, description) VALUES (895,'yok
 INSERT INTO Exercises (exerciseid, name, category, description) VALUES (896,'zercher squats','quadriceps',NULL);
 INSERT INTO Exercises (exerciseid, name, category, description) VALUES (897,'zottman curl','biceps',NULL);
 INSERT INTO Exercises (exerciseid, name, category, description) VALUES (898,'zottman preacher curl','biceps',NULL);
+
+
+-- Create Basic Sample Starter Workouts (Back & Biceps / Chest & Triceps)
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (1, 'Back & Biceps', 7, 4, 10);   -- Alternating Hammer Curls
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (1, 'Back & Biceps', 70, 4, 8);   -- Barbell Curls
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (1, 'Back & Biceps', 365, 4, 10); -- Inclined DB Curls
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (1, 'Back & Biceps', 651, 4, 10); -- Seated Cable Rows
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (1, 'Back & Biceps', 27, 4, 8);   -- Axle Deadlift
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (1, 'Back & Biceps', 102, 4, 10); -- Bent Over BB Rows
+
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (2, 'Chest & Triceps', 247, 4, 10);   -- DB Bench Press
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (2, 'Chest & Triceps', 69, 5, 5);   -- BB Bench Press
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (2, 'Chest & Triceps', 384, 4, 8);   -- Isometric Chest Squeeze
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (2, 'Chest & Triceps', 147, 4, 15);   -- Cable One-arm Tricep Extensions
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (2, 'Chest & Triceps', 850, 4, 15);   -- Tricep Pushdown
+INSERT INTO Workouts (workoutid, name, exerciseid, setcount, repcount) VALUES (2, 'Chest & Triceps', 550, 4, 15);   -- Overhead Tricep Extensions
