@@ -51,11 +51,25 @@ curl -X DELETE localhost:8080/workouts/name/Push
 These are the following tables constructed by database dump (`dump.sql`) with some sample data for reference
 
 ## Exercises
-| exerciseid | name | category | description | 
-| :--- | :--- | :--- | :--- |
-| 1 | ab crunch machine | abdominals | NULL |
-| 2 | ab roller | abdominals | NULL |
-| 3 | adductor | abdominals | NULL |
+```
+mysql> SELECT * FROM Exercises;
++------------+------------------------------------------------------------+-------------+-------------+
+| exerciseid | name                                                       | category    | description |
++------------+------------------------------------------------------------+-------------+-------------+
+|          0 | ab crunch machine                                          | abdominals  | NULL        |
+|          1 | ab roller                                                  | abdominals  | NULL        |
+|          2 | adductor                                                   | adductors   | NULL        |
+|          3 | adductor/groin                                             | adductors   | NULL        |
+|          4 | advanced kettlebell windmill                               | abdominals  | NULL        |
+|          5 | air bike                                                   | abdominals  | NULL        |
+|          6 | all fours quad stretch                                     | quadriceps  | NULL        |
+|          7 | alternate hammer curl                                      | biceps      | NULL        |
+|          8 | alternate heel touchers                                    | abdominals  | NULL        |
+|          9 | alternate incline dumbbell curl                            | biceps      | NULL        |
+|         10 | alternate leg diagonal bound                               | quadriceps  | NULL        |
+|         11 | alternating cable shoulder press                           | shoulders   | NULL        |
+|         12 | alternating deltoid raise                                  | shoulders   | NULL        |
+```
 
 ## Workouts
 ```
@@ -77,11 +91,6 @@ mysql> SELECT * FROM Workouts;
 |         2 | Chest & Triceps |        550 |        4 |       15 |
 +-----------+-----------------+------------+----------+----------+
 ```
-| workoutid | name | exerciseid | setcount | repcount |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | Back & Biceps | 7 | 4 | 10 |
-| 1 | Back & Biceps | 70 | 4 | 8 |
-| 1 | Back & Biceps | 365 | 4 | 10 |
 
 ## Routines
 WIP
