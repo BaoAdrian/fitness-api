@@ -9,7 +9,7 @@ API Endpoints include interactions with the following base URIs:
 - `/routines`
 - `/users`
 
-Each base URI is associated with a particular resource stored in a MySQL Database and all queries are formatted and returned as JSON. See `[Sample Requests](#sample-requests)` for more info
+Each base URI is associated with a particular resource stored in a MySQL Database and all queries are formatted and returned as JSON. See [`Sample Requests`](#sample-requests) for more info
 
 # Deploying API
 This service consists of two containers
@@ -97,3 +97,33 @@ WIP
 
 ## Users
 WIP
+
+
+# Tips
+These are some helpful commands & their usecase
+
+Need to rebuild the Backend Container without affecting the MySQL Container?
+```
+docker-compose up --build -d --no-deps api
+```
+
+Need to run an SQL Query from outside the MySQL Container?
+```
+docker exec -i /bin/sh -c 'mysql -uroot -ppassword -e "CREATE DATABASE fitnessdb"'
+```
+
+Create database backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)
+```
+docker exec db /usr/bin/mysqldump -u root --password=password fitnessdb > backup.sql
+```
+
+Restore database from backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)
+```
+cat backup.sql | docker exec -i db /usr/bin/mysql -u root --password=password fitnessdb
+```
+
+Run a specific Test by name
+```
+go test -v -run [TEST_NAME]
+go test -v -run TestGetWorkoutsByWorkoutID
+```
