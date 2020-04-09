@@ -103,12 +103,12 @@ Need to run an SQL Query from outside the MySQL Container?
 docker exec -i /bin/sh -c 'mysql -uroot -ppassword -e "CREATE DATABASE fitnessdb"'
 ```
 
-Need to create database backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)?
+Need to create database backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb))?
 ```
 docker exec db /usr/bin/mysqldump -u root --password=password fitnessdb > backup.sql
 ```
 
-Need to restore database from backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)?
+Need to restore database from backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb))?
 ```
 cat backup.sql | docker exec -i db /usr/bin/mysql -u root --password=password fitnessdb
 ```
