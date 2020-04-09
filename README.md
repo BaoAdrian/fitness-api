@@ -74,29 +74,20 @@ mysql> SELECT * FROM Exercises;
 ## Workouts
 ```
 mysql> SELECT * FROM Workouts;
-+-----------+-----------------+------------+----------+----------+
-| workoutid | name            | exerciseid | setcount | repcount |
-+-----------+-----------------+------------+----------+----------+
-|         1 | Back & Biceps   |          7 |        4 |       10 |
-|         1 | Back & Biceps   |         70 |        4 |        8 |
-|         1 | Back & Biceps   |        365 |        4 |       10 |
-|         1 | Back & Biceps   |        651 |        4 |       10 |
-|         1 | Back & Biceps   |         27 |        4 |        8 |
-|         1 | Back & Biceps   |        102 |        4 |       10 |
-|         2 | Chest & Triceps |        247 |        4 |       10 |
-|         2 | Chest & Triceps |         69 |        5 |        5 |
-|         2 | Chest & Triceps |        384 |        4 |        8 |
-|         2 | Chest & Triceps |        147 |        4 |       15 |
-|         2 | Chest & Triceps |        850 |        4 |       15 |
-|         2 | Chest & Triceps |        550 |        4 |       15 |
-+-----------+-----------------+------------+----------+----------+
+WIP
 ```
 
 ## Routines
+```
+mysql> SELECT * FROM Routines;
 WIP
+```
 
 ## Users
+```
+mysql> SELECT * FORM Users;
 WIP
+```
 
 
 # Tips
@@ -112,17 +103,17 @@ Need to run an SQL Query from outside the MySQL Container?
 docker exec -i /bin/sh -c 'mysql -uroot -ppassword -e "CREATE DATABASE fitnessdb"'
 ```
 
-Create database backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)
+Need to create database backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)?
 ```
 docker exec db /usr/bin/mysqldump -u root --password=password fitnessdb > backup.sql
 ```
 
-Restore database from backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)
+Need to restore database from backup ([source](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb)?
 ```
 cat backup.sql | docker exec -i db /usr/bin/mysql -u root --password=password fitnessdb
 ```
 
-Run a specific Test by name
+Want to run a specific Test by name?
 ```
 go test -v -run [TEST_NAME]
 go test -v -run TestGetWorkoutsByWorkoutID
