@@ -124,7 +124,7 @@ func TestDeleteUserByUserID(t *testing.T) {
 	assert.Equal(t, result, dummyUser)
 
 	// Delete User
-	req, err := http.NewRequest("GET", "/users/id/99999", nil)
+	req, err := http.NewRequest("DELETE", "/users/id/99999", nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
