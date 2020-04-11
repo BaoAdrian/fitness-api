@@ -44,10 +44,10 @@ func (app *App) SetupRouter() {
 	// Routines Endpoints
 	app.Router.Methods("GET").Path("/routines").HandlerFunc(app.getRoutines)
 	app.Router.Methods("POST").Path("/routines").HandlerFunc(app.addRoutine)
-	app.Router.Methods("GET").Path("/routines/id/{routineid}").HandlerFunc(app.getRoutineByID)
-	app.Router.Methods("DELETE").Path("/routines/id/{routineid}").HandlerFunc(app.deleteRoutineByID)
-	app.Router.Methods("GET").Path("/routines/name/{name}").HandlerFunc(app.getRoutineByName)
-	app.Router.Methods("DELETE").Path("/routines/name/{name}").HandlerFunc(app.deleteRoutineByName)
+	app.Router.Methods("GET").Path("/routines/routineid/{routineid}").HandlerFunc(app.getRoutineByRoutineID)
+	app.Router.Methods("DELETE").Path("/routines/routineid/{routineid}").HandlerFunc(app.deleteRoutineByRoutineID)
+	app.Router.Methods("GET").Path("/routines/userid/{userid}").HandlerFunc(app.getRoutinesByUserID)
+	app.Router.Methods("DELETE").Path("/routines/userid/{userid}").HandlerFunc(app.deleteRoutinesByUserID)
 
 	// Users Endpoints
 	app.Router.Methods("GET").Path("/users").HandlerFunc(app.getUsers)
