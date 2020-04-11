@@ -23,12 +23,12 @@ DROP TABLE IF EXISTS `Exercises`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Exercises` (
-  `exerciseid` int NOT NULL,
-  `name` varchar(60) NOT NULL,
+  `exercise_id` int NOT NULL,
+  `exercise_name` varchar(60) NOT NULL,
   `category` varchar(15) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`exerciseid`),
-  UNIQUE KEY `UC_EXERCISE` (`exerciseid`,`name`)
+  PRIMARY KEY (`exercise_id`),
+  UNIQUE KEY `UC_EXERCISE` (`exercise_id`,`exercise_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -43,6 +43,64 @@ INSERT INTO `Exercises` VALUES (0,'ab crunch machine','abdominals',NULL),(1,'ab 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Routines`
+--
+
+DROP TABLE IF EXISTS `Routines`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Routines` (
+  `routine_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `routine_name` varchar(50) NOT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `day` int DEFAULT NULL,
+  PRIMARY KEY (`routine_id`),
+  UNIQUE KEY `UK_ROUTINE` (`routine_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `Routines_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Routines`
+--
+
+LOCK TABLES `Routines` WRITE;
+/*!40000 ALTER TABLE `Routines` DISABLE KEYS */;
+INSERT INTO `Routines` VALUES (1,1,'My Super Awesome Routine','Some compound back movements with isolation bicep exercises',1);
+/*!40000 ALTER TABLE `Routines` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Users`
+--
+
+DROP TABLE IF EXISTS `Users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Users` (
+  `user_id` int NOT NULL,
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `age` int DEFAULT NULL,
+  `weight` decimal(5,2) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `UK_USERID` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Users`
+--
+
+LOCK TABLES `Users` WRITE;
+/*!40000 ALTER TABLE `Users` DISABLE KEYS */;
+INSERT INTO `Users` VALUES (1,'John','Doe',21,185.50);
+/*!40000 ALTER TABLE `Users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Workouts`
 --
 
@@ -50,13 +108,11 @@ DROP TABLE IF EXISTS `Workouts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Workouts` (
-  `workoutid` int NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `exerciseid` int NOT NULL,
-  `setcount` int DEFAULT '0',
-  `repcount` int DEFAULT '0',
-  KEY `FK_EXERCISEID` (`exerciseid`),
-  CONSTRAINT `FK_EXERCISEID` FOREIGN KEY (`exerciseid`) REFERENCES `Exercises` (`exerciseid`)
+  `exercise_id` int NOT NULL,
+  `routine_id` int NOT NULL,
+  `set_count` int DEFAULT NULL,
+  `rep_count` int DEFAULT NULL,
+  PRIMARY KEY (`exercise_id`,`routine_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -66,7 +122,7 @@ CREATE TABLE `Workouts` (
 
 LOCK TABLES `Workouts` WRITE;
 /*!40000 ALTER TABLE `Workouts` DISABLE KEYS */;
-INSERT INTO `Workouts` VALUES (1,'Back & Biceps',7,4,10),(1,'Back & Biceps',70,4,8),(1,'Back & Biceps',365,4,10),(1,'Back & Biceps',651,4,10),(1,'Back & Biceps',27,4,8),(1,'Back & Biceps',102,4,10),(2,'Chest & Triceps',247,4,10),(2,'Chest & Triceps',69,5,5),(2,'Chest & Triceps',384,4,8),(2,'Chest & Triceps',147,4,15),(2,'Chest & Triceps',850,4,15),(2,'Chest & Triceps',550,4,15);
+INSERT INTO `Workouts` VALUES (7,1,4,10),(27,1,4,8),(70,1,4,8),(102,1,4,10),(365,1,4,10),(651,1,4,10);
 /*!40000 ALTER TABLE `Workouts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +135,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-02 19:15:11
+-- Dump completed on 2020-04-10 23:55:59
