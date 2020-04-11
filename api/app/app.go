@@ -41,6 +41,20 @@ func setupApp() (app *App) {
 // SetupRouter Creates Router & Maps Handler Functions for API
 func (app *App) SetupRouter() {
 
+	// Routines Endpoints
+	app.Router.Methods("GET").Path("/routines").HandlerFunc(app.getRoutines)
+	app.Router.Methods("POST").Path("/routines").HandlerFunc(app.addRoutine)
+	app.Router.Methods("GET").Path("/routines/id/{routineid}").HandlerFunc(app.getRoutineByID)
+	app.Router.Methods("DELETE").Path("/routines/id/{routineid}").HandlerFunc(app.deleteRoutineByID)
+	app.Router.Methods("GET").Path("/routines/name/{name}").HandlerFunc(app.getRoutineByName)
+	app.Router.Methods("DELETE").Path("/routines/name/{name}").HandlerFunc(app.deleteRoutineByName)
+
+	// Users Endpoints
+	app.Router.Methods("GET").Path("/users").HandlerFunc(app.getUsers)
+	app.Router.Methods("POST").Path("/users").HandlerFunc(app.addUser)
+	app.Router.Methods("GET").Path("/users/id/{userid}").HandlerFunc(app.getUserByUserID)
+	app.Router.Methods("DELETE").Path("/users/id/{userid}").HandlerFunc(app.deleteUserByUserID)
+
 	// Exercise endpoints
 	app.Router.Methods("GET").Path("/exercises").HandlerFunc(app.getExercises)
 	app.Router.Methods("POST").Path("/exercises").HandlerFunc(app.addExercise)
@@ -51,23 +65,14 @@ func (app *App) SetupRouter() {
 	app.Router.Methods("GET").Path("/exercises/id/{exerciseid}").HandlerFunc(app.getExerciseByID)
 	app.Router.Methods("DELETE").Path("/exercises/id/{exerciseid}").HandlerFunc(app.deleteExerciseByID)
 	app.Router.Methods("GET").Path("/exercises/category/{category}").HandlerFunc(app.getExerciseByCategory)
-	app.Router.Methods("GET").Path("/exercises/workoutid/{workoutid}").HandlerFunc(app.getExercisesByWorkoutID)
 
-	// Workout Endpoints
+	// Workouts Endpoints
 	app.Router.Methods("GET").Path("/workouts").HandlerFunc(app.getWorkouts)
 	app.Router.Methods("POST").Path("/workouts").HandlerFunc(app.addWorkout)
-	app.Router.Methods("GET").Path("/workouts/id/{workoutid}").HandlerFunc(app.getWorkoutByWorkoutID)
-	app.Router.Methods("DELETE").Path("/workouts/id/{workoutid}").HandlerFunc(app.deleteWorkoutByWorkoutID)
-	app.Router.Methods("GET").Path("/workouts/name/{name}").HandlerFunc(app.getWorkoutByWorkoutName)
-	app.Router.Methods("DELETE").Path("/workouts/name/{name}").HandlerFunc(app.deleteWorkoutByWorkoutName)
-
-	// Routine Endpoints
-	app.Router.Methods("GET").Path("/routines").HandlerFunc(app.getRoutines)
-	app.Router.Methods("POST").Path("/routines").HandlerFunc(app.addRoutine)
-	app.Router.Methods("GET").Path("/routines/id/{routineid}").HandlerFunc(app.getRoutineByID)
-	app.Router.Methods("DELETE").Path("/routines/id/{routineid}").HandlerFunc(app.deleteRoutineByID)
-	app.Router.Methods("GET").Path("/routines/name/{name}").HandlerFunc(app.getRoutineByName)
-	app.Router.Methods("DELETE").Path("/routines/name/{name}").HandlerFunc(app.deleteRoutineByName)
+	app.Router.Methods("GET").Path("/workouts/exerciseid/{exerciseid}").HandlerFunc(app.getWorkoutByExerciseID)
+	app.Router.Methods("DELETE").Path("/workouts/exerciseid/{exerciseid}").HandlerFunc(app.deleteWorkoutByExerciseID)
+	app.Router.Methods("GET").Path("/workouts/routineid/{routineid}").HandlerFunc(app.getWorkoutByRoutineID)
+	app.Router.Methods("DELETE").Path("/workouts/routineid/{routineid}").HandlerFunc(app.deleteWorkoutByRoutineID)
 
 	// Default Endpoint
 	app.Router.HandleFunc("", notFound)
