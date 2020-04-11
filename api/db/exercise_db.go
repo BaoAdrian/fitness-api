@@ -56,7 +56,7 @@ func GetExercises(db *sql.DB) (exercises Exercises, err error) {
 
 // GetExerciseNames Retrieves all exercise names from database
 func GetExerciseNames(db *sql.DB) (names Names, err error) {
-	rows, err := runQuery(db, `SELECT name FROM Exercises`)
+	rows, err := runQuery(db, `SELECT exercise_name FROM Exercises`)
 
 	collection := Names{}
 	for rows.Next() {
@@ -91,20 +91,23 @@ func GetExerciseCategories(db *sql.DB) (categories Categories, err error) {
 // GetExerciseByID Retrieves exercise matching the given id
 func GetExerciseByID(id string, db *sql.DB) (exercise Exercise, err error) {
 	result := Exercise{}
-	err = db.QueryRow(fmt.Sprintf("SELECT * FROM Exercises WHERE exerciseid = %s", id)).Scan(&result.ID, &result.Name, &result.Category, &result.Description)
+	query := fmt.Sprintf("SELECT * FROM Exercises WHERE exercise_id = %s", id)
+	err = db.QueryRow(query).Scan(&result.ID, &result.Name, &result.Category, &result.Description)
 	return result, err
 }
 
 // GetExerciseByName Retrieves exercise matching the given name
 func GetExerciseByName(name string, db *sql.DB) (exercise Exercise, err error) {
 	result := Exercise{}
-	err = db.QueryRow(fmt.Sprintf(`SELECT * FROM Exercises WHERE name = "%s"`, name)).Scan(&result.ID, &result.Name, &result.Category, &result.Description)
+	query := fmt.Sprintf(`SELECT * FROM Exercises WHERE exercise_name = "%s"`, name)
+	err = db.QueryRow(query).Scan(&result.ID, &result.Name, &result.Category, &result.Description)
 	return result, err
 }
 
 // GetExerciseByCategory Retrieves exercise(s) matching given category
 func GetExerciseByCategory(category string, db *sql.DB) (exercises Exercises, err error) {
-	rows, err := runQuery(db, fmt.Sprintf(`SELECT * FROM Exercises WHERE category = "%s"`, category))
+	query := fmt.Sprintf(`SELECT * FROM Exercises WHERE category = "%s"`, category)
+	rows, err := runQuery(db, query)
 
 	collection := Exercises{}
 	for rows.Next() {
@@ -121,21 +124,21 @@ func GetExerciseByCategory(category string, db *sql.DB) (exercises Exercises, er
 func AddExercise(exercise Exercise, db *sql.DB) {
 	var query string
 	if exercise.Description != nil {
-		query = fmt.Sprintf(`INSERT INTO Exercises (exerciseid,name,category,description) VALUES (%d,"%s","%s","%s")`, exercise.ID, exercise.Name, exercise.Category, *exercise.Description)
+		query = fmt.Sprintf(`INSERT INTO Exercises (exercise_id,exercise_name,category,description) VALUES (%d,"%s","%s","%s")`, exercise.ID, exercise.Name, exercise.Category, *exercise.Description)
 	} else {
-		query = fmt.Sprintf(`INSERT INTO Exercises (exerciseid,name,category) VALUES (%d,"%s","%s")`, exercise.ID, exercise.Name, exercise.Category)
+		query = fmt.Sprintf(`INSERT INTO Exercises (exercise_id,exercise_name,category) VALUES (%d,"%s","%s")`, exercise.ID, exercise.Name, exercise.Category)
 	}
 	db.Exec(query)
 }
 
 // DeleteExerciseByID Deletes exercise with a given exerciseid
 func DeleteExerciseByID(exerciseid string, db *sql.DB) {
-	query := fmt.Sprintf("DELETE FROM Exercises WHERE exerciseid = %s", exerciseid)
+	query := fmt.Sprintf("DELETE FROM Exercises WHERE exercise_id = %s", exerciseid)
 	db.Exec(query)
 }
 
 // DeleteExerciseByName Deletes exercise with a given name
 func DeleteExerciseByName(name string, db *sql.DB) {
-	query := fmt.Sprintf(`DELETE FROM Exercises WHERE name = "%s"`, name)
+	query := fmt.Sprintf(`DELETE FROM Exercises WHERE exercise_name = "%s"`, name)
 	db.Exec(query)
 }

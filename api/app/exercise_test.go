@@ -5,12 +5,19 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
+	"strconv"
 	"testing"
 
 	"github.com/BaoAdrian/fitness-api/api/db"
 
 	"github.com/stretchr/testify/assert"
 )
+
+var dummyExercise = db.Exercise{
+	ID:       12345,
+	Name:     "some_name",
+	Category: "some_category",
+}
 
 func TestGetExercises(t *testing.T) {
 	app := setupApp()
@@ -29,15 +36,10 @@ func TestPostExercise(t *testing.T) {
 	app := setupApp()
 
 	// First verify exercise doesn't exist yet
-	result, _ := db.GetExerciseByID("12345", app.Database)
+	result, _ := db.GetExerciseByID(strconv.Itoa(dummyExercise.ID), app.Database)
 	assert.Equal(t, result, db.Exercise{})
 
 	// Post exercise
-	dummyExercise := db.Exercise{
-		ID:       12345,
-		Name:     "some_name",
-		Category: "some_category",
-	}
 	payload, _ := json.Marshal(dummyExercise)
 	req, err := http.NewRequest("POST", "/exercises", bytes.NewBuffer(payload))
 	assert.NoError(t, err)
@@ -48,12 +50,12 @@ func TestPostExercise(t *testing.T) {
 	assert.Equal(t, http.StatusOK, rr.Code)
 
 	// Verify exercise exists
-	result, err = db.GetExerciseByID("12345", app.Database)
+	result, err = db.GetExerciseByID(strconv.Itoa(dummyExercise.ID), app.Database)
 	assert.Equal(t, result, dummyExercise)
 	assert.NoError(t, err)
 
 	// Delete dummy exercise
-	db.DeleteExerciseByID("12345", app.Database)
+	db.DeleteExerciseByID(strconv.Itoa(dummyExercise.ID), app.Database)
 }
 
 func TestGetExerciseNames(t *testing.T) {
@@ -116,19 +118,14 @@ func TestDeleteExerciseByID(t *testing.T) {
 	app := setupApp()
 
 	// First verify exercise doesn't exist
-	result, _ := db.GetExerciseByID("12345", app.Database)
+	result, _ := db.GetExerciseByID(strconv.Itoa(dummyExercise.ID), app.Database)
 	assert.Equal(t, result, db.Exercise{})
 
 	// Add dummy exercise
-	dummyExercise := db.Exercise{
-		ID:       12345,
-		Name:     "some_name",
-		Category: "some_category",
-	}
 	db.AddExercise(dummyExercise, app.Database)
 
 	// Verify exercise exists
-	result, _ = db.GetExerciseByID("12345", app.Database)
+	result, _ = db.GetExerciseByID(strconv.Itoa(dummyExercise.ID), app.Database)
 	assert.Equal(t, result, dummyExercise)
 
 	// Now Delete the exercise matching ID
@@ -141,7 +138,7 @@ func TestDeleteExerciseByID(t *testing.T) {
 	assert.Equal(t, http.StatusOK, rr.Code)
 
 	// Verify it no longer exists
-	result, _ = db.GetExerciseByID("12345", app.Database)
+	result, _ = db.GetExerciseByID(strconv.Itoa(dummyExercise.ID), app.Database)
 	assert.Equal(t, result, db.Exercise{})
 }
 
@@ -179,19 +176,14 @@ func TestDeleteExerciseByName(t *testing.T) {
 	app := setupApp()
 
 	// First verify exercise doesn't exist
-	result, _ := db.GetExerciseByName("some_name", app.Database)
+	result, _ := db.GetExerciseByName(dummyExercise.Name, app.Database)
 	assert.Equal(t, result, db.Exercise{})
 
 	// Add dummy exercise
-	dummyExercise := db.Exercise{
-		ID:       12345,
-		Name:     "some_name",
-		Category: "some_category",
-	}
 	db.AddExercise(dummyExercise, app.Database)
 
 	// Verify exercise exists
-	result, _ = db.GetExerciseByName("some_name", app.Database)
+	result, _ = db.GetExerciseByName(dummyExercise.Name, app.Database)
 	assert.Equal(t, result, dummyExercise)
 
 	// Now Delete the exercise matching ID
@@ -204,7 +196,7 @@ func TestDeleteExerciseByName(t *testing.T) {
 	assert.Equal(t, http.StatusOK, rr.Code)
 
 	// Verify it no longer exists
-	result, _ = db.GetExerciseByName("some_name", app.Database)
+	result, _ = db.GetExerciseByName(dummyExercise.Name, app.Database)
 	assert.Equal(t, result, db.Exercise{})
 }
 

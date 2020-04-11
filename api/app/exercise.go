@@ -5,7 +5,6 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
-	"strconv"
 
 	"github.com/BaoAdrian/fitness-api/api/db"
 	"github.com/gorilla/mux"
@@ -149,30 +148,4 @@ func (app *App) deleteExerciseByName(w http.ResponseWriter, r *http.Request) {
 	}
 
 	db.DeleteExerciseByName(name, app.Database)
-}
-
-// (GET) Endpoint: /exercises/workoutid/{workoutid}
-// Retrieves all collection of exercises listed under a specific workout
-func (app *App) getExercisesByWorkoutID(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-
-	vars := mux.Vars(r)
-	workoutid, ok := vars["workoutid"]
-	if !ok {
-		log.Fatal("ERROR: No ID was provided")
-	}
-
-	exerciseIds := db.GetExerciseIDByWorkoutID(workoutid, app.Database)
-	exercises := db.Exercises{}
-
-	for _, exerciseid := range exerciseIds {
-		exercise, err := db.GetExerciseByID(strconv.Itoa(exerciseid), app.Database)
-		if err != nil {
-			log.Fatal("ERROR: Failed to retrieve Exercise with id: " + string(exerciseid))
-		}
-		exercises.Exercises = append(exercises.Exercises, exercise)
-	}
-
-	json.NewEncoder(w).Encode(exercises)
 }
