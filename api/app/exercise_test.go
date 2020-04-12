@@ -3,6 +3,7 @@ package app
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
@@ -129,7 +130,8 @@ func TestDeleteExerciseByID(t *testing.T) {
 	assert.Equal(t, result, dummyExercise)
 
 	// Now Delete the exercise matching ID
-	req, err := http.NewRequest("DELETE", "/exercises/id/12345", nil)
+	url := fmt.Sprintf("/exercises/id/%d", dummyExercise.ID)
+	req, err := http.NewRequest("DELETE", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()

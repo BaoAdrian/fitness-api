@@ -3,6 +3,7 @@ package app
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
@@ -72,7 +73,8 @@ func TestGetUserByValidUserID(t *testing.T) {
 	db.AddUser(dummyUser, app.Database)
 
 	// GET User by user id
-	req, err := http.NewRequest("GET", "/users/id/12345", nil)
+	url := fmt.Sprintf("/users/id/%d", dummyUser.ID)
+	req, err := http.NewRequest("GET", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
@@ -90,14 +92,15 @@ func TestGetUserByValidUserID(t *testing.T) {
 func TestGetUserByInvalidUserID(t *testing.T) {
 	app := setupApp()
 
-	invalidID := "99999"
+	invalidID := 99999
 
 	// Verify User doesn't exist yet (using direct DB call)
-	result, _ := db.GetUserByUserID(invalidID, app.Database)
+	result, _ := db.GetUserByUserID(strconv.Itoa(invalidID), app.Database)
 	assert.Equal(t, result, db.User{})
 
 	// GET User by invalid user, hitting endpoint
-	req, err := http.NewRequest("GET", "/users/id/99999", nil)
+	url := fmt.Sprintf("/users/id/%d", invalidID)
+	req, err := http.NewRequest("GET", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
@@ -124,7 +127,8 @@ func TestDeleteUserByUserID(t *testing.T) {
 	assert.Equal(t, result, dummyUser)
 
 	// Delete User
-	req, err := http.NewRequest("DELETE", "/users/id/99999", nil)
+	url := fmt.Sprintf("/users/id/%d", dummyUser.ID)
+	req, err := http.NewRequest("DELETE", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
