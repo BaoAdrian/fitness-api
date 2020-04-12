@@ -3,14 +3,53 @@ package app
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"strconv"
 	"testing"
 
 	"github.com/BaoAdrian/fitness-api/api/db"
-
 	"github.com/stretchr/testify/assert"
 )
+
+var dummyWorkout = db.Workout{
+	ExerciseID: 1,
+	RoutineID:  12345,
+	SetCount:   3,
+	RepCount:   10,
+}
+
+var dummyWorkoutExercise = db.Exercise{
+	ID:       12345,
+	Name:     "some_name",
+	Category: "some_category",
+}
+
+var dummyWorkoutUser = db.User{
+	ID: 12345,
+	Name: db.Name{
+		FirstName: "some_fname",
+		LastName:  "some_lname",
+	},
+	Age:    33,
+	Weight: 205.0,
+}
+
+var dummyWorkoutRoutine = db.Routine{
+	RoutineID:   5555,
+	UserID:      dummyRoutineUser.ID,
+	Name:        "some_name",
+	Description: "some_description",
+	Day:         1,
+}
+
+// Workout Dependencies:
+// > Exercises (exercise_id)
+// > Routines (routine_id) > Users (user_id)
+// NOTE: Workout is dependent on both Exercise (exercise_id) and
+// Routines (routine_id) which is also dependent on (user_id)
+// Implement tests accordingly
 
 func TestGetWorkouts(t *testing.T) {
 	app := setupApp()
@@ -28,18 +67,15 @@ func TestGetWorkouts(t *testing.T) {
 func TestAddWorkout(t *testing.T) {
 	app := setupApp()
 
-	// First verifiy workout doesnt exist yet
-	result, _ := db.GetWorkoutByWorkoutID("12345", app.Database)
-	assert.Equal(t, result, db.Workouts{})
+	// Add dependencies
+	db.AddUser(dummyWorkoutUser, app.Database)
+	db.AddRoutine(dummyWorkoutRoutine, app.Database)
+	db.AddExercise(dummyWorkoutExercise, app.Database)
 
-	// Post Workout
-	dummyWorkout := db.Workout{
-		ID:         12345,
-		Name:       "some_name",
-		ExerciseID: 1,
-		SetCount:   4,
-		RepCount:   10,
-	}
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
 	payload, _ := json.Marshal(dummyWorkout)
 	req, err := http.NewRequest("POST", "/workouts", bytes.NewBuffer(payload))
 	assert.NoError(t, err)
@@ -50,97 +86,203 @@ func TestAddWorkout(t *testing.T) {
 	assert.Equal(t, http.StatusOK, rr.Code)
 
 	// Verfiy Workout has been added
-	expected := db.Workouts{Workouts: []db.Workout{dummyWorkout}}
-	result, err = db.GetWorkoutByWorkoutID("12345", app.Database)
-	assert.Equal(t, result, expected)
+	routineid := strconv.Itoa(dummyWorkout.RoutineID)
+	exerciseid := strconv.Itoa(dummyWorkout.ExerciseID)
+	resWorkout, err := db.GetWorkoutByPKIDs(routineid, exerciseid, app.Database)
+	assert.Equal(t, resWorkout, dummyWorkout)
 	assert.NoError(t, err)
 
 	// Delete Workout
-	db.DeleteWorkoutByID("12345", app.Database)
+	db.DeleteWorkoutByPKIDs(routineid, exerciseid, app.Database)
+
+	// Delete dependencies
+	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
+	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
+	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
 }
 
-func TestGetWorkoutsByValidWorkoutID(t *testing.T) {
+func TestGetWorkoutByValidExerciseID(t *testing.T) {
 	app := setupApp()
 
-	// Verify workout doesn't exist yet
-	result, _ := db.GetWorkoutByWorkoutID("12345", app.Database)
-	assert.Equal(t, result, db.Workouts{})
+	// Add dependencies
+	db.AddUser(dummyWorkoutUser, app.Database)
+	db.AddRoutine(dummyWorkoutRoutine, app.Database)
+	db.AddExercise(dummyWorkoutExercise, app.Database)
 
-	// Add dummy workout
-	dummyWorkout := db.Workout{
-		ID:         12345,
-		Name:       "some_name",
-		ExerciseID: 1,
-		SetCount:   4,
-		RepCount:   10,
-	}
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Add dummyWorkout
 	db.AddWorkout(dummyWorkout, app.Database)
 
-	// GET workout by workoutid
-	req, err := http.NewRequest("GET", "/workouts/id/12345", nil)
+	// Verify workout has been added (API Call)
+	url := fmt.Sprintf("/workouts/exerciseid/%s", strconv.Itoa(dummyWorkout.ExerciseID))
+	req, err := http.NewRequest("GET", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
-	app.Router.HandleFunc("/workouts/id/{workoutid}", app.getWorkoutByWorkoutID)
+	app.Router.HandleFunc("/workouts/exerciseid/{exerciseid}", app.getWorkoutsByExerciseID)
 	app.Router.ServeHTTP(rr, req)
+	expected, _ := json.Marshal(db.Workouts{Workouts: []db.Workout{dummyWorkout}})
+	assert.Equal(t, string(expected)+"\n", rr.Body.String())
 
-	expected := `{"workouts":[{"workoutid":12345,"name":"some_name","exerciseid":1,"setcount":4,"repcount":10}]}` + "\n"
-	assert.Equal(t, expected, rr.Body.String())
-	assert.Equal(t, http.StatusOK, rr.Code)
+	// Delete Workout
+	db.DeleteWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
 
-	// Delete workout
-	db.DeleteWorkoutByID("12345", app.Database)
+	// Delete dependencies
+	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
+	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
+	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
 }
 
-func TestGetWorkoutsByInvalidWorkoutID(t *testing.T) {
+func TestGetWorkoutByInvalidExerciseID(t *testing.T) {
 	app := setupApp()
 
-	// Verify workout doesn't exist (using direct query as opposed request)
-	result, _ := db.GetWorkoutByWorkoutID("12345", app.Database)
-	assert.Equal(t, result, db.Workouts{})
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
 
-	// Test API Endpoint to verify workout doesn't exist
-	req, err := http.NewRequest("GET", "/workouts/id/12345", nil)
+	// Verify workout doesn't exist (API call)
+	url := fmt.Sprintf("/workouts/exerciseid/%d", dummyWorkout.ExerciseID)
+	req, err := http.NewRequest("GET", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
-	app.Router.HandleFunc("/workouts/id/{workoutid}", app.getWorkoutByWorkoutID)
+	app.Router.HandleFunc("/workouts/exerciseid/{exerciseid}", app.getWorkoutsByExerciseID)
 	app.Router.ServeHTTP(rr, req)
-
-	expected := `{"workouts":null}` + "\n"
-	assert.Equal(t, expected, rr.Body.String())
-	assert.Equal(t, http.StatusOK, rr.Code)
+	expected, _ := json.Marshal(db.Workouts{})
+	assert.Equal(t, string(expected)+"\n", rr.Body.String())
 }
 
-func TestGetWorkoutsByValidName(t *testing.T) {
+func TestDeleteWorkoutByExerciseID(t *testing.T) {
 	app := setupApp()
 
-	// Verify workout doesn't exist yet
-	result, _ := db.GetWorkoutByName("some_name", app.Database)
-	assert.Equal(t, result, db.Workouts{})
+	// Add dependencies
+	db.AddUser(dummyWorkoutUser, app.Database)
+	db.AddRoutine(dummyWorkoutRoutine, app.Database)
+	db.AddExercise(dummyWorkoutExercise, app.Database)
 
-	// Add dummy workout
-	dummyWorkout := db.Workout{
-		ID:         12345,
-		Name:       "some_name",
-		ExerciseID: 1,
-		SetCount:   4,
-		RepCount:   10,
-	}
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Add dummyWorkout
 	db.AddWorkout(dummyWorkout, app.Database)
 
-	// GET workout by workoutid
-	req, err := http.NewRequest("GET", "/workouts/name/some_name", nil)
+	// Verify it does exist
+	result, _ = db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, dummyWorkout)
+
+	// Delete Workout
+	url := fmt.Sprintf("/workouts/exerciseid/%d", dummyWorkout.ExerciseID)
+	req, err := http.NewRequest("DELETE", url, nil)
 	assert.NoError(t, err)
 
 	rr := httptest.NewRecorder()
-	app.Router.HandleFunc("/workouts/name/{name}", app.getWorkoutByWorkoutName)
+	app.Router.HandleFunc("/workouts/exerciseid/{exerciseid}", app.deleteWorkoutsByExerciseID)
 	app.Router.ServeHTTP(rr, req)
-
-	expected := `{"workouts":[{"workoutid":12345,"name":"some_name","exerciseid":1,"setcount":4,"repcount":10}]}` + "\n"
-	assert.Equal(t, expected, rr.Body.String())
 	assert.Equal(t, http.StatusOK, rr.Code)
 
-	// Delete workout
-	db.DeleteWorkoutByName("some_name", app.Database)
+	// Verify workout doesn't exist
+	result, _ = db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Delete dependencies
+	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
+	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
+	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+}
+
+func TestGetWorkoutByValidRoutineID(t *testing.T) {
+	app := setupApp()
+
+	// Add dependencies
+	db.AddUser(dummyWorkoutUser, app.Database)
+	db.AddRoutine(dummyWorkoutRoutine, app.Database)
+	db.AddExercise(dummyWorkoutExercise, app.Database)
+
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Add dummyWorkout
+	db.AddWorkout(dummyWorkout, app.Database)
+
+	// Verify workout has been added (API Call)
+	url := fmt.Sprintf("/workouts/routineid/%s", strconv.Itoa(dummyWorkout.RoutineID))
+	req, err := http.NewRequest("GET", url, nil)
+	assert.NoError(t, err)
+
+	rr := httptest.NewRecorder()
+	app.Router.HandleFunc("/workouts/routineid/{routineid}", app.getWorkoutsByRoutineID)
+	app.Router.ServeHTTP(rr, req)
+	expected, _ := json.Marshal(db.Workouts{Workouts: []db.Workout{dummyWorkout}})
+	assert.Equal(t, string(expected)+"\n", rr.Body.String())
+
+	// Delete Workout
+	db.DeleteWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+
+	// Delete dependencies
+	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
+	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
+	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+}
+
+func TestGetWorkoutByInvalidRoutineID(t *testing.T) {
+	app := setupApp()
+
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Verify workout doesn't exist (API call)
+	url := fmt.Sprintf("/workouts/routineid/%d", dummyWorkout.RoutineID)
+	req, err := http.NewRequest("GET", url, nil)
+	assert.NoError(t, err)
+
+	rr := httptest.NewRecorder()
+	app.Router.HandleFunc("/workouts/routineid/{routineid}", app.getWorkoutsByRoutineID)
+	app.Router.ServeHTTP(rr, req)
+	expected, _ := json.Marshal(db.Workouts{})
+	assert.Equal(t, string(expected)+"\n", rr.Body.String())
+}
+
+func TestDeleteWorkoutByRoutineID(t *testing.T) {
+	app := setupApp()
+
+	// Add dependencies
+	db.AddUser(dummyWorkoutUser, app.Database)
+	db.AddRoutine(dummyWorkoutRoutine, app.Database)
+	db.AddExercise(dummyWorkoutExercise, app.Database)
+
+	// First verify workout doesnt exist yet
+	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Add dummyWorkout
+	db.AddWorkout(dummyWorkout, app.Database)
+
+	// Verify it does exist
+	result, _ = db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, dummyWorkout)
+
+	// Delete Workout
+	url := fmt.Sprintf("/workouts/routineid/%d", dummyWorkout.RoutineID)
+	req, err := http.NewRequest("DELETE", url, nil)
+	assert.NoError(t, err)
+
+	rr := httptest.NewRecorder()
+	app.Router.HandleFunc("/workouts/routineid/{routineid}", app.deleteWorkoutsByRoutineID)
+	app.Router.ServeHTTP(rr, req)
+	assert.Equal(t, http.StatusOK, rr.Code)
+
+	// Verify workout doesn't exist
+	result, _ = db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
+	assert.Equal(t, result, db.Workout{})
+
+	// Delete dependencies
+	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
+	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
+	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
 }

@@ -69,10 +69,12 @@ func (app *App) SetupRouter() {
 	// Workouts Endpoints
 	app.Router.Methods("GET").Path("/workouts").HandlerFunc(app.getWorkouts)
 	app.Router.Methods("POST").Path("/workouts").HandlerFunc(app.addWorkout)
-	app.Router.Methods("GET").Path("/workouts/exerciseid/{exerciseid}").HandlerFunc(app.getWorkoutByExerciseID)
-	app.Router.Methods("DELETE").Path("/workouts/exerciseid/{exerciseid}").HandlerFunc(app.deleteWorkoutByExerciseID)
-	app.Router.Methods("GET").Path("/workouts/routineid/{routineid}").HandlerFunc(app.getWorkoutByRoutineID)
-	app.Router.Methods("DELETE").Path("/workouts/routineid/{routineid}").HandlerFunc(app.deleteWorkoutByRoutineID)
+	app.Router.Methods("GET").Path("/workouts/exerciseid/{exerciseid}").HandlerFunc(app.getWorkoutsByExerciseID)
+	app.Router.Methods("DELETE").Path("/workouts/exerciseid/{exerciseid}").HandlerFunc(app.deleteWorkoutsByExerciseID)
+	app.Router.Methods("GET").Path("/workouts/routineid/{routineid}").HandlerFunc(app.getWorkoutsByRoutineID)
+	app.Router.Methods("DELETE").Path("/workouts/routineid/{routineid}").HandlerFunc(app.deleteWorkoutsByRoutineID)
+	app.Router.Methods("GET").Path("/workouts/ids").HandlerFunc(app.getWorkoutByPKIDs)
+	app.Router.Methods("DELETE").Path("/workouts/ids").HandlerFunc(app.deleteWorkoutByPKIDs)
 
 	// Default Endpoint
 	app.Router.HandleFunc("", notFound)
