@@ -51,6 +51,18 @@ var dummyWorkoutRoutine = db.Routine{
 // Routines (routine_id) which is also dependent on (user_id)
 // Implement tests accordingly
 
+func addDependencies(app *App) {
+	db.AddUser(dummyWorkoutUser, app.Database)
+	db.AddRoutine(dummyWorkoutRoutine, app.Database)
+	db.AddExercise(dummyWorkoutExercise, app.Database)
+}
+
+func removeDependencies(app *App) {
+	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
+	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
+	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+}
+
 func TestGetWorkouts(t *testing.T) {
 	app := setupApp()
 
@@ -67,10 +79,7 @@ func TestGetWorkouts(t *testing.T) {
 func TestAddWorkout(t *testing.T) {
 	app := setupApp()
 
-	// Add dependencies
-	db.AddUser(dummyWorkoutUser, app.Database)
-	db.AddRoutine(dummyWorkoutRoutine, app.Database)
-	db.AddExercise(dummyWorkoutExercise, app.Database)
+	addDependencies(app)
 
 	// First verify workout doesnt exist yet
 	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
@@ -95,19 +104,13 @@ func TestAddWorkout(t *testing.T) {
 	// Delete Workout
 	db.DeleteWorkoutByPKIDs(routineid, exerciseid, app.Database)
 
-	// Delete dependencies
-	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
-	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
-	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+	removeDependencies(app)
 }
 
 func TestGetWorkoutByValidExerciseID(t *testing.T) {
 	app := setupApp()
 
-	// Add dependencies
-	db.AddUser(dummyWorkoutUser, app.Database)
-	db.AddRoutine(dummyWorkoutRoutine, app.Database)
-	db.AddExercise(dummyWorkoutExercise, app.Database)
+	addDependencies(app)
 
 	// First verify workout doesnt exist yet
 	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
@@ -130,10 +133,7 @@ func TestGetWorkoutByValidExerciseID(t *testing.T) {
 	// Delete Workout
 	db.DeleteWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
 
-	// Delete dependencies
-	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
-	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
-	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+	removeDependencies(app)
 }
 
 func TestGetWorkoutByInvalidExerciseID(t *testing.T) {
@@ -158,10 +158,7 @@ func TestGetWorkoutByInvalidExerciseID(t *testing.T) {
 func TestDeleteWorkoutByExerciseID(t *testing.T) {
 	app := setupApp()
 
-	// Add dependencies
-	db.AddUser(dummyWorkoutUser, app.Database)
-	db.AddRoutine(dummyWorkoutRoutine, app.Database)
-	db.AddExercise(dummyWorkoutExercise, app.Database)
+	addDependencies(app)
 
 	// First verify workout doesnt exist yet
 	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
@@ -188,19 +185,13 @@ func TestDeleteWorkoutByExerciseID(t *testing.T) {
 	result, _ = db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
 	assert.Equal(t, result, db.Workout{})
 
-	// Delete dependencies
-	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
-	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
-	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+	removeDependencies(app)
 }
 
 func TestGetWorkoutByValidRoutineID(t *testing.T) {
 	app := setupApp()
 
-	// Add dependencies
-	db.AddUser(dummyWorkoutUser, app.Database)
-	db.AddRoutine(dummyWorkoutRoutine, app.Database)
-	db.AddExercise(dummyWorkoutExercise, app.Database)
+	addDependencies(app)
 
 	// First verify workout doesnt exist yet
 	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
@@ -223,10 +214,7 @@ func TestGetWorkoutByValidRoutineID(t *testing.T) {
 	// Delete Workout
 	db.DeleteWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
 
-	// Delete dependencies
-	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
-	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
-	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+	removeDependencies(app)
 }
 
 func TestGetWorkoutByInvalidRoutineID(t *testing.T) {
@@ -251,10 +239,7 @@ func TestGetWorkoutByInvalidRoutineID(t *testing.T) {
 func TestDeleteWorkoutByRoutineID(t *testing.T) {
 	app := setupApp()
 
-	// Add dependencies
-	db.AddUser(dummyWorkoutUser, app.Database)
-	db.AddRoutine(dummyWorkoutRoutine, app.Database)
-	db.AddExercise(dummyWorkoutExercise, app.Database)
+	addDependencies(app)
 
 	// First verify workout doesnt exist yet
 	result, _ := db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
@@ -281,8 +266,5 @@ func TestDeleteWorkoutByRoutineID(t *testing.T) {
 	result, _ = db.GetWorkoutByPKIDs(strconv.Itoa(dummyWorkout.RoutineID), strconv.Itoa(dummyWorkout.ExerciseID), app.Database)
 	assert.Equal(t, result, db.Workout{})
 
-	// Delete dependencies
-	db.DeleteExerciseByID(strconv.Itoa(dummyWorkoutExercise.ID), app.Database)
-	db.DeleteRoutineByRoutineID(strconv.Itoa(dummyWorkoutRoutine.RoutineID), app.Database)
-	db.DeleteUserByUserID(strconv.Itoa(dummyWorkoutUser.ID), app.Database)
+	removeDependencies(app)
 }
