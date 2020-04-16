@@ -47,7 +47,7 @@ Assumption: Two users, John Doe (userid=1) and Jane Doe (userid=2) exist in the 
 
 ### Success Response
 **Code**: `200 OK`  
-**Example**:
+**Example**:  
 Assumption: Requests uses User ID associated with John Doe (userid=1)
 ```
 {
@@ -61,7 +61,7 @@ Assumption: Requests uses User ID associated with John Doe (userid=1)
 }
 ```
 
-## Post A New User
+## Delete User By User ID
 **URL**: `/users/id/{userid}`  
 **Method**: `DELETE`  
 
