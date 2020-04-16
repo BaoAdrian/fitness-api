@@ -15,10 +15,10 @@ Documentation of all supported endpoints, their methods, response, and sample re
 | :--- | :--- | :---- | :--- |
 | `GET` | `/exercises` | `curl -X GET http://localhost:8080/exercises` | [see here](./exercises.md#get-all-exercises) | 
 | `POST` | `/exercises` | `curl -X POST -d '{"exerciseid":1000,"name":"eccentric barbell curls","category":"biceps","description":"Curl Barbell up then slow the eccentric movement, fighting gravity on the way down"}' http://localhost:8080/exercises` | [see here](./exercises.md#post-a-new-exercise) |
-| `GET` | `/exercises/names` | `curl -X GET http://localhost:8080/exercises/names` | [see here](./users.md#get-all-exercise-names) |
-| `GET` | `/exercises/name/{name}` | `curl -X GET http://localhost:8080/exercises/name/ab%20roller` | [see here](./users.md#get-exercise-by-name) |
-| `DELETE` | `/exercises/name/{name}` | `curl -X DELETE http://localhost:8080/exercises/name/ab%20roller` | [see here](./users.md#delete-exercise-by-name) |
-| `GET` | `/exercises/categories` | `curl -X GET http://localhost:8080/exercises/categories` | [see here](./users.md#get-all-exercise-categories) |
-| `GET` | `/exercises/category/{category}` | `curl -X GET http://localhost:8080/exercises/category/quadriceps` | [see here](./users.md#get-exercises-by-categories) |
-| `GET` | `/exercises/id/{exerciseid}` | `curl -X GET http://localhost:8080/exercises/id/1` | [see here](./users.md#get-exercise-by-exercise-id) |
-| `DELETE` | `/exercises/id/{exerciseid}` | `curl -X DELETE http://localhost:8080/exercises/id/1` | [see here](./users.md#delete-exercise-by-exercise-id) |
+| `GET` | `/exercises/names` | `curl -X GET http://localhost:8080/exercises/names` | [see here](./exercises.md#get-all-exercise-names) |
+| `GET` | `/exercises/name/{name}` | `curl -X GET http://localhost:8080/exercises/name/ab%20roller` | [see here](./exercises.md#get-exercise-by-name) |
+| `DELETE` | `/exercises/name/{name}` | `curl -X DELETE http://localhost:8080/exercises/name/ab%20roller` | [see here](./exercises.md#delete-exercise-by-name) |
+| `GET` | `/exercises/categories` | `curl -X GET http://localhost:8080/exercises/categories` | [see here](./exercises.md#get-all-exercise-categories) |
+| `GET` | `/exercises/category/{category}` | `curl -X GET http://localhost:8080/exercises/category/quadriceps` | [see here](./exercises.md#get-exercises-by-categories) |
+| `GET` | `/exercises/id/{exerciseid}` | `curl -X GET http://localhost:8080/exercises/id/1` | [see here](./exercises.md#get-exercise-by-exercise-id) |
+| `DELETE` | `/exercises/id/{exerciseid}` | `curl -X DELETE http://localhost:8080/exercises/id/1` | [see here](./exercises.md#delete-exercise-by-exercise-id) |
