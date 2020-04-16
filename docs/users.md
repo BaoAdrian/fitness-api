@@ -1,12 +1,12 @@
 # User Endpoints
 
 ## Get All Users
-**URL**: `/users`
-**Method**: `GET`
+**URL**: `/users`  
+**Method**: `GET`  
 
 ### Success Response
-**Code**: `200 OK`
-**Example**:
+**Code**: `200 OK`  
+**Example**:  
 Assumption: Two users, John Doe (userid=1) and Jane Doe (userid=2) exist in the database
 ```
 {
