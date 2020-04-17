@@ -8,6 +8,7 @@
 **Code**: `200 OK`  
 **Example**:  
 ```
+$ curl -X GET localhost:8080/exercises
 {
     "exercises": [
         {
@@ -39,6 +40,9 @@
 
 ### Success Response
 **Code**: `200 OK`  
+```
+$ curl -X POST -d '{"exerciseid":1000,"name":"eccentric barbell curls","category":"biceps","description":"Curl Barbell up then slow the eccentric movement, fighting gravity on the way down"}' http://localhost:8080/exercises
+```
 
 
 ## Get All Exercise Names
@@ -49,6 +53,7 @@
 **Code**: `200 OK`  
 **Example**:  
 ```
+$ curl -X GET http://localhost:8080/exercises/names
 {
     "names": [
         "ab crunch machine",
@@ -71,8 +76,8 @@
 ### Success Response
 **Code**: `200 OK`  
 **Example**:  
-Assumption: Request uses Exercise Name = 'ab roller` (urlencoded)
 ```
+$ curl -X GET http://localhost:8080/exercises/name/ab%20roller
 {
     "category": "abdominals",
     "description": null,
@@ -87,6 +92,9 @@ Assumption: Request uses Exercise Name = 'ab roller` (urlencoded)
 
 ### Success Response
 **Code**: `200 OK`  
+```
+$ curl -X DELETE http://localhost:8080/exercises/name/ab%20roller
+```
 
 
 ## Get All Exercise Categories
@@ -97,6 +105,7 @@ Assumption: Request uses Exercise Name = 'ab roller` (urlencoded)
 **Code**: `200 OK`  
 **Example**:  
 ```
+$ curl -X GET http://localhost:8080/exercises/categories
 {
     "categories": [
         {
@@ -124,6 +133,7 @@ Assumption: Request uses Exercise Name = 'ab roller` (urlencoded)
 **Code**: `200 OK`  
 **Example**:  
 ```
+$ curl -X GET http://localhost:8080/exercises/category/quadriceps
 {
     "exercises": [
         {
@@ -156,8 +166,8 @@ Assumption: Request uses Exercise Name = 'ab roller` (urlencoded)
 ### Success Response
 **Code**: `200 OK`  
 **Example**:  
-Assumption: Request uses Exercise ID = 1
 ```
+$ curl -X GET http://localhost:8080/exercises/id/1
 {
     "category": "abdominals",
     "description": null,
@@ -172,3 +182,6 @@ Assumption: Request uses Exercise ID = 1
 
 ### Success Response
 **Code**: `200 OK`  
+```
+$ curl -X DELETE http://localhost:8080/exercises/id/1
+```

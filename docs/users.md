@@ -7,8 +7,8 @@
 ### Success Response
 **Code**: `200 OK`  
 **Example**:  
-Assumption: Two users, John Doe (userid=1) and Jane Doe (userid=2) exist in the database
 ```
+$ curl -x GET localhost:8080/users
 {
     "users": [
         {
@@ -39,6 +39,9 @@ Assumption: Two users, John Doe (userid=1) and Jane Doe (userid=2) exist in the 
 
 ### Success Response
 **Code**: `200 OK`  
+```
+$ curl -X POST -d '{"userid":1,"name":{"firstname":"John","lastname":"Doe"},"age":21,"weight":185.5}' http://localhost:8080/users
+```
 
 
 ## Get User By User ID
@@ -48,8 +51,8 @@ Assumption: Two users, John Doe (userid=1) and Jane Doe (userid=2) exist in the 
 ### Success Response
 **Code**: `200 OK`  
 **Example**:  
-Assumption: Requests uses User ID associated with John Doe (userid=1)
 ```
+$ curl -X GET localhost:8080/users/id/1
 {
     "age": 21,
     "name": {
@@ -67,3 +70,6 @@ Assumption: Requests uses User ID associated with John Doe (userid=1)
 
 ### Success Response
 **Code**: `200 OK`  
+```
+$ curl -X DELETE http://localhost:8080/users/id/1
+```
